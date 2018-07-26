@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="MCADataTranslator.Content.ImportAppearance"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MCADataTranslator.Content"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="135*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Label  Content="Ag文件路径" Width="70" />
+            <TextBox Name="textbox_ag" Width="300" IsReadOnly="True"/>
+            <Button Content="选择" Name="button_ag" Click="button_ag_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Label  Content="W文件路径" Width="70"/>
+            <TextBox Name="textbox_w" Width="300" IsReadOnly="True"/>
+            <Button Content="选择" Name="button_w" Click="button_w_Click"/>
+        </StackPanel>
+        <WrapPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="文件检查" Name="button_check" Click="button_check_Click" Margin="0 0 10 0"/>
+            <Button  Content="导入数据库" Name="button_import" Click="button_import_Click" IsEnabled="False"/>
+            <!--<Button Content="生成报表" Name="button_report" Click="button_report_Click" Margin="10 0 0 0" IsEnabled="False"/>-->
+        </WrapPanel>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="5" IsReadOnly="True" Name="textbox_output" TextWrapping="WrapWithOverflow" />
+
+        <Label Content="Output:" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"/>
+
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<mui:ModernWindow x:Class="MCADataTranslator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MCADataTranslator"
+         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+         ContentSource="/Pages/Import.xaml"
+        Title="MCADataTranslator" Height="650" Width="800">
+
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="Settings" Source="/Pages/Settings.xaml" />
+    </mui:ModernWindow.TitleLinks>
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Welcome">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Import" Source="/Pages/Import.xaml" />
+                <mui:Link DisplayName="Export" Source="/Pages/Output.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Settings" GroupKey="settings">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Software" Source="/Pages/Settings.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+    
+</mui:ModernWindow>
