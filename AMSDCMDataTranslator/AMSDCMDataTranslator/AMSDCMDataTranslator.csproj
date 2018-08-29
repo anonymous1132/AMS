@@ -38,6 +38,9 @@
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\..\..\myapp\库\Renci.SshNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,9 +56,11 @@
     <Compile Include="Helper\CsvHelper.cs" />
     <Compile Include="Helper\DB2Helper.cs" />
     <Compile Include="Helper\Encrypt.cs" />
+    <Compile Include="Helper\FTPClientHelper.cs" />
     <Compile Include="Helper\FTPHelper.cs" />
     <Compile Include="Helper\LogHelper.cs" />
     <Compile Include="Helper\OracleHelper.cs" />
+    <Compile Include="Helper\SFTPHelper.cs" />
     <Compile Include="Helper\SqlHelper.cs" />
     <Compile Include="Helper\XmlHelper.cs" />
     <Compile Include="Models\DCM.cs" />
@@ -93,8 +98,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\cp_data\current\" />
+    <Folder Include="App\cp_data\history\" />
+    <Folder Include="App\cp_data\siff\" />
+    <Folder Include="App\cp_data\siff_history\" />
     <Folder Include="App\data\current\" />
     <Folder Include="App\data\history\" />
+    <Folder Include="App\hlcm_data\current\" />
+    <Folder Include="App\hlcm_data\history\" />
+    <Folder Include="App\hlcm_data\siff\" />
+    <Folder Include="App\hlcm_data\siff_history\" />
     <Folder Include="App\logs\" />
     <Folder Include="App\wat_data\current\" />
     <Folder Include="App\wat_data\history\" />

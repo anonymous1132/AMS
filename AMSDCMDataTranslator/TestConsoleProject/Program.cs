@@ -25,14 +25,19 @@ namespace TestConsoleProject
 
             //test ftp
 
-            //FTPHelper.FtpServerIP = "10.132.0.38";
-            //FTPHelper.FtpUserID = "ace";
-            //FTPHelper.FtpPassword = "Ams_ace";
-            //FTPHelper.ftpURI= "ftp://10.132.0.38/data/siff/Etest/import/";
-            //FTPHelper.FtpUploadFile(@" C:\Users\PUI\Desktop\csv\v20180726A_test.csv");
-            //Console.WriteLine("ok");
-            //Console.Read();
+            //FTPHelper.FtpServerIP = "112.20.189.145";
+            //FTPHelper.FtpUserID = "ams-file";
+            //FTPHelper.FtpPassword = "16kQgN8V";
+            //FTPHelper.ftpURI = "ftp://112.20.189.145:22";
+            ////FTPHelper.FtpUploadFile(@" C:\Users\PUI\Desktop\csv\v20180726A_test.csv");
+            //string res=   string.Join("-",FTPHelper.GetFileList(""));
+            //Console.WriteLine(res);
+            //Console.ReadLine();
 
+            SFTPHelper sftp = new SFTPHelper("112.20.189.145","22","ams-file", "16kQgN8V");
+            string res = string.Join("-",sftp.GetFileList("/",""));
+            Console.WriteLine(res);
+            Console.ReadLine();
             //test siff writer
             //WATFileOperator fileOperator = new WATFileOperator();
             //fileOperator.ReadFiles();
@@ -44,11 +49,11 @@ namespace TestConsoleProject
             //Class1.str1 = "456";
             //class1.Echo();
             //Console.ReadKey();
-           
-            WATRunningConfig config = new WATRunningConfig();
-            config.GetData();
-            WATRunner.Run(config);
-            Console.ReadLine();
+
+            //WATRunningConfig config = new WATRunningConfig();
+            //config.GetData();
+            //WATRunner.Run(config);
+            //Console.ReadLine();
 
         }
     }

@@ -26,3 +26,4 @@ D:\repository\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProje
 D:\repository\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.csproj.CopyComplete
 D:\repository\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.exe
 D:\repository\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.pdb
+D:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\Renci.SshNet.dll

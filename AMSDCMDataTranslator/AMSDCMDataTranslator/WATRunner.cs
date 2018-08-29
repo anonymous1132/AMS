@@ -11,7 +11,10 @@ namespace AMSDCMDataTranslator
     {
         public WATRunner()
         { }
-
+        /// <summary>
+        /// WAT转换主线程
+        /// </summary>
+        /// <param name="config">WAT配置信息</param>
         public static void Run(WATRunningConfig config)
         {
             LogHelper.WATInfoLog("开始执行WATTranslator");

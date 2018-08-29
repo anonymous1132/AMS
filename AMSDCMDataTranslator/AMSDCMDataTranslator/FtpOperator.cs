@@ -9,10 +9,10 @@ namespace AMSDCMDataTranslator
 {
    public class FtpOperator
     {
-        public static string FtpServerIP = "10.132.0.38";
-        public static string FtpUserID="ace";
-        public static string FtpPassword="Ams_ace";
-        public static string FtpUri= "ftp://10.132.0.38/data/siff/Etest/import/";
+        public static string FtpServerIP ;
+        public static string FtpUserID;
+        public static string FtpPassword;
+        public static string FtpUri;
 
         public static void UploadEtestFile(string filePath)
         {

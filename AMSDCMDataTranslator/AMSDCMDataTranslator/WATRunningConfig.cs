@@ -30,7 +30,7 @@ namespace AMSDCMDataTranslator
         {
             get;
             set;
-        }=@"C:\Users\PUI\Desktop\test";
+        }= @"\\10.8.0.252\Data\OutputData\WAT";
 
         public string SiffPath
         {
@@ -48,7 +48,7 @@ namespace AMSDCMDataTranslator
         {
             get;
             set;
-        }= @"C:\Users\PUI\Desktop\test\spec";
+        }= @"\\10.8.0.252\Data\OutputData\Limit File";
 
         private string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
         private string _configFile

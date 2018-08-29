@@ -9,17 +9,18 @@ namespace AMSDCMDataTranslator
 {
     public class WATFileOperator
     {
-        public static string LOCALPATH= @"App\wat_data\history";
-        public static string WORKINGPATH = @"App\wat_data\current";
-        public static string DIRPATH=@"C:\Users\PUI\Desktop\test";
-        public static string SIFFPATH = @"App\wat_data\siff";
-        public static string SIFFHISTORYPATH = @"App\wat_data\siff_history";
+        public static string LOCALPATH;
+        public static string WORKINGPATH ;
+        public static string SIFFPATH ;
+        public static string SIFFHISTORYPATH ;
         private string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
-        public static string SPECPATH = @"C:\Users\PUI\Desktop\test\spec";
-        //public static string WATFTPUSER = "WAT";
-        //public static string WATFTPPASS = "2uYgm#1D";
+        public static string DIRPATH;
+        public static string SPECPATH ;
+        ////获取文件改为FTP目录后新增（后取消）
+        //public static string WATFTPUSER ;
+        //public static string WATFTPPASS ;
 
-
+        //构造函数
         public WATFileOperator()
         {
 
@@ -55,6 +56,9 @@ namespace AMSDCMDataTranslator
             get { return exeDirctory + SIFFHISTORYPATH; }
         }
 
+        /// <summary>
+        /// 获取DIR共享目录下所有文件名
+        /// </summary>
         private string[] WATFiles
         {
             get
@@ -87,7 +91,10 @@ namespace AMSDCMDataTranslator
         }
 
         private List<string> _newFiles;
-
+        /// <summary>
+        ///排除本地已有的文件，获取新增加的文件名
+        ///结果保存在_newFiles中
+        /// </summary>
         public void GetNewFiles()
         {
             List<string> files = new List<string>();
@@ -101,7 +108,11 @@ namespace AMSDCMDataTranslator
             _newFiles = files;
         }
 
-
+        /// <summary>
+        /// 根据文件全路径获取文件名
+        /// </summary>
+        /// <param name="FilePath">文件全路径集合</param>
+        /// <returns>文件名集合</returns>
         private string[] GetFileName(string[] FilePath)
         {
             if (FilePath.Length == 0)
@@ -115,6 +126,9 @@ namespace AMSDCMDataTranslator
             return FilePath;
         }
 
+        /// <summary>
+        /// 从共享目录下拷贝新文件
+        /// </summary>
         private void CopyNewFiles()
         {
             GetNewFiles();
@@ -132,7 +146,17 @@ namespace AMSDCMDataTranslator
             }
         }
 
-        // public 
+        /// <summary>
+        /// 通过FTP方式获取文件（已取消）
+        /// </summary>
+        private void GetFtpNewFiles()
+        {
+
+        }
+
+        /// <summary>
+        /// 文件读取、转换主进程
+        /// </summary> 
         public void ReadFiles()
         {
             CopyNewFiles();

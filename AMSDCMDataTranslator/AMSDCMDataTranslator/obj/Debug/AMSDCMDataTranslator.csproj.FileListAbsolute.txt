@@ -19,3 +19,4 @@ D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTran
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.csproj.CopyComplete
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.exe
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.pdb
+D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\Renci.SshNet.dll
