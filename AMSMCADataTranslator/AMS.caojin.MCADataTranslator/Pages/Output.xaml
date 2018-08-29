@@ -9,8 +9,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Style="{StaticResource ContentRoot}">
-
-        <content:OutputAppearance />
+        <mui:ModernTab SelectedSource="/Content/OutputAppearance.xaml" Layout="Tab">
+            <mui:ModernTab.Links>
+                <mui:Link DisplayName="Type1" Source="/Content/OutputAppearance.xaml" />
+                <mui:Link DisplayName="Type2" Source="/Content/OutputAppearenceType2.xaml" />
+            </mui:ModernTab.Links>
+        </mui:ModernTab>
 
     </Grid>
 </UserControl>

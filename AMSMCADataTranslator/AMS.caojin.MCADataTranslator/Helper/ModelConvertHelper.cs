@@ -40,6 +40,10 @@ namespace MCADataTranslator.Helper
                             {
                                 pi.SetValue(t, ((double)value).ToString(), null);
                             }
+                            else if (value is int)
+                            {
+                                pi.SetValue(t, ((int)value).ToString(), null);
+                            }
                             else { pi.SetValue(t, value, null); }
                             // pi.SetValue(t, value, null);
                         }

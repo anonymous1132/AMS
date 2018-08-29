@@ -38,11 +38,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Interop.Microsoft.Office.Core">
-      <HintPath>..\..\officedll\Interop.Microsoft.Office.Core.dll</HintPath>
+      <HintPath>..\..\..\myapp\库\officedll\Interop.Microsoft.Office.Core.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.Microsoft.Office.Interop.Excel">
-      <HintPath>..\..\officedll\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
+      <HintPath>..\..\..\myapp\库\officedll\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -77,18 +77,29 @@
     <Compile Include="Bll\CSVValueViewModel.cs" />
     <Compile Include="Bll\ExcelOper.cs" />
     <Compile Include="Bll\ImportDGViewModel.cs" />
+    <Compile Include="Bll\ImportDGViewType2.cs" />
     <Compile Include="Bll\QueryDataViewModel.cs" />
+    <Compile Include="Bll\QueryDataViewModelType2.cs" />
     <Compile Include="Bll\ReportModelBlock.cs" />
+    <Compile Include="Bll\ReportModelBlockType2.cs" />
     <Compile Include="Bll\ReportModelUnit.cs" />
+    <Compile Include="Bll\ReportModelUnitType2.cs" />
+    <Compile Include="Bll\Type2ViewModel.cs" />
     <Compile Include="Bll\WSeriesViewModel.cs" />
     <Compile Include="Content\ImportAppearance.xaml.cs">
       <DependentUpon>ImportAppearance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ImportAppearanceType2.xaml.cs">
+      <DependentUpon>ImportAppearanceType2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\ImportAppearenceEnhanced.xaml.cs">
       <DependentUpon>ImportAppearenceEnhanced.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\OutputAppearance.xaml.cs">
       <DependentUpon>OutputAppearance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\OutputAppearenceType2.xaml.cs">
+      <DependentUpon>OutputAppearenceType2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\PreviewDrid.xaml.cs">
       <DependentUpon>PreviewDrid.xaml</DependentUpon>
@@ -133,6 +144,9 @@
     <None Include="mould\mould.xls">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="mould\mould2.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -146,11 +160,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Content\ImportAppearanceType2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Content\ImportAppearenceEnhanced.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Content\OutputAppearance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\OutputAppearenceType2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

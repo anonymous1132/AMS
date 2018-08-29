@@ -1,0 +1,10 @@
+2018-08-23 15:02:46: -- Analysis Started by On File Change, After Delay
+2018-08-23 15:02:46: Changes: 4, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4650
+2018-08-23 15:02:46: Left to Right: Copy File: 4 
+2018-08-23 15:02:46: == Sync Started by On File Change, After Delay
+2018-08-23 15:02:47: Create Folder '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/App/wat_data/siff_history'
+2018-08-23 15:02:47: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (139,264)
+2018-08-23 15:02:47: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/AMSDCMDataTranslator.csproj' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/AMSDCMDataTranslator.csproj' (4,757)
+2018-08-23 15:02:47: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/WATFileOperator.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/WATFileOperator.cs' (3,225)
+2018-08-23 15:02:47: == Sync Complete. Time: 00:00:01, Speed: 155 KB/s, OK: 4, Errors: 0
+2018-08-23 15:02:47: 

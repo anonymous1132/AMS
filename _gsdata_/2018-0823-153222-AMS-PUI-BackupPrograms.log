@@ -1,0 +1,10 @@
+2018-08-23 15:32:23: -- Analysis Started by On File Change, After Delay
+2018-08-23 15:32:23: Changes: 4, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4650
+2018-08-23 15:32:23: Left to Right: Copy File: 4 
+2018-08-23 15:32:23: == Sync Started by On File Change, After Delay
+2018-08-23 15:32:23: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (157,696)
+2018-08-23 15:32:23: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest.cs' (2,074)
+2018-08-23 15:32:23: Copy Over 'D:/repository/AMSMCADataTranslator/.vs/FirstFloor.ModernUI/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSMCADataTranslator/.vs/FirstFloor.ModernUI/v15/.suo' (501,248)
+2018-08-23 15:32:23: Copy Over 'D:/repository/AMSMCADataTranslator/.vs/FirstFloor.ModernUI/v15/Server/sqlite3/storage.ide-wal' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSMCADataTranslator/.vs/FirstFloor.ModernUI/v15/Server/sqlite3/storage.ide-wal' (4,194,192)
+2018-08-23 15:32:23: == Sync Complete. Time: 00:00:00, Speed: 0 字节/s, OK: 4, Errors: 0
+2018-08-23 15:32:23: 

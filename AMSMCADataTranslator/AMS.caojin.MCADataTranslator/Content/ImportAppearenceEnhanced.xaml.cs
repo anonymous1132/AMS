@@ -92,10 +92,14 @@ namespace MCADataTranslator.Content
                 dGViewModel.Comment = "File Not Exists";
                 return;
             }
-            CsvHelper csv = new CsvHelper();
+
+            ExcelOper excel = new ExcelOper(dGViewModel.FilePath);
             try
             {
-                DataTable dt = csv.readCsvTxt(dGViewModel.FilePath);
+                // CsvHelper csv = new CsvHelper();
+               
+                //DataTable dt = csv.readCsvTxt(dGViewModel.FilePath);
+                DataTable dt = excel.GetContentFromExcel();
                 if (dt.DefaultView[5][1].ToString().Trim() == "Ag")
                 {
                     dGViewModel.CsvType = "Ag";
@@ -111,14 +115,14 @@ namespace MCADataTranslator.Content
                 }
                 dGViewModel.SampleComment = dt.DefaultView[3][1].ToString();
                 dGViewModel.Csv_VM = new CSVValueViewModel();
-                dGViewModel.Csv_VM = CSVVM(dGViewModel.CsvType,dt);
-               // MessageBox.Show(CSVVM(dGViewModel.CsvType, dt).SampleComment);
+                dGViewModel.Csv_VM = CSVVM(dGViewModel.CsvType, dt);
             }
             catch (Exception)
             {
                 dGViewModel.Comment = "未能识别文件内容";
                 return;
             }
+            finally { excel.Quit(); }
             
         }
 
@@ -364,7 +368,6 @@ namespace MCADataTranslator.Content
             SqlHelper sqlhelper = new SqlHelper();
             string sql = "insert into MCA_Pool (SampleComment,Sample,UpdateDateTime,UserName,Recipe,Version,EQP) values ('" + csv.SampleComment + "','"
                 + csv.Sample + "','" + csv.DataTime + "','" + csv.User + "','" + csv.Recipe + "','" + csv.Version + "','" + csv.SampleComment.Split(' ')[0] + "')";
-
             sqlhelper.getSomeDate(sql);
 
 

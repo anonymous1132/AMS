@@ -1,0 +1,9 @@
+2018-08-27 11:41:18: -- Analysis Started by On File Change, After Delay
+2018-08-27 11:41:18: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4684
+2018-08-27 11:41:18: Left to Right: Copy File: 3 
+2018-08-27 11:41:18: == Sync Started by On File Change, After Delay
+2018-08-27 11:41:18: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' (42)
+2018-08-27 11:41:18: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' (7,254)
+2018-08-27 11:41:18: Copy New 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/WATRunningConfig.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/WATRunningConfig.cs' (206)
+2018-08-27 11:41:18: == Sync Complete. Time: 00:00:00, Speed: 0 字节/s, OK: 3, Errors: 0
+2018-08-27 11:41:18: 

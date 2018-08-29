@@ -1,0 +1,408 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,814                                   
+【线程编号】[7]                                   
+【执行时间】[431]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.01_20180816153048.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,815                                   
+【线程编号】[5]                                   
+【执行时间】[432]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.01_20180816105143.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,815                                   
+【线程编号】[4]                                   
+【执行时间】[432]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.01_20180816095325.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,815                                   
+【线程编号】[6]                                   
+【执行时间】[432]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.01_20180816150412.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,834                                   
+【线程编号】[7]                                   
+【执行时间】[451]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180817160249.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,835                                   
+【线程编号】[5]                                   
+【执行时间】[452]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180820111142.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,837                                   
+【线程编号】[4]                                   
+【执行时间】[454]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180820153337.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,844                                   
+【线程编号】[5]                                   
+【执行时间】[461]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180821104314.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,845                                   
+【线程编号】[4]                                   
+【执行时间】[462]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.03_20180822150605.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,845                                   
+【线程编号】[5]                                   
+【执行时间】[462]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.03_20180822160605.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,843                                   
+【线程编号】[6]                                   
+【执行时间】[460]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180820161740.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,843                                   
+【线程编号】[7]                                   
+【执行时间】[460]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180821101152.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,856                                   
+【线程编号】[7]                                   
+【执行时间】[473]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AE00063.00_20180817101602.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,858                                   
+【线程编号】[6]                                   
+【执行时间】[475]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AW00003.01_20180816143724.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,860                                   
+【线程编号】[4]                                   
+【执行时间】[477]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AW00003.01_20180816145533.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,862                                   
+【线程编号】[5]                                   
+【执行时间】[479]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AW00003.01_20180816151222.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:31:02,866                                   
+【线程编号】[7]                                   
+【执行时间】[483]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AW00004.01_20180820110659.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,110                                   
+【线程编号】[7]                                   
+【执行时间】[414]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.01_20180816153048.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,111                                   
+【线程编号】[6]                                   
+【执行时间】[415]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.01_20180816150412.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,111                                   
+【线程编号】[5]                                   
+【执行时间】[415]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.01_20180816105143.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,119                                   
+【线程编号】[4]                                   
+【执行时间】[423]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.01_20180816095325.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,130                                   
+【线程编号】[7]                                   
+【执行时间】[434]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180817160249.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,133                                   
+【线程编号】[5]                                   
+【执行时间】[437]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180820153337.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,136                                   
+【线程编号】[4]                                   
+【执行时间】[440]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180820161740.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,132                                   
+【线程编号】[6]                                   
+【执行时间】[436]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180820111142.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,138                                   
+【线程编号】[7]                                   
+【执行时间】[442]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180821101152.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,140                                   
+【线程编号】[4]                                   
+【执行时间】[444]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.03_20180822150605.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,139                                   
+【线程编号】[5]                                   
+【执行时间】[443]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.02_20180821104314.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,140                                   
+【线程编号】[6]                                   
+【执行时间】[444]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MC-CFR-01_AE00062.03_20180822160605.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,161                                   
+【线程编号】[7]                                   
+【执行时间】[465]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AE00063.00_20180817101602.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,163                                   
+【线程编号】[7]                                   
+【执行时间】[467]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AW00003.01_20180816143724.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,164                                   
+【线程编号】[6]                                   
+【执行时间】[468]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AW00003.01_20180816145533.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,165                                   
+【线程编号】[6]                                   
+【执行时间】[469]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AW00003.01_20180816151222.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-22 16:36:48,170                                   
+【线程编号】[7]                                   
+【执行时间】[474]毫秒                                   
+【出错文件】C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】20                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】MT-TFR-01_AW00004.01_20180820110659.csv:	格式错误，不包含列Collection Date Time/r/nAMSDCMDataTranslator/r/nSystem.Data.DataTable readCsvTxtWithColumnName(System.String)/r/n   在 AMSDCMDataTranslator.Helper.CsvHelper.readCsvTxtWithColumnName(String strpath) 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\CsvHelper.cs:行号 77
+   在 AMSDCMDataTranslator.FolderOperator.ReadFile() 位置 C:\Users\PUI\source\repos\AMSDCMDataTranslator\AMSDCMDataTranslator\FolderOperator.cs:行号 134                                   
+【错误详情】

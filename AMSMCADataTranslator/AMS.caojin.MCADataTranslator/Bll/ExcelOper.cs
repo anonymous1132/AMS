@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MCADataTranslator.Helper;
 using Microsoft.Office.Interop.Excel;
 using System.Data;
+using DataTable = System.Data.DataTable;
 
 namespace MCADataTranslator.Bll
 {
@@ -98,6 +99,10 @@ namespace MCADataTranslator.Bll
             Range rng = worksheet.Range["A"+(startrow+1).ToString(),"U"+(startrow+3).ToString()];
             excelHelper.SetFontSize(rng,12);
             excelHelper.SetFontStyle(rng, "Times New Roman");
+             rng = worksheet.Range["B" + (startrow + 1).ToString(), "U" + (startrow + 3).ToString()];
+            rng.Cells.ColumnWidth = 10;
+            rng = worksheet.Range["A" + (startrow + 1).ToString(), "A" + (startrow + 3).ToString()];
+            rng.Cells.ColumnWidth = 15;
             rng = (Range)worksheet.Cells[startrow+3,"A"];
             excelHelper.SetFontHVLeft(rng);
             rng= worksheet.Range["B" + (startrow + 3).ToString(), "U" + (startrow + 3).ToString()];
@@ -112,6 +117,48 @@ namespace MCADataTranslator.Bll
             excelHelper.SetRangeBodersThickness(rng,XlBorderWeight.xlThin);
             rng= worksheet.Range["A" + (startrow + 5).ToString(), "U" + (currentRow - 1).ToString()];
             excelHelper.SetRangeValueStyleNumber(rng);
+        }
+
+        public void PrintOneReportBlcok(ReportModelBlockType2 report)
+        {
+            int startrow = 21;
+            int currentrow = startrow;
+            foreach (ReportModelUnitType2 unit in report.repotunits)
+            {
+                List<string> elementlist = new List<string> { unit.EQP, unit.WaferID, unit.Na, unit.Al, unit.Ca, unit.Cr, unit.Fe, unit.Ni, unit.Cu, unit.Zn , "E10ats/cm2" };
+                for (int i = 1; i <=elementlist.Count ; i++)
+                {
+                    worksheet.Cells[currentrow, i] = elementlist[i - 1];
+                }
+                currentrow++;
+            }
+            //设置格式
+            Range rng = worksheet.Range["A" + startrow.ToString(), "K" + (currentrow-1).ToString()];
+            excelHelper.SetFontSize(rng, 12);
+            excelHelper.SetFontStyle(rng, "Times New Roman");
+            excelHelper.SetRangeBodersStyle(rng, 1);
+            excelHelper.SetRangeBodersThickness(rng, XlBorderWeight.xlThin);
+            excelHelper.SetFontHVCenter(rng);
+        }
+
+        public DataTable GetContentFromExcel()
+        {
+            DataTable dt = new DataTable();
+            int iRowCount = worksheet.UsedRange.Rows.Count;
+            int iColCount = worksheet.UsedRange.Columns.Count;
+            for (int i=0;i<iColCount;i++)
+            { dt.Columns.Add(); }
+            for (int iRow = 1; iRow <= iRowCount; iRow++)
+            {
+                DataRow dr = dt.NewRow();
+                for (int iCol = 1; iCol <= iColCount; iCol++)
+                {
+                  Range  range = worksheet.Cells[iRow, iCol];
+                    dr[iCol - 1] = (range.Value2 == null) ? "" : range.Text.ToString();
+                }
+                dt.Rows.Add(dr);
+            }
+            return dt;   
         }
 
     }

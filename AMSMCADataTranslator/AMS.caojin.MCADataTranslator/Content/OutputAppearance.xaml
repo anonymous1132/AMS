@@ -21,7 +21,7 @@
                     <Button Name="bt_query" Content="Query" Click="bt_query_Click" IsDefault="True"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 5 0 0" HorizontalAlignment="Center">
-                    <Button Name="bt_preview" Content="Preview Selected Items" Width="auto" Margin="0 0 10 0" Click="bt_preview_Click" Visibility="Collapsed"/>
+                    <!--<Button Name="bt_preview" Content="Preview Selected Items" Width="auto" Margin="0 0 10 0" Click="bt_preview_Click" Visibility="Collapsed"/>-->
                     <Button Name="bt_export" Content="Selected Items Report" Width="auto" Click="bt_export_Click" />
                 </StackPanel>
             </StackPanel>

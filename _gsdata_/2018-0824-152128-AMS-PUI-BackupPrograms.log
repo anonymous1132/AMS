@@ -1,0 +1,9 @@
+2018-08-24 15:21:29: -- Analysis Started by On File Change, After Delay
+2018-08-24 15:21:29: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4656
+2018-08-24 15:21:29: Left to Right: Copy File: 3 
+2018-08-24 15:21:29: == Sync Started by On File Change, After Delay
+2018-08-24 15:21:29: Create Folder '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/current'
+2018-08-24 15:21:29: Create Folder '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/history'
+2018-08-24 15:21:29: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (162,816)
+2018-08-24 15:21:29: == Sync Complete. Time: 00:00:00, Speed: 0 字节/s, OK: 3, Errors: 0
+2018-08-24 15:21:29: 

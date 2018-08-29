@@ -34,7 +34,7 @@ namespace MCADataTranslator.Bll
             if (string.IsNullOrEmpty(SampleComment.Trim())) { return; }
 
             SqlHelper sqlHelper = new SqlHelper();
-            string sql = "select * from MCA_ACE_DATA where SampleComment = '" + SampleComment + "' order by IndexNo";
+            string sql = "select * from AMS_MCA_ACE_DATA where SampleComment = '" + SampleComment + "' order by IndexNo";
             sqlHelper.getSomeDate(sql);
             if (sqlHelper.dt.DefaultView.Count <= 0) return;
             IList<ReportModelUnit> ilist = ModelConvertHelper<ReportModelUnit>.ConvertToModel(sqlHelper.dt);

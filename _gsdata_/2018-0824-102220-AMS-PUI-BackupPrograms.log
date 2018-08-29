@@ -1,0 +1,7 @@
+2018-08-24 10:22:21: -- Analysis Started by On File Change, After Delay
+2018-08-24 10:22:21: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4650
+2018-08-24 10:22:21: Left to Right: Copy File: 1 
+2018-08-24 10:22:21: == Sync Started by On File Change, After Delay
+2018-08-24 10:22:21: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (154,624)
+2018-08-24 10:22:21: == Sync Complete. Time: 00:00:00, Speed: 0 字节/s, OK: 1, Errors: 0
+2018-08-24 10:22:21: 

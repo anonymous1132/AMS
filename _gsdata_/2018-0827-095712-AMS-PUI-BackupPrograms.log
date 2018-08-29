@@ -1,0 +1,9 @@
+2018-08-27 09:57:13: -- Analysis Started by On File Change, After Delay
+2018-08-27 09:57:13: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4677
+2018-08-27 09:57:13: Left to Right: Copy File: 3 
+2018-08-27 09:57:13: == Sync Started by On File Change, After Delay
+2018-08-27 09:57:14: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (164,864)
+2018-08-27 09:57:14: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/logs/LogError/2018/201808/20180827.txt' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/logs/LogError/2018/201808/20180827.txt' (2,001)
+2018-08-27 09:57:14: Copy New 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/siff/AAAAAAAA2520180827095656.txt' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/siff/AAAAAAAA2520180827095656.txt' (7,385)
+2018-08-27 09:57:14: == Sync Complete. Time: 00:00:01, Speed: 176 KB/s, OK: 3, Errors: 0
+2018-08-27 09:57:14: 

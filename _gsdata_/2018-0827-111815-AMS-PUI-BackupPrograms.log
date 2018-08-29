@@ -1,0 +1,13 @@
+2018-08-27 11:18:16: -- Analysis Started by On File Change, After Delay
+2018-08-27 11:18:16: Changes: 7, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4681
+2018-08-27 11:18:16: Left to Right: Delete File: 7 
+2018-08-27 11:18:16: == Sync Started by On File Change, After Delay
+2018-08-27 11:18:16: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/siff/AAAAAAAA2520180824.txt'
+2018-08-27 11:18:16: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/siff/AAAAAAAA2520180824161158.txt'
+2018-08-27 11:18:16: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/siff/AAAAAAAA2520180824161439.txt'
+2018-08-27 11:18:16: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/siff/AAAAAAAA2520180827094448.txt'
+2018-08-27 11:18:16: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/siff/AAAAAAAA2520180827095656.txt'
+2018-08-27 11:18:16: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/siff/AAAAAAAA2520180827100913.txt'
+2018-08-27 11:18:16: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/wat_data/siff/AAAAAAAA2520180827102335.txt'
+2018-08-27 11:18:16: == Sync Complete. Time: 00:00:00, Speed: 0 字节/s, OK: 7, Errors: 0
+2018-08-27 11:18:16: 

@@ -1,0 +1,7 @@
+2018-08-27 10:38:16: -- Analysis Started by On File Change, After Delay
+2018-08-27 10:38:16: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4680
+2018-08-27 10:38:16: Left to Right: Copy File: 1 
+2018-08-27 10:38:16: == Sync Started by On File Change, After Delay
+2018-08-27 10:38:16: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest.cs' (1,625)
+2018-08-27 10:38:17: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 1, Errors: 0
+2018-08-27 10:38:17: 

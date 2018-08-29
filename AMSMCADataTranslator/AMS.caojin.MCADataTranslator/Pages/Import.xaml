@@ -9,9 +9,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Style="{StaticResource ContentRoot}">
-
-            <content:ImportAppearenceEnhanced   />
-            <mui:BBCodeBlock   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 50 0"  >Current Version:1.0.0.0   UpdateDate:2018/07/26
+        <mui:ModernTab SelectedSource="/Content/ImportAppearenceEnhanced.xaml" Layout="Tab">
+            <mui:ModernTab.Links>
+                <mui:Link DisplayName="Type1" Source="/Content/ImportAppearenceEnhanced.xaml" />
+                <mui:Link DisplayName="Type2" Source="/Content/ImportAppearanceType2.xaml" />
+            </mui:ModernTab.Links>
+        </mui:ModernTab>
+        <!--<content:ImportAppearenceEnhanced   />-->
+            <mui:BBCodeBlock   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 50 0"  >Current Version:1.2.0.0   UpdateDate:2018/08/08
             </mui:BBCodeBlock>
  
     </Grid>

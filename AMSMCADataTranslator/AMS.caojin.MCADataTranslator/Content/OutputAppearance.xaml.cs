@@ -31,13 +31,13 @@ namespace MCADataTranslator.Content
             switch (this.comb_title.SelectedIndex)
             {
                 case 0:
-                    sql = "select * from MCA_Pool order by UpdateDateTime";
+                    sql = "select * from MCA_Pool order by UpdateDateTime desc";
                     break;
                 case 1:
-                    sql = "select * from MCA_Pool where SampleComment like '%" + this.textbox_content.Text + "%' order by UpdateDateTime";
+                    sql = "select * from MCA_Pool where SampleComment like '%" + this.textbox_content.Text + "%' order by UpdateDateTime desc";
                     break;
                 case 2:
-                    sql = "select * from MCA_Pool where UpdateDateTime like '%" + this.textbox_content.Text + "%' order by UpdateDateTime";
+                    sql = "select * from MCA_Pool where UpdateDateTime like '%" + this.textbox_content.Text + "%' order by UpdateDateTime desc";
                     break;
             }
             sqlHelper.getSomeDate(sql);
@@ -61,11 +61,7 @@ namespace MCADataTranslator.Content
 
         }
 
-        private void bt_preview_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+  
         private void bt_export_Click(object sender, RoutedEventArgs e)
         {
             if (GetSelectItemsCount() <= 0) { return; }

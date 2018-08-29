@@ -1,0 +1,13 @@
+2018-08-27 11:31:37: -- Analysis Started by On File Change, After Delay
+2018-08-27 11:31:37: Changes: 7, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4683
+2018-08-27 11:31:37: Left to Right: Copy File: 7 
+2018-08-27 11:31:37: == Sync Started by On File Change, After Delay
+2018-08-27 11:31:37: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (163,840)
+2018-08-27 11:31:37: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.exe' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.exe' (6,656)
+2018-08-27 11:31:37: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.pdb' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.pdb' (15,872)
+2018-08-27 11:31:37: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csproj.CopyComplete' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csproj.CopyComplete' (0)
+2018-08-27 11:31:37: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.exe' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.exe' (6,656)
+2018-08-27 11:31:37: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.pdb' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.pdb' (15,872)
+2018-08-27 11:31:37: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/Program.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/Program.cs' (1,609)
+2018-08-27 11:31:38: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 7, Errors: 0
+2018-08-27 11:31:38: 
