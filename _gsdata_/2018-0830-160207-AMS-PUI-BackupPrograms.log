@@ -1,0 +1,26 @@
+2018-08-30 16:02:08: -- Analysis Started by On File Change, After Delay
+2018-08-30 16:02:09: Changes: 20, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7586
+2018-08-30 16:02:09: Left to Right: Copy File: 10 Delete File: 10 
+2018-08-30 16:02:09: == Sync Started by On File Change, After Delay
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/AMSDCMDataTranslator.exe'
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/AMSDCMDataTranslator.exe.config'
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/AMSDCMDataTranslator.pdb'
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/log4net.dll'
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/log4net.xml'
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/Renci.SshNet.dll'
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/EtestV2.cs'
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CopyComplete'
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.exe'
+2018-08-30 16:02:09: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.pdb'
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (182,784)
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/AMSDCMDataTranslator.csproj' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/AMSDCMDataTranslator.csproj' (6,155)
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/AMSWAT.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/AMSWAT.cs' (742)
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/AMSWATFileOperator.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/AMSWATFileOperator.cs' (779)
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest.cs' (1,478)
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/WATFileOperator.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/WATFileOperator.cs' (1,644)
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' (42)
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.FileListAbsolute.txt' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.FileListAbsolute.txt' (2,230)
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' (7,289)
+2018-08-30 16:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/Class1.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/Class1.cs' (328)
+2018-08-30 16:02:10: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 20, Errors: 0
+2018-08-30 16:02:10: 

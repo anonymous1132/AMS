@@ -1,0 +1,9 @@
+2018-08-29 17:43:11: -- Analysis Started by On File Change, After Delay
+2018-08-29 17:43:11: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7579
+2018-08-29 17:43:11: Left to Right: Copy File: 3 
+2018-08-29 17:43:11: == Sync Started by On File Change, After Delay
+2018-08-29 17:43:12: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (177,664)
+2018-08-29 17:43:12: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/EtestV2.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/EtestV2.cs' (1,294)
+2018-08-29 17:43:12: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/ISiffable.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/ISiffable.cs' (633)
+2018-08-29 17:43:12: == Sync Complete. Time: 00:00:01, Speed: 182 KB/s, OK: 3, Errors: 0
+2018-08-29 17:43:12: 

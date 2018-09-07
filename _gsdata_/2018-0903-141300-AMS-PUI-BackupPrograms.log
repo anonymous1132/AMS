@@ -1,0 +1,9 @@
+2018-09-03 14:13:01: -- Analysis Started by On File Change, After Delay
+2018-09-03 14:13:01: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7799
+2018-09-03 14:13:01: Left to Right: Copy File: 3 
+2018-09-03 14:13:01: == Sync Started by On File Change, After Delay
+2018-09-03 14:13:02: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (199,168)
+2018-09-03 14:13:02: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/TestConsoleProject.csproj' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/TestConsoleProject.csproj' (3,244)
+2018-09-03 14:13:02: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/TestParameter.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/TestParameter.cs' (466)
+2018-09-03 14:13:02: == Sync Complete. Time: 00:00:01, Speed: 202 KB/s, OK: 3, Errors: 0
+2018-09-03 14:13:02: 

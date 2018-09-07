@@ -1,0 +1,10 @@
+2018-08-30 17:20:35: -- Analysis Started by On File Change, After Delay
+2018-08-30 17:20:35: Changes: 4, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7595
+2018-08-30 17:20:35: Left to Right: Copy File: 4 
+2018-08-30 17:20:35: == Sync Started by On File Change, After Delay
+2018-08-30 17:20:35: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' (7,082)
+2018-08-30 17:20:35: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csproj.CoreCompileInputs.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csproj.CoreCompileInputs.cache' (42)
+2018-08-30 17:20:35: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csprojAssemblyReference.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csprojAssemblyReference.cache' (54,162)
+2018-08-30 17:20:35: Copy New 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/TestDcm.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/TestDcm.cs' (195)
+2018-08-30 17:20:36: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 4, Errors: 0
+2018-08-30 17:20:36: 

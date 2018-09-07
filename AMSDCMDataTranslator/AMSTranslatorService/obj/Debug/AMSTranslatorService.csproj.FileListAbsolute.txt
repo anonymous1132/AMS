@@ -21,7 +21,6 @@ D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\AMSTranslatorS
 D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\AMSTranslatorService.pdb
 D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\AMSDCMDataTranslator.exe
 D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\log4net.dll
-D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\AMSDCMDataTranslator.pdb
 D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\AMSDCMDataTranslator.exe.config
 D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\log4net.xml
@@ -32,3 +31,5 @@ D:\repository\AMSDCMDataTranslator\AMSTranslatorService\obj\Debug\AMSTranslatorS
 D:\repository\AMSDCMDataTranslator\AMSTranslatorService\obj\Debug\AMSTranslatorService.csproj.CopyComplete
 D:\repository\AMSDCMDataTranslator\AMSTranslatorService\obj\Debug\AMSTranslatorService.exe
 D:\repository\AMSDCMDataTranslator\AMSTranslatorService\obj\Debug\AMSTranslatorService.pdb
+D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\Renci.SshNet.dll
+D:\repository\AMSDCMDataTranslator\AMSTranslatorService\bin\Debug\Oracle.ManagedDataAccess.dll

@@ -1,0 +1,13 @@
+2018-08-31 17:34:42: -- Analysis Started by On File Change, After Delay
+2018-08-31 17:34:42: Changes: 7, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7776
+2018-08-31 17:34:42: Left to Right: Copy File: 7 
+2018-08-31 17:34:42: == Sync Started by On File Change, After Delay
+2018-08-31 17:34:43: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (198,144)
+2018-08-31 17:34:43: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/AMSDCMDataTranslator.csproj' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/AMSDCMDataTranslator.csproj' (6,430)
+2018-08-31 17:34:43: Copy New 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/HlcmWATRunner.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/HlcmWATRunner.cs' (212)
+2018-08-31 17:34:43: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' (42)
+2018-08-31 17:34:43: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' (7,299)
+2018-08-31 17:34:43: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/TestConsoleProject.csproj' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/TestConsoleProject.csproj' (3,158)
+2018-08-31 17:34:43: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/TestHlcm.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/TestHlcm.cs' (309)
+2018-08-31 17:34:43: == Sync Complete. Time: 00:00:01, Speed: 233 KB/s, OK: 7, Errors: 0
+2018-08-31 17:34:43: 

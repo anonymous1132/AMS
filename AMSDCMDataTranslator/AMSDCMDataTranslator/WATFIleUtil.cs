@@ -8,9 +8,9 @@ using System.IO;
 
 namespace AMSDCMDataTranslator
 {
-   public class WATFIleUtil
+   public class WATFileUtil
     {
-        public WATFIleUtil(string filePath)
+        public WATFileUtil(string filePath)
         {
             this.FilePath = filePath;
             GetData();
@@ -72,15 +72,16 @@ namespace AMSDCMDataTranslator
                         {
                             Wat.wafers.Add(wafer);
                         }
-                        wafer = new WATWafer();
                         wafer.WaferID = array[1];
                     }
                     if (array.Length > 3)
                     {
-                        WATParameter parameter = new WATParameter();
-                        parameter.ItemNo = array[0];
-                        parameter.ParameterName = array[1];
-                        parameter.unit = array[2];
+                        WATParameter parameter = new WATParameter
+                        {
+                            ItemNo = array[0],
+                            ParameterName = array[1],
+                            unit = array[2]
+                        };
                         for (int i = 3; i < array.Length; i++)
                         {
                             parameter.ValueList.Add(array[i]);

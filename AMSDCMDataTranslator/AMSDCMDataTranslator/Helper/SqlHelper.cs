@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
+using AMSDCMDataTranslator.Models;
 
 namespace AMSDCMDataTranslator.Helper
 {
@@ -14,25 +15,19 @@ namespace AMSDCMDataTranslator.Helper
         public SqlDataAdapter sda;
         public DataTable dt;
         SqlConnectionStringBuilder connbuilder = new SqlConnectionStringBuilder();
-        private void connect()
+        private void Connect()
         {
             //sqlconnection
-            //connbuilder.DataSource = "10.132.0.34";
-            //connbuilder.IntegratedSecurity = false;
-            //connbuilder.InitialCatalog = "ACEDB";
-            //connbuilder.UserID = "ams_ace";
-            //connbuilder.Password = "AMS@123456";
-            // connbuilder.ConnectTimeout = 3000;
-            connbuilder.DataSource = PUBLICSTRING.DataSource;
-            connbuilder.IntegratedSecurity = PUBLICSTRING.Security;
-            connbuilder.InitialCatalog = PUBLICSTRING.Catalog;
-            connbuilder.UserID = PUBLICSTRING.UserID;
-            connbuilder.Password = PUBLICSTRING.Password;
+            connbuilder.DataSource = DCMSetting.DataSource;
+            connbuilder.IntegratedSecurity = DCMSetting.Security;
+            connbuilder.InitialCatalog = DCMSetting.Catalog;
+            connbuilder.UserID = DCMSetting.UserID;
+            connbuilder.Password = DCMSetting.Password;
         }
 
-        public void getSomeDate(string sql)
+        public void GetSomeDate(string sql)
         {
-            connect();
+            Connect();
             SqlConnection conn = new SqlConnection(connbuilder.ConnectionString);
             sda = new SqlDataAdapter(sql, conn);
             this.dt = new DataTable();
@@ -46,14 +41,16 @@ namespace AMSDCMDataTranslator.Helper
             finally { conn.Close(); }
         }
 
-        public void getSomeData2(string sql, SqlParameter[] paraValues)
+        public void GetSomeData2(string sql, SqlParameter[] paraValues)
         {
-            connect();
+            Connect();
             SqlConnection conn = new SqlConnection(connbuilder.ConnectionString);
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = sql;
-            //cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Connection = conn;
+            SqlCommand cmd = new SqlCommand
+            {
+                CommandText = sql,
+                //cmd.CommandType = CommandType.StoredProcedure;
+                Connection = conn
+            };
             try
             {
                 conn.Open();
@@ -78,7 +75,7 @@ namespace AMSDCMDataTranslator.Helper
     {
         public DataTable dt;
 
-        public void getSomeDate(string sql)
+        public void GetSomeDate(string sql)
         {
 
             DB2Helper db2 = new DB2Helper();
@@ -94,9 +91,9 @@ namespace AMSDCMDataTranslator.Helper
 
         }
 
-        public void setSomeDate(string sql)
+        public void SetSomeDate(string sql)
         {
-            getSomeDate(sql);
+            GetSomeDate(sql);
         }
 
     }

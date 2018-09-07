@@ -23,7 +23,9 @@ namespace AMSTranslatorService
                 ServicesToRun = new ServiceBase[]
                 {
                      new DCMTransLateService(),
-                     new WATTranslateService()
+                     new WATTranslateService(),
+                     //new HlcmWATTranslateService()
+                     new InlineTranslateService()
                 };
                 ServiceBase.Run(ServicesToRun);
             }

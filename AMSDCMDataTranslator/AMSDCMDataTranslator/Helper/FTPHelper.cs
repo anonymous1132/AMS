@@ -100,7 +100,7 @@ namespace AMSDCMDataTranslator.Helper
                 response.Close();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
                 throw;
@@ -193,7 +193,7 @@ namespace AMSDCMDataTranslator.Helper
                 response.Close();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
                 throw;

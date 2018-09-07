@@ -1,0 +1,7 @@
+2018-08-29 16:19:47: -- Analysis Started by On File Change, After Delay
+2018-08-29 16:19:47: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7576
+2018-08-29 16:19:47: Left to Right: Copy File: 1 
+2018-08-29 16:19:47: == Sync Started by On File Change, After Delay
+2018-08-29 16:19:48: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/IFileOperable.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/IFileOperable.cs' (310)
+2018-08-29 16:19:48: == Sync Complete. Time: 00:00:01, Speed: 310 字节/s, OK: 1, Errors: 0
+2018-08-29 16:19:48: 

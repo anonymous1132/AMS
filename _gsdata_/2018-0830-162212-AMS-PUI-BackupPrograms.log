@@ -1,0 +1,11 @@
+2018-08-30 16:22:13: -- Analysis Started by On File Change, After Delay
+2018-08-30 16:22:13: Changes: 5, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7588
+2018-08-30 16:22:13: Left to Right: Copy File: 5 
+2018-08-30 16:22:13: == Sync Started by On File Change, After Delay
+2018-08-30 16:22:13: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (184,832)
+2018-08-30 16:22:13: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/AMSDCMDataTranslator.csproj' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/AMSDCMDataTranslator.csproj' (5,741)
+2018-08-30 16:22:13: Copy New 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/DCMFileOperator.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/DCMFileOperator.cs' (221)
+2018-08-30 16:22:13: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' (42)
+2018-08-30 16:22:13: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' (7,166)
+2018-08-30 16:22:14: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 5, Errors: 0
+2018-08-30 16:22:14: 

@@ -15,20 +15,7 @@ namespace AMSDCMDataTranslator
             FilePath = filePath;
             GetData();
         }
-
-        private string _filePath;
-        public string FilePath
-        {
-            get { return _filePath; }
-            set
-            {
-                if (File.Exists(value))
-                {
-                    _filePath = value;
-                }
-                else { _filePath = null; return; }
-            }
-        }
+        public string FilePath { get; set; }
 
         public List<WATSpecData> datalist;
 
@@ -37,7 +24,11 @@ namespace AMSDCMDataTranslator
             if (string.IsNullOrEmpty(FilePath))
             {
                 datalist = null;
-                return;
+                throw new Exception("SpecFile文件路径为空");
+            }
+            if (!File.Exists(FilePath))
+            {
+                throw new Exception("SpecFile:\t"+FilePath+"\t文件不存在");
             }
             datalist = new List<WATSpecData>();
             StreamReader sr = new StreamReader(FilePath, Encoding.Default);

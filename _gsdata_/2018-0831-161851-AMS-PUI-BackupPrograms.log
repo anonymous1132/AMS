@@ -1,0 +1,7 @@
+2018-08-31 16:18:52: -- Analysis Started by On File Change, After Delay
+2018-08-31 16:18:53: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7770
+2018-08-31 16:18:53: Left to Right: Copy File: 1 
+2018-08-31 16:18:53: == Sync Started by On File Change, After Delay
+2018-08-31 16:18:53: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/HlcmWAT.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/HlcmWAT.cs' (3,960)
+2018-08-31 16:18:53: == Sync Complete. Time: 00:00:00, Speed: 0 字节/s, OK: 1, Errors: 0
+2018-08-31 16:18:53: 

@@ -9,15 +9,14 @@ using System.IO;
 using System.Collections;
 using System.Diagnostics;
 using Oracle.ManagedDataAccess.Types;
+using AMSDCMDataTranslator.Models;
 
 namespace AMSDCMDataTranslator.Helper
 {
-    class OracleHelper
+   public class OracleHelper
     {
-        private static string connStr =string.Format("User Id={0};Password={1};Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST={2})(PORT={3})))(CONNECT_DATA=(SERVICE_NAME={4})))",PUBLICSTRING.UserID,PUBLICSTRING.Password,PUBLICSTRING.DataSource,PUBLICSTRING.Port,PUBLICSTRING.Catalog);
-       // private static string connStr = "User Id=ace_loader;Password=KT4LOADER;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.132.0.38)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=acexp)))";
-
-
+        private static string connStr = string.Format("User Id={0};Password={1};Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST={2})(PORT={3})))(CONNECT_DATA=(SERVICE_NAME={4})))", ACEDBSetting.UserID, ACEDBSetting.Password, ACEDBSetting.HostName, ACEDBSetting.Port, ACEDBSetting.ServerName);
+       
         #region 执行SQL语句,返回受影响行数
         public static int ExecuteNonQuery(string sql, params OracleParameter[] parameters)
         {
@@ -36,7 +35,7 @@ namespace AMSDCMDataTranslator.Helper
 
         public static int ExecuteNonQuery(string sql)
         {
-            return ExecuteNonQuery(sql,new OracleParameter());
+            return ExecuteNonQuery(sql, new OracleParameter());
         }
 
 
@@ -61,7 +60,7 @@ namespace AMSDCMDataTranslator.Helper
 
         public static DataTable ExecuteDataTable(string sql)
         {
-            return ExecuteDataTable(sql,new OracleParameter());
+            return ExecuteDataTable(sql, new OracleParameter());
 
         }
     }

@@ -9,18 +9,8 @@ using System.Xml;
 
 namespace AMSDCMDataTranslator.Models
 {
-   public class Etest
+   public abstract class Etest:ISiffable
     {
-        public Etest(WAT wAT,List<WATSpecData>specDatas )
-        {
-            this.wat = wAT;
-            this.specs = specDatas;
-            GetDate();
-        }
-
-        private WAT wat;
-
-        private List<WATSpecData>specs;
 
         public string DataSource
         {
@@ -34,23 +24,25 @@ namespace AMSDCMDataTranslator.Models
 
         public Etest_Lot_Run lot_run;
 
-        private void GetDate()
-        {
-            this.lot_run = new Etest_Lot_Run();
-            lot_run.GetData(wat,specs);
-        }
+        public abstract void GetData(string filePath,string specPath);
 
-        public string WriteSiffFile(string filePath)
+        /// <summary>
+        /// 生成siff，
+        /// </summary>
+        /// <param name="filePath">siffPath</param>
+        /// <returns>SiffFileName</returns>
+        public string WriteSiff(string filePath)
         {
             CultureInfo cultureInfo = CultureInfo.CreateSpecificCulture("en-US");
-            string siff_file_name = wat.LotID + wat.TestWafer + DateTime.Now.ToString("yyyyMMddHHmmss")+".txt";
-            XmlDocument document= XmlHelper.CreateXmlDocument("ADB_DOCUMENT",DataSource,FormatVersion);
+            string siff_file_name = lot_run.Lot+  DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt";
+            XmlDocument document = XmlHelper.CreateXmlDocument("ADB_DOCUMENT", DataSource, FormatVersion);
             XmlNode xn = document.SelectSingleNode("/ADB_DOCUMENT");
-            XmlNode xn2= document.CreateElement("ETEST_LOT_RUN");
+            XmlNode xn2 = document.CreateElement("ETEST_LOT_RUN");
             xn2 = lot_run.SetLotRunNode(xn2);
             xn.AppendChild(xn2);
-            document.Save(filePath+"\\"+siff_file_name);
-            return  siff_file_name;
+            document.Save(filePath + "\\" + siff_file_name);
+            return siff_file_name;
         }
+
     }
 }

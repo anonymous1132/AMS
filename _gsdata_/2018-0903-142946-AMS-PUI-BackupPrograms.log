@@ -1,0 +1,17 @@
+2018-09-03 14:29:47: -- Analysis Started by On File Change, After Delay
+2018-09-03 14:29:47: Changes: 11, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7810
+2018-09-03 14:29:47: Left to Right: Copy File: 11 
+2018-09-03 14:29:47: == Sync Started by On File Change, After Delay
+2018-09-03 14:29:48: Create Folder '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/Tools'
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSDCMDataTranslator.exe' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSDCMDataTranslator.exe' (94,720)
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSDCMDataTranslator.exe.config' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSDCMDataTranslator.exe.config' (9,050)
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSDCMDataTranslator.pdb' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSDCMDataTranslator.pdb' (273,920)
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSTranslatorService.exe' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSTranslatorService.exe' (10,752)
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSTranslatorService.exe.config' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSTranslatorService.exe.config' (191)
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSTranslatorService.pdb' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/AMSTranslatorService.pdb' (34,304)
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/log4net.dll' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/log4net.dll' (276,480)
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/log4net.xml' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/log4net.xml' (1,547,797)
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/Renci.SshNet.dll' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/Renci.SshNet.dll' (466,432)
+2018-09-03 14:29:48: Copy New 'D:/repository/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/Tools/InstallUtil.exe' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSTranslatorService/bin/Release/Tools/InstallUtil.exe' (41,056)
+2018-09-03 14:29:49: == Sync Complete. Time: 00:00:02, Speed: 2.64 MB/s, OK: 11, Errors: 0
+2018-09-03 14:29:49: 

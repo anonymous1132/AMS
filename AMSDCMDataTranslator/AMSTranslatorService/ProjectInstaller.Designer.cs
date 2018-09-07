@@ -31,33 +31,50 @@
             this.serviceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
             this.serviceInstaller1 = new System.ServiceProcess.ServiceInstaller();
             this.serviceInstaller2 = new System.ServiceProcess.ServiceInstaller();
+            this.serviceInstaller3 = new System.ServiceProcess.ServiceInstaller();
+            this.serviceInstaller4 = new System.ServiceProcess.ServiceInstaller();
             // 
             // serviceProcessInstaller1
             // 
-            this.serviceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
-            this.serviceProcessInstaller1.Password = null;
-            this.serviceProcessInstaller1.Username = null;
+            this.serviceProcessInstaller1.Password = "amsc@2018";
+            this.serviceProcessInstaller1.Username = ".\\Administrator";
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.Description = "AMSDCMTranslator Service";
-            this.serviceInstaller1.DisplayName = "DCMTranslator Service";
-            this.serviceInstaller1.ServiceName = "DCMTranslatorService";
+            this.serviceInstaller1.Description = "AMSDCMTranslate Service";
+            this.serviceInstaller1.DisplayName = "DCMTranslate Service";
+            this.serviceInstaller1.ServiceName = "DCMTranslateService";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // serviceInstaller2
             // 
+            this.serviceInstaller2.Description = "AMSWATTranslate Service";
+            this.serviceInstaller2.DisplayName = "WATTranslate Service";
             this.serviceInstaller2.ServiceName = "WATTranslateService";
-            this.serviceInstaller2.Description = "AMSWATTranslator Service";
-            this.serviceInstaller2.DisplayName = "WATTranslatorService";
-            this.serviceInstaller2.StartType= System.ServiceProcess.ServiceStartMode.Automatic;
+            this.serviceInstaller2.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            // 
+            // serviceInstaller3
+            // 
+            this.serviceInstaller3.Description = "HlcmWATTranslate Service";
+            this.serviceInstaller3.DisplayName = "HlcmTranslate Service";
+            this.serviceInstaller3.ServiceName = "HlcmTranslateService";
+            this.serviceInstaller3.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            // 
+            // serviceInstaller4
+            // 
+            this.serviceInstaller4.Description = "MesInlineTranslate Service";
+            this.serviceInstaller4.DisplayName = "InlineTranslate Service";
+            this.serviceInstaller4.ServiceName = "InlineTranslateService";
+            this.serviceInstaller4.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
             this.serviceProcessInstaller1,
             this.serviceInstaller1,
-            this.serviceInstaller2});
+            this.serviceInstaller2,
+            this.serviceInstaller3,
+            this.serviceInstaller4});
 
         }
 
@@ -66,5 +83,7 @@
         private System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
         private System.ServiceProcess.ServiceInstaller serviceInstaller1;
         private System.ServiceProcess.ServiceInstaller serviceInstaller2;
+        private System.ServiceProcess.ServiceInstaller serviceInstaller3;
+        private System.ServiceProcess.ServiceInstaller serviceInstaller4;
     }
 }

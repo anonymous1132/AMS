@@ -1,0 +1,423 @@
+ERS: 'S6F11' W /* Name=EventReportSend Dir=1 Header=[00 00 86 0B 00 00 00 00 0B FF 00] Rcvd=2 Time=16:07:SS TID=184 */
+    <L [3]
+        <U4 [1] 1770 > /* Name= */
+        <U4 [1] 201 > /* Name=DataCollection_WaferProcessData */
+        <L [...]
+            <L [2]
+                <U4 [1] 15 > /* Name=Rpt_DataCollection */
+                <L [...]
+                    <L [3]
+                        <L [2]
+                            <A [20] 'Message Header Frame' > /* MappedValue=Message Header Frame Name= */
+                            <L [18]
+                                <L [2]
+                                    <A [13] 'Cassette Name' > /* MappedValue=Cassette Name Name= */
+                                    <A [40] 'MMTFR_OX_13PTHK_V01                     ' > /* MappedValue=MMTFR_OX_13PTHK_V01                      Name= */
+                                 >
+                                <L [2]
+                                    <A [11] 'Recipe Name' > /* MappedValue=Recipe Name Name= */
+                                    <A [40] 'MMTFR_OX_13PTHK_V01                     ' > /* MappedValue=MMTFR_OX_13PTHK_V01                      Name= */
+                                 >
+                                <L [2]
+                                    <A [9] 'Test TYPE' > /* MappedValue=Test TYPE Name= */
+                                    <A [20] 'QUICK TEST OPERATION' > /* MappedValue=QUICK TEST OPERATION Name= */
+                                 >
+                                <L [2]
+                                    <A [11] 'Description' > /* MappedValue=Description Name= */
+                                    <A [40] '                                        ' > /* Name= */
+                                 >
+                                <L [2]
+                                    <A [6] 'Lot ID' > /* MappedValue=Lot ID Name= */
+                                    <A [20] 'AE00036.00          ' > /* MappedValue=AE00036.00           Name= */
+                                 >
+                                <L [2]
+                                    <A [7] 'Slot ID' > /* MappedValue=Slot ID Name= */
+                                    <A [20] '1                   ' > /* MappedValue=1                    Name= */
+                                 >
+                                <L [2]
+                                    <A [11] 'Cassette ID' > /* MappedValue=Cassette ID Name= */
+                                    <A [20] 'P1                  ' > /* MappedValue=P1                   Name= */
+                                 >
+                                <L [2]
+                                    <A [8] 'Wafer ID' > /* MappedValue=Wafer ID Name= */
+                                    <A [20] 'AE00036.00.01       ' > /* MappedValue=AE00036.00.01        Name= */
+                                 >
+                                <L [2]
+                                    <A [12] 'Process Date' > /* MappedValue=Process Date Name= */
+                                    <A [20] '07132018            ' > /* MappedValue=07132018             Name= */
+                                 >
+                                <L [2]
+                                    <A [12] 'Process Time' > /* MappedValue=Process Time Name= */
+                                    <A [20] '162632              ' > /* MappedValue=162632               Name= */
+                                 >
+                                <L [2]
+                                    <A [8] 'Run Date' > /* MappedValue=Run Date Name= */
+                                    <A [20] '07132018            ' > /* MappedValue=07132018             Name= */
+                                 >
+                                <L [2]
+                                    <A [8] 'Run Time' > /* MappedValue=Run Time Name= */
+                                    <A [20] '162506              ' > /* MappedValue=162506               Name= */
+                                 >
+                                <L [2]
+                                    <A [15] 'Collection Date' > /* MappedValue=Collection Date Name= */
+                                    <A [20] '07132018            ' > /* MappedValue=07132018             Name= */
+                                 >
+                                <L [2]
+                                    <A [15] 'Collection Time' > /* MappedValue=Collection Time Name= */
+                                    <A [20] '162632              ' > /* MappedValue=162632               Name= */
+                                 >
+                                <L [2]
+                                    <A [10] 'Film Stack' > /* MappedValue=Film Stack Name= */
+                                    <U2 [1] 0 > /* Name= */
+                                 >
+                                <L [2]
+                                    <A [15] 'Film Stack Name' > /* MappedValue=Film Stack Name Name= */
+                                    <A [40] 'Film Stack                              ' > /* MappedValue=Film Stack                               Name= */
+                                 >
+                                <L [2]
+                                    <A [9] 'Run Count' > /* MappedValue=Run Count Name= */
+                                    <U2 [1] 0 > /* Name= */
+                                 >
+                                <L [2]
+                                    <A [9] 'Recipe ID' > /* MappedValue=Recipe ID Name= */
+                                    <U4 [1] 1935 > /* Name= */
+                                 >
+                             >
+                         >
+                        <L [2]
+                            <A [30] 'Aggregate DataSet Header Frame' > /* MappedValue=Aggregate DataSet Header Frame Name= */
+                            <L [5]
+                                <L [2]
+                                    <A [10] 'ADS Set ID' > /* MappedValue=ADS Set ID Name= */
+                                    <U4 [1] 68378 > /* Name= */
+                                 >
+                                <L [2]
+                                    <A [13] 'Number of IDS' > /* MappedValue=Number of IDS Name= */
+                                    <U2 [1] 2 > /* Name= */
+                                 >
+                                <L [2]
+                                    <A [15] 'Number of Sites' > /* MappedValue=Number of Sites Name= */
+                                    <U2 [1] 13 > /* Name= */
+                                 >
+                                <L [2]
+                                    <A [17] 'Location of Sites' > /* MappedValue=Location of Sites Name= */
+                                    <L [13]
+                                        <F8 [2]  0 0  > /* Name= */
+                                        <F8 [2]  -33989.3410205841 -33989.3410205841  > /* Name= */
+                                        <F8 [2]  -33989.3410205841 33989.3410205841  > /* Name= */
+                                        <F8 [2]  33989.3410205841 33989.3410205841  > /* Name= */
+                                        <F8 [2]  33989.3410205841 -33989.3410205841  > /* Name= */
+                                        <F8 [2]  0 -95990.9995794296  > /* Name= */
+                                        <F8 [2]  -95990.9995794296 0  > /* Name= */
+                                        <F8 [2]  0 95990.9995794296  > /* Name= */
+                                        <F8 [2]  95990.9995794296 0  > /* Name= */
+                                        <F8 [2]  -101866.586744785 -101866.586744785  > /* Name= */
+                                        <F8 [2]  -101866.586744785 101866.586744785  > /* Name= */
+                                        <F8 [2]  101866.586744785 101866.586744785  > /* Name= */
+                                        <F8 [2]  101866.586744785 -101866.586744785  > /* Name= */
+                                     >
+                                 >
+                                <L [2]
+                                    <A [16] 'Number of values' > /* MappedValue=Number of values Name= */
+                                    <U2 [1] 2 > /* Name= */
+                                 >
+                             >
+                         >
+                        <L [2]
+                            <A [24] 'Individual DataSet Frame' > /* MappedValue=Individual DataSet Frame Name= */
+                            <L [2]
+                                <L [3]
+                                    <L [2]
+                                        <A [22] 'Individual DataSet #01' > /* MappedValue=Individual DataSet #01 Name= */
+                                        <L [4]
+                                            <L [2]
+                                                <A [6] 'IDS ID' > /* MappedValue=IDS ID Name= */
+                                                <U4 [1] 68378 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [10] 'Layer Type' > /* MappedValue=Layer Type Name= */
+                                                <I2 [1] 1 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [11] 'Result Type' > /* MappedValue=Result Type Name= */
+                                                <U2 [1] 1 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [14] 'Sub Value Type' > /* MappedValue=Sub Value Type Name= */
+                                                <U2 [1] 1 > /* Name= */
+                                             >
+                                         >
+                                     >
+                                    <L [2]
+                                        <A [17] 'Statistic Summary' > /* MappedValue=Statistic Summary Name= */
+                                        <L [5]
+                                            <L [2]
+                                                <A [4] 'Mean' > /* MappedValue=Mean Name= */
+                                                <F4 [1] 1004.552 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [7] 'Std Dev' > /* MappedValue=Std Dev Name= */
+                                                <F4 [1] 0.696905 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [7] 'Maximum' > /* MappedValue=Maximum Name= */
+                                                <F4 [1] 1017.232 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [7] 'Minimum' > /* MappedValue=Minimum Name= */
+                                                <F4 [1] 996.7728 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [20] 'Number Of Good Sites' > /* MappedValue=Number Of Good Sites Name= */
+                                                <U2 [1] 13 > /* Name= */
+                                             >
+                                         >
+                                     >
+                                    <L [2]
+                                        <A [14] 'RAW Data Frame' > /* MappedValue=RAW Data Frame Name= */
+                                        <L [26]
+                                            <L [1]
+                                                <F4 [1] 996.7728 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01538928 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 998.5648 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01541114 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 998.0837 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01539584 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 997.234 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01540095 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 997.8644 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01540561 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 1003.776 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01538759 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 1006.649 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.0153736 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 1002.42 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01538623 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 1003.752 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01539619 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 1011.56 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01536823 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 1017.232 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01532423 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 1013.327 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01535421 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 1011.939 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.01534204 > /* Name= */
+                                             >
+                                         >
+                                     >
+                                 >
+                                <L [3]
+                                    <L [2]
+                                        <A [22] 'Individual DataSet #02' > /* MappedValue=Individual DataSet #02 Name= */
+                                        <L [4]
+                                            <L [2]
+                                                <A [6] 'IDS ID' > /* MappedValue=IDS ID Name= */
+                                                <U4 [1] 68379 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [10] 'Layer Type' > /* MappedValue=Layer Type Name= */
+                                                <I2 [1] -9999 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [11] 'Result Type' > /* MappedValue=Result Type Name= */
+                                                <U2 [1] 24 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [14] 'Sub Value Type' > /* MappedValue=Sub Value Type Name= */
+                                                <U2 [1] 1 > /* Name= */
+                                             >
+                                         >
+                                     >
+                                    <L [2]
+                                        <A [17] 'Statistic Summary' > /* MappedValue=Statistic Summary Name= */
+                                        <L [5]
+                                            <L [2]
+                                                <A [4] 'Mean' > /* MappedValue=Mean Name= */
+                                                <F4 [1] 0.9908805 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [7] 'Std Dev' > /* MappedValue=Std Dev Name= */
+                                                <F4 [1] 0.01161843 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [7] 'Maximum' > /* MappedValue=Maximum Name= */
+                                                <F4 [1] 0.9910369 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [7] 'Minimum' > /* MappedValue=Minimum Name= */
+                                                <F4 [1] 0.9905902 > /* Name= */
+                                             >
+                                            <L [2]
+                                                <A [20] 'Number Of Good Sites' > /* MappedValue=Number Of Good Sites Name= */
+                                                <U2 [1] 13 > /* Name= */
+                                             >
+                                         >
+                                     >
+                                    <L [2]
+                                        <A [14] 'RAW Data Frame' > /* MappedValue=RAW Data Frame Name= */
+                                        <L [26]
+                                            <L [1]
+                                                <F4 [1] 0.9909737 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9909307 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.990854 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9907963 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9908971 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9908713 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9909683 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9910369 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9908067 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9905902 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9909973 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9909034 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0.9908205 > /* Name= */
+                                             >
+                                            <L [1]
+                                                <F4 [1] 0 > /* Name= */
+                                             >
+                                         >
+                                     >
+                                 >
+                             >
+                         >
+                     >
+                    <L [2]
+                        <A [13] 'OperatorInput' > /* MappedValue=OperatorInput Name= */
+                        <L [5]
+                            <L [2]
+                                <A [11] 'Test Status' > /* MappedValue=Test Status Name= */
+                                <A [0] > /* Name= */
+                             >
+                            <L [2]
+                                <A [12] 'Equipment ID' > /* MappedValue=Equipment ID Name= */
+                                <A [0] > /* Name= */
+                             >
+                            <L [2]
+                                <A [11] 'Operator ID' > /* MappedValue=Operator ID Name= */
+                                <A [0] > /* Name= */
+                             >
+                            <L [2]
+                                <A [7] 'Process' > /* MappedValue=Process Name= */
+                                <A [8] 'EAP00172' > /* MappedValue=EAP00172 Name= */
+                             >
+                            <L [2]
+                                <A [5] 'Shift' > /* MappedValue=Shift Name= */
+                                <A [0] > /* Name= */
+                             >
+                         >
+                     >
+                 >
+             >
+         >
+     >
+.

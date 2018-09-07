@@ -1,9 +1,0 @@
-2018-08-24 08:52:34: -- Analysis Started by On File Change, After Delay
-2018-08-24 08:52:34: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4650
-2018-08-24 08:52:34: Left to Right: Copy File: 3 
-2018-08-24 08:52:34: == Sync Started by On File Change, After Delay
-2018-08-24 08:52:34: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (162,304)
-2018-08-24 08:52:34: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest_Lot_Run.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest_Lot_Run.cs' (2,637)
-2018-08-24 08:52:34: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest_Wafer_Run.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/Etest_Wafer_Run.cs' (1,571)
-2018-08-24 08:52:35: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 3, Errors: 0
-2018-08-24 08:52:35: 

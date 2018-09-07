@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AMSDCMDataTranslator.Helper;
+using AMSDCMDataTranslator.Models;
 
 namespace AMSDCMDataTranslator
 {
@@ -14,28 +15,18 @@ namespace AMSDCMDataTranslator
         /// <summary>
         /// WAT转换主线程
         /// </summary>
-        /// <param name="config">WAT配置信息</param>
-        public static void Run(WATRunningConfig config)
+        public static void Run()
         {
             LogHelper.WATInfoLog("开始执行WATTranslator");
-            WATFileOperator fileOperator = new WATFileOperator();
-            WATFileOperator.DIRPATH = config.DirPath;
-            WATFileOperator.LOCALPATH = config.LocalPath;
-            WATFileOperator.WORKINGPATH = config.WorkingPath;
-            WATFileOperator.SPECPATH = config.SpecPath;
-            WATFileOperator.SIFFPATH = config.SiffPath;
-            WATFileOperator.SIFFHISTORYPATH = config.SiffHistoryPath;
-            FtpOperator.FtpServerIP = config.FtpServerIP;
-            FtpOperator.FtpUserID = config.FtpUserID;
-            FtpOperator.FtpPassword = config.FtpPassword;
-            FtpOperator.FtpUri = config.FtpUri;
+            AMSWAT wat = new AMSWAT();
+            AMSWATFileOperator fileOperator = new AMSWATFileOperator(wat);
             try
             {
-                fileOperator.ReadFiles();
+                fileOperator.OperateFiles();
             }
             catch (Exception e)
             {
-                LogHelper.ErrorLog("WAT:\t",e);
+                LogHelper.ErrorLog("WAT:\t", e);
             }
             LogHelper.WATInfoLog("WATTranslator执行完毕");
         }

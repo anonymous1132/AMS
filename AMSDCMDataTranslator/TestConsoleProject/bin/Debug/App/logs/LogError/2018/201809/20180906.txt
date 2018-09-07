@@ -1,0 +1,704 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:45,875                                   
+【线程编号】[7]                                   
+【执行时间】[12111]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2063,437,0,to_date('2018/8/16 9:53:27','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:45,922                                   
+【线程编号】[7]                                   
+【执行时间】[12158]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2063,440,0,to_date('2018/8/16 10:51:45','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:45,955                                   
+【线程编号】[7]                                   
+【执行时间】[12191]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2063,441,0,to_date('2018/8/16 10:51:45','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:45,987                                   
+【线程编号】[9]                                   
+【执行时间】[12223]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,1765,447,0,to_date('2018/8/16 14:37:24','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,021                                   
+【线程编号】[7]                                   
+【执行时间】[12257]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,1765,448,0,to_date('2018/8/16 14:37:24','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,052                                   
+【线程编号】[9]                                   
+【执行时间】[12288]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,1765,447,0,to_date('2018/8/16 14:55:33','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,339                                   
+【线程编号】[7]                                   
+【执行时间】[12575]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,1765,448,0,to_date('2018/8/16 14:55:33','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,384                                   
+【线程编号】[7]                                   
+【执行时间】[12620]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2063,436,0,to_date('2018/8/16 15:04:14','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,421                                   
+【线程编号】[7]                                   
+【执行时间】[12657]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2063,437,0,to_date('2018/8/16 15:04:14','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,460                                   
+【线程编号】[7]                                   
+【执行时间】[12696]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,1765,447,0,to_date('2018/8/16 15:12:23','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,490                                   
+【线程编号】[7]                                   
+【执行时间】[12726]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,1765,448,0,to_date('2018/8/16 15:12:23','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,522                                   
+【线程编号】[9]                                   
+【执行时间】[12758]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2063,440,0,to_date('2018/8/16 15:30:50','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,553                                   
+【线程编号】[7]                                   
+【执行时间】[12789]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2063,441,0,to_date('2018/8/16 15:30:50','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,628                                   
+【线程编号】[9]                                   
+【执行时间】[12864]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (56,1784,422,0,to_date('2018/8/17 10:16:04','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,658                                   
+【线程编号】[7]                                   
+【执行时间】[12894]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (56,1784,423,0,to_date('2018/8/17 10:16:04','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,693                                   
+【线程编号】[7]                                   
+【执行时间】[12929]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,436,0,to_date('2018/8/17 16:02:51','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,727                                   
+【线程编号】[9]                                   
+【执行时间】[12963]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,437,0,to_date('2018/8/17 16:02:51','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,758                                   
+【线程编号】[7]                                   
+【执行时间】[12994]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2090,437,0,to_date('2018/8/17 16:02:51','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,791                                   
+【线程编号】[7]                                   
+【执行时间】[13027]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,2027,447,0,to_date('2018/8/20 11:07:00','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,825                                   
+【线程编号】[7]                                   
+【执行时间】[13061]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,2027,448,0,to_date('2018/8/20 11:07:00','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,857                                   
+【线程编号】[7]                                   
+【执行时间】[13093]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,440,0,to_date('2018/8/20 11:11:43','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,889                                   
+【线程编号】[7]                                   
+【执行时间】[13125]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,441,0,to_date('2018/8/20 11:11:43','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,920                                   
+【线程编号】[7]                                   
+【执行时间】[13156]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,436,0,to_date('2018/8/20 15:33:39','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,954                                   
+【线程编号】[7]                                   
+【执行时间】[13190]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,437,0,to_date('2018/8/20 15:33:39','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:46,986                                   
+【线程编号】[9]                                   
+【执行时间】[13222]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,440,0,to_date('2018/8/20 16:17:43','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,017                                   
+【线程编号】[7]                                   
+【执行时间】[13253]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,441,0,to_date('2018/8/20 16:17:43','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,049                                   
+【线程编号】[9]                                   
+【执行时间】[13285]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,436,0,to_date('2018/8/21 10:11:53','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,080                                   
+【线程编号】[7]                                   
+【执行时间】[13316]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,437,0,to_date('2018/8/21 10:11:53','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,111                                   
+【线程编号】[7]                                   
+【执行时间】[13347]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,440,0,to_date('2018/8/21 10:43:15','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,142                                   
+【线程编号】[7]                                   
+【执行时间】[13378]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2065,441,0,to_date('2018/8/21 10:43:15','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,176                                   
+【线程编号】[7]                                   
+【执行时间】[13412]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2066,436,0,to_date('2018/8/22 15:06:07','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,207                                   
+【线程编号】[7]                                   
+【执行时间】[13443]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2066,437,0,to_date('2018/8/22 15:06:07','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,240                                   
+【线程编号】[7]                                   
+【执行时间】[13476]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (82,2066,440,0,to_date('2018/8/22 16:06:07','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,318                                   
+【线程编号】[7]                                   
+【执行时间】[13554]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (56,1856,422,0,to_date('2018/8/24 9:52:41','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,354                                   
+【线程编号】[7]                                   
+【执行时间】[13590]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (56,1856,423,0,to_date('2018/8/24 9:52:41','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,407                                   
+【线程编号】[7]                                   
+【执行时间】[13643]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2035,479,0,to_date('2018/8/27 10:42:44','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,441                                   
+【线程编号】[7]                                   
+【执行时间】[13677]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2035,480,0,to_date('2018/8/27 10:42:44','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,474                                   
+【线程编号】[7]                                   
+【执行时间】[13710]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2042,479,0,to_date('2018/8/27 10:53:20','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,506                                   
+【线程编号】[7]                                   
+【执行时间】[13742]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2042,480,0,to_date('2018/8/27 10:53:20','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,539                                   
+【线程编号】[7]                                   
+【执行时间】[13775]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (81,1975,485,0,to_date('2018/8/27 11:33:25','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,572                                   
+【线程编号】[7]                                   
+【执行时间】[13808]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (81,1975,487,0,to_date('2018/8/27 11:33:25','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,622                                   
+【线程编号】[9]                                   
+【执行时间】[13858]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2035,479,0,to_date('2018/8/29 9:53:35','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,656                                   
+【线程编号】[9]                                   
+【执行时间】[13892]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2035,480,0,to_date('2018/8/29 9:53:35','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,688                                   
+【线程编号】[7]                                   
+【执行时间】[13924]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2042,479,0,to_date('2018/8/29 10:07:54','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,751                                   
+【线程编号】[7]                                   
+【执行时间】[13987]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2042,480,0,to_date('2018/8/29 10:07:54','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,788                                   
+【线程编号】[7]                                   
+【执行时间】[14024]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2035,496,0,to_date('2018/8/29 10:41:01','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,824                                   
+【线程编号】[7]                                   
+【执行时间】[14060]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2035,497,0,to_date('2018/8/29 10:41:01','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,858                                   
+【线程编号】[7]                                   
+【执行时间】[14094]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2042,496,0,to_date('2018/8/29 10:52:44','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,890                                   
+【线程编号】[7]                                   
+【执行时间】[14126]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2042,497,0,to_date('2018/8/29 10:52:44','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,922                                   
+【线程编号】[7]                                   
+【执行时间】[14158]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (85,2046,501,0,to_date('2018/8/30 14:57:07','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,955                                   
+【线程编号】[7]                                   
+【执行时间】[14191]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (85,2046,502,0,to_date('2018/8/30 14:57:07','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:47,987                                   
+【线程编号】[7]                                   
+【执行时间】[14223]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (85,2047,501,0,to_date('2018/8/30 15:07:27','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,021                                   
+【线程编号】[7]                                   
+【执行时间】[14257]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (85,2047,502,0,to_date('2018/8/30 15:07:27','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,053                                   
+【线程编号】[7]                                   
+【执行时间】[14289]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (85,2046,505,0,to_date('2018/8/30 15:21:02','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,086                                   
+【线程编号】[7]                                   
+【执行时间】[14322]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (85,2046,506,0,to_date('2018/8/30 15:21:02','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,116                                   
+【线程编号】[7]                                   
+【执行时间】[14352]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (85,2047,505,0,to_date('2018/8/30 15:31:36','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,151                                   
+【线程编号】[7]                                   
+【执行时间】[14387]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (85,2047,506,0,to_date('2018/8/30 15:31:36','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,185                                   
+【线程编号】[7]                                   
+【执行时间】[14421]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,2081,447,0,to_date('2018/8/31 9:25:20','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,216                                   
+【线程编号】[7]                                   
+【执行时间】[14452]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (60,2081,448,0,to_date('2018/8/31 9:25:20','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,249                                   
+【线程编号】[7]                                   
+【执行时间】[14485]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (56,1973,422,0,to_date('2018/8/31 11:05:52','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,282                                   
+【线程编号】[7]                                   
+【执行时间】[14518]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (56,1973,423,0,to_date('2018/8/31 11:05:52','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,314                                   
+【线程编号】[7]                                   
+【执行时间】[14550]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2035,479,0,to_date('2018/9/5 16:02:14','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:49:48,345                                   
+【线程编号】[7]                                   
+【执行时间】[14581]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline:	insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values (80,2035,480,0,to_date('2018/9/5 16:02:14','yyyy/mm/dd HH24:mi:ss'),'')	 导入失败/r/nORA-01400: 无法将 NULL 插入 ("ACME"."EDC_LOT_SUMMARY"."DUPLICATE_FLAG")                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-06 11:51:57,495                                   
+【线程编号】[9]                                   
+【执行时间】[6651]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline/r/nORA-01840: 输入值对于日期格式不够长                                   
+【错误详情】

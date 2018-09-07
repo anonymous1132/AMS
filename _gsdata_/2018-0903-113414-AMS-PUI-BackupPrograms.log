@@ -1,0 +1,13 @@
+2018-09-03 11:34:15: -- Analysis Started by On File Change, After Delay
+2018-09-03 11:34:15: Changes: 7, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7790
+2018-09-03 11:34:15: Left to Right: Copy File: 7 
+2018-09-03 11:34:15: == Sync Started by On File Change, After Delay
+2018-09-03 11:34:15: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (215,552)
+2018-09-03 11:34:15: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/AMSDCMDataTranslator.exe' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/AMSDCMDataTranslator.exe' (94,720)
+2018-09-03 11:34:15: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/AMSDCMDataTranslator.pdb' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/bin/Debug/AMSDCMDataTranslator.pdb' (273,920)
+2018-09-03 11:34:15: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/HlcmWAT.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/HlcmWAT.cs' (5,554)
+2018-09-03 11:34:15: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CopyComplete' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CopyComplete' (0)
+2018-09-03 11:34:15: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.exe' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.exe' (94,720)
+2018-09-03 11:34:15: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.pdb' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.pdb' (273,920)
+2018-09-03 11:34:16: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 7, Errors: 0
+2018-09-03 11:34:16: 

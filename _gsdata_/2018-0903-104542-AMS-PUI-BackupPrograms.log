@@ -1,0 +1,15 @@
+2018-09-03 10:45:43: -- Analysis Started by On File Change, After Delay
+2018-09-03 10:45:44: Changes: 9, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7789
+2018-09-03 10:45:44: Left to Right: Copy File: 9 
+2018-09-03 10:45:44: == Sync Started by On File Change, After Delay
+2018-09-03 10:45:44: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (216,064)
+2018-09-03 10:45:44: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/hlcm_data/current/hlcm2.xlsx' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/hlcm_data/current/hlcm2.xlsx' (18,047)
+2018-09-03 10:45:44: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/logs/LogError/2018/201809/20180903.txt' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/logs/LogError/2018/201809/20180903.txt' (2,192)
+2018-09-03 10:45:44: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/logs/LogInfo/WAT2018/201809/20180903.txt' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/logs/LogInfo/WAT2018/201809/20180903.txt' (1,296)
+2018-09-03 10:45:44: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.exe' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.exe' (7,680)
+2018-09-03 10:45:44: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.pdb' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.pdb' (24,064)
+2018-09-03 10:45:44: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csproj.CopyComplete' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csproj.CopyComplete' (0)
+2018-09-03 10:45:44: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.exe' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.exe' (7,680)
+2018-09-03 10:45:44: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.pdb' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.pdb' (24,064)
+2018-09-03 10:45:45: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 9, Errors: 0
+2018-09-03 10:45:45: 

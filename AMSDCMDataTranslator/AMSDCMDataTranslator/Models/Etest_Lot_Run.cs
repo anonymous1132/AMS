@@ -23,13 +23,13 @@ namespace AMSDCMDataTranslator.Models
         {
             get;
             set;
-        }
+        } = "";
 
         public string Operation
         {
             get;
             set;
-        }
+        } = "WAT";
 
         public string MeasureTime
         {
@@ -41,19 +41,19 @@ namespace AMSDCMDataTranslator.Models
         {
             get;
             set;
-        }
+        } = "FAB2";
 
         public string Product
         {
             get;
             set;
-        }
+        } = "WATProduct";
 
         public string Technology
         {
             get;
             set;
-        }
+        } = "";
 
         public string SpecfileName
         {
@@ -71,11 +71,11 @@ namespace AMSDCMDataTranslator.Models
             get { return "Y"; }
         }
 
-        public string Temprature
+        public string Temperature
         {
             get;
             set;
-        }
+        } = "";
 
         public string TestProgram
         {
@@ -87,7 +87,7 @@ namespace AMSDCMDataTranslator.Models
         {
             get;
             set;
-        }
+        } = "";
 
         public string Operator
         {
@@ -101,7 +101,7 @@ namespace AMSDCMDataTranslator.Models
             set;
         }
 
-        public string FlagOrientation
+        public string FlatOrientation
         {
             get;
             set;
@@ -139,12 +139,12 @@ namespace AMSDCMDataTranslator.Models
             XmlHelper.InsertAttribute(ref xn, "SpecfileName",SpecfileName);
             XmlHelper.InsertAttribute(ref xn,"SpecfileVersion",SpecfileVersion);
             XmlHelper.InsertAttribute(ref xn,"SpecfileInside",SpecfileInside);
-            XmlHelper.InsertAttribute(ref xn, "Temprature", Temprature);
+            XmlHelper.InsertAttribute(ref xn, "Temperature", Temperature);
             XmlHelper.InsertAttribute(ref xn, "TestProgram", TestProgram);
             XmlHelper.InsertAttribute(ref xn, "Equipment", Equipment);
             XmlHelper.InsertAttribute(ref xn, "Operator", Operator);
             XmlHelper.InsertAttribute(ref xn, "ProbeCard", ProbeCard);
-            XmlHelper.InsertAttribute(ref xn, "FlagOrientation", FlagOrientation);
+            XmlHelper.InsertAttribute(ref xn, "FlatOrientation", FlatOrientation);
             XmlHelper.InsertAttribute(ref xn, "Owner", Owner);
             XmlHelper.InsertAttribute(ref xn, "Pos_X", Pos_X);
             XmlHelper.InsertAttribute(ref xn, "Pos_Y", Pos_Y);
@@ -172,19 +172,18 @@ namespace AMSDCMDataTranslator.Models
             return xn;
         }
 
-        public  void GetData(WAT wat,List<WATSpecData>specDatas)
+        public  void GetData(WAT wat,IList<WATSpecData>specDatas)
         {
             Lot = wat.LotID;
             SourceLot = "";
             Operation = "WAT";
             MeasureTime = wat.DateTime;
             Fab = "FAB2";
-            Product = "";
             SpecfileName = wat.LimitFile;
             TestProgram = wat.TestProgram;
             Operator = wat.TesterID;
             ProbeCard = wat.ProbeCardID;
-            FlagOrientation = wat.Notch;
+            FlatOrientation = wat.Notch;
             Owner = wat.UserID;
             foreach (WATSpecData spec in specDatas)
             {

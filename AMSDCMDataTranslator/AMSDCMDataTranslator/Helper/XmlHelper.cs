@@ -639,7 +639,7 @@ namespace AMSDCMDataTranslator.Helper
                     writer.Close();
                     break;
                 }
-                catch (Exception exec)
+                catch (Exception)
                 {
                     if (i < 5)
                     {

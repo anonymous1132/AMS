@@ -17,17 +17,18 @@ namespace AMSTranslatorService
         public DCMTransLateService()
         {
             InitializeComponent();
-            congfig = new RunningCongfig();
-            congfig.GetData();
+            DCMSetting.SetValue();
         }
 
-        RunningCongfig congfig;
+
 
         protected override void OnStart(string[] args)
         {
             LogHelper.InfoLog("DCM服务启动成功");
-            System.Timers.Timer t = new System.Timers.Timer();
-            t.Interval = congfig.INTERVAL;
+            System.Timers.Timer t = new System.Timers.Timer
+            {
+                Interval = DCMSetting.Interval
+            };
             t.Elapsed += new System.Timers.ElapsedEventHandler(ChkSrv);//到达时间的时候执行事件；   
             t.AutoReset = true;//设置是执行一次（false）还是一直执行(true)；   
             t.Enabled = true;//是否执行System.Timers.Timer.Elapsed事件；   
@@ -46,7 +47,7 @@ namespace AMSTranslatorService
                     System.Timers.Timer tt = (System.Timers.Timer)source;
                  //可防止重复执行程序
                     tt.Enabled = false;
-                    AMSDCMDataTranslator.Program.SMain(congfig);
+                    AMSDCMDataTranslator.DCMRunner.Run();
                     tt.Enabled = true;
                 }
                 catch (Exception err)

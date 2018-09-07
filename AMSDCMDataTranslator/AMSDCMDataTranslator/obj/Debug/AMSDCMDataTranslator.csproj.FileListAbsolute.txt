@@ -13,10 +13,14 @@ D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\AMSDCMDataTran
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\AMSDCMDataTranslator.exe
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\AMSDCMDataTranslator.pdb
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\log4net.dll
-D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\log4net.xml
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.csproj.CoreCompileInputs.cache
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.csproj.CopyComplete
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.exe
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.pdb
 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\Renci.SshNet.dll
+D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\Tamir.SharpSSH.dll
+D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\DiffieHellman.dll
+D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\Org.Mentalis.Security.dll
+D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.csprojAssemblyReference.cache

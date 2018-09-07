@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AMSDCMDataTranslator.Helper;
 using AMSDCMDataTranslator;
+using AMSDCMDataTranslator.Models;
 
 namespace AMSTranslatorService
 {
@@ -17,10 +18,9 @@ namespace AMSTranslatorService
         public WATTranslateService()
         {
             InitializeComponent();
-            config = new WATRunningConfig();
-            config.GetData();
+            WATSetting.SetValue();
         }
-        WATRunningConfig config;
+
         /// <summary>  
         /// 定时检查，并执行方法  
         /// </summary>  
@@ -33,8 +33,7 @@ namespace AMSTranslatorService
                 System.Timers.Timer tt = (System.Timers.Timer)source;
                 //可防止重复执行程序
                 tt.Enabled = false;
-                WATRunner.Run(config);
-                
+                WATRunner.Run();
                 tt.Enabled = true;
             }
             catch (Exception err)
@@ -50,7 +49,7 @@ namespace AMSTranslatorService
             // TODO: 在此处添加代码以启动服务。
             LogHelper.WATInfoLog("WAT服务启动成功");
             System.Timers.Timer t = new System.Timers.Timer();
-            t.Interval = config.INTERVAL;
+            t.Interval = WATSetting.Interval;
             t.Elapsed += new System.Timers.ElapsedEventHandler(ChkSrv);//到达时间的时候执行事件；   
             t.AutoReset = true;//设置是执行一次（false）还是一直执行(true)；   
             t.Enabled = true;//是否执行System.Timers.Timer.Elapsed事件；   

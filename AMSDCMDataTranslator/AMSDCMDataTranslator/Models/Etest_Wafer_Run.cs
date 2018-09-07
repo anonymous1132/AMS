@@ -54,7 +54,7 @@ namespace AMSDCMDataTranslator.Models
             XmlHelper.InsertAttribute(ref xn,"Comments",Comments);
             foreach (Etest_Site site in sites)
             {
-                XmlElement xe = (xn.OwnerDocument).CreateElement("Site");
+                XmlElement xe = (xn.OwnerDocument).CreateElement("SITE");
                 XmlNode xnn = site.SetSiteNode(xe);
                 xn.AppendChild(xnn);
             }

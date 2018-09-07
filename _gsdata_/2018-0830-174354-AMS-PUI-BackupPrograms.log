@@ -1,0 +1,12 @@
+2018-08-30 17:43:55: -- Analysis Started by On File Change, After Delay
+2018-08-30 17:43:55: Changes: 6, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7598
+2018-08-30 17:43:55: Left to Right: Copy File: 6 
+2018-08-30 17:43:55: == Sync Started by On File Change, After Delay
+2018-08-30 17:43:55: Copy New 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/AMSDCMDataTranslator.exe.config' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/AMSDCMDataTranslator.exe.config' (9,050)
+2018-08-30 17:43:55: Copy New 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/log4net.xml' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/log4net.xml' (1,547,797)
+2018-08-30 17:43:55: Copy New 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/Oracle.ManagedDataAccess.dll' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/Oracle.ManagedDataAccess.dll' (4,877,312)
+2018-08-30 17:43:55: Copy New 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/Renci.SshNet.dll' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/Renci.SshNet.dll' (466,432)
+2018-08-30 17:43:55: Copy New 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.exe.config' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.exe.config' (1,771)
+2018-08-30 17:43:55: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csproj.CopyComplete' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/obj/Debug/TestConsoleProject.csproj.CopyComplete' (0)
+2018-08-30 17:43:56: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 6, Errors: 0
+2018-08-30 17:43:56: 
