@@ -4,7 +4,7 @@
         xmlns:local="clr-namespace:MCADataTranslator"
          xmlns:mui="http://firstfloorsoftware.com/ModernUI"
          ContentSource="/Pages/Import.xaml"
-        Title="MCADataTranslator" Height="650" Width="800">
+        Title="MCADataTranslator" Height="650" Width="850">
 
     <mui:ModernWindow.TitleLinks>
         <mui:Link DisplayName="Settings" Source="/Pages/Settings.xaml" />

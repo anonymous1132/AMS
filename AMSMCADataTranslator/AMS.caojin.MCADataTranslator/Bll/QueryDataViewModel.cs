@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FirstFloor.ModernUI.Presentation;
+using MCADataTranslator.Helper;
 
 namespace MCADataTranslator.Bll
 {
@@ -44,6 +45,20 @@ namespace MCADataTranslator.Bll
         {
             get { return _w; }
             set { _w = value;OnPropertyChanged("W"); }
+        }
+
+        private bool _hideInACE;
+        public bool HideInACE
+        {
+            get { return _hideInACE; }
+            set { _hideInACE = value; UpdateHideInACE(); OnPropertyChanged("HideInACE"); }
+        }
+
+        private void UpdateHideInACE()
+        {
+            SqlHelper sqlHelper = new SqlHelper();
+            string sql = string.Format("update MCA_Pool set HideInACE= {0} where SampleComment ='{1}'", _hideInACE == false ? 0 : 1,_sampleComment);
+            sqlHelper.getSomeDate(sql);
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.IO;
@@ -34,14 +34,26 @@ namespace MCADataTranslator.Content
                 obc_import = new ObservableCollection<ImportDGViewModel>();
                 return;
             }
-
-            obc_import = OBCImportVM(filepaths);
-            DG1.ItemsSource = obc_import;
+            ProgressRing.IsActive = true;
+            Thread t = new Thread(new ParameterizedThreadStart(ThreadWork));
+            t.IsBackground = true;
+            t.Start(filepaths);
         }
 
+        private void ThreadWork(object filepaths)
+        {
+            obc_import = OBCImportVM((string[])filepaths);
+            
+            Dispatcher.Invoke(new Action(() => {
+                DG1.ItemsSource = obc_import;
+                button_import.IsEnabled = true;
+                ProgressRing.IsActive = false;
+            }));
+            }
 
         private void button_import_Click(object sender, RoutedEventArgs e)
         {
+
             foreach (ImportDGViewModel dg in obc_import)
             {
                 ImportDGViewModel dg_c = dg;
@@ -54,11 +66,11 @@ namespace MCADataTranslator.Content
                 }
                 else { dg.OperationResult = "未执行"; }
             }
+
         }
 
         private string[] selectfile()
         {
-
             System.Windows.Forms.OpenFileDialog openFile = new System.Windows.Forms.OpenFileDialog();
             openFile.Filter = "CSV(逗号分隔)(*.csv)|*.csv";
             openFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -80,7 +92,6 @@ namespace MCADataTranslator.Content
                 CheckFileInOBC(ref idgvm);
                 obc.Add(idgvm);
             }
-            if (obc.Count > 0) this.button_import.IsEnabled = true;
             return obc;
         }
 

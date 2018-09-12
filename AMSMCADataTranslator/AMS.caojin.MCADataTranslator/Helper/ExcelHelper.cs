@@ -15,6 +15,7 @@ namespace MCADataTranslator.Helper
     {
         public ExcelHelper()
         { }
+
         public DataSet GetContent(string path)
         {
             String sConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +

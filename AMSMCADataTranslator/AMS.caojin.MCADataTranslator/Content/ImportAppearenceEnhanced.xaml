@@ -27,6 +27,6 @@
                 </DataGrid>
             </ScrollViewer>
         </DockPanel>
-
+        <mui:ModernProgressRing IsActive="False" Width="80" Height="80" Style="{StaticResource CircleProgressRingStyle}" Name="ProgressRing"/>
     </Grid>
 </UserControl>

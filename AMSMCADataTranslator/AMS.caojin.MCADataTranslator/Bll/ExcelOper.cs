@@ -17,6 +17,14 @@ namespace MCADataTranslator.Bll
             _filePath = filepath;
         }
 
+        ~ExcelOper()
+        {
+            try
+            { Quit(); }
+            catch (Exception)
+            { }
+        }
+
         private Application _app;
         public Application app
         {
@@ -85,12 +93,27 @@ namespace MCADataTranslator.Bll
             }
 
             currentRow += 2;
+            List<string> speclist = new List<string> {report.SpecUnit.S,report.SpecUnit.Cl, report.SpecUnit.K, report.SpecUnit.Ca, report.SpecUnit.Ti, report.SpecUnit.V, report.SpecUnit.Cr, report.SpecUnit.Mn, report.SpecUnit.Fe, report.SpecUnit.Co, report.SpecUnit.Ni, report.SpecUnit.Cu, report.SpecUnit.Zn, report.SpecUnit.Sb, report.SpecUnit.Te, report.SpecUnit.Na, report.SpecUnit.Mg, report.SpecUnit.Al, report.SpecUnit.Ge, report.SpecUnit.As };
             foreach (ReportModelUnit unit in report.repotunits)
             {
                 List<string> elementlist = new List<string> { unit.IndexNo, unit.S, unit.Cl, unit.K, unit.Ca, unit.Ti, unit.V, unit.Cr, unit.Mn, unit.Fe, unit.Co, unit.Ni, unit.Cu, unit.Zn, unit.Sb, unit.Te, unit.Na, unit.Mg, unit.Al, unit.Ge, unit.As };
                 for (int i = 1; i <= colConut; i++)
                 {
                     worksheet.Cells[currentRow, i] = elementlist[i - 1];
+                    try
+                    {
+                        if (i > 1)
+                        {
+                            double num = speclist[i - 1] == "" ? 0 : Convert.ToDouble(speclist[i - 1]);
+                            double elevalue = elementlist[i - 1] == "" ? 0 : Convert.ToDouble(elementlist[i - 1]);
+                            if (elevalue > num)
+                            {
+                                excelHelper.SetRangeBackground((Range)worksheet.Cells[currentRow, i]);
+                            }
+                        }
+                    }
+                    catch (Exception)
+                    { }
                 }
                 currentRow++;
             }
@@ -115,7 +138,7 @@ namespace MCADataTranslator.Bll
             rng= worksheet.Range["A" + (startrow + 3).ToString(), "U" + (currentRow - 1).ToString()];
             excelHelper.SetRangeBodersStyle(rng,1);
             excelHelper.SetRangeBodersThickness(rng,XlBorderWeight.xlThin);
-            rng= worksheet.Range["A" + (startrow + 5).ToString(), "U" + (currentRow - 1).ToString()];
+            rng= worksheet.Range["B" + (startrow + 5).ToString(), "U" + (currentRow - 1).ToString()];
             excelHelper.SetRangeValueStyleNumber(rng);
         }
 

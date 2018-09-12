@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Globalization;
@@ -106,9 +106,44 @@ namespace MCADataTranslator.Content
             File.Copy(mouldpath, filepath);
         }
 
+        private void bt_delete_Click(object sender, RoutedEventArgs e)
+        {
+            if (GetSelectItemsCount() <= 0) { return; }
 
+            List<string> SampleList = new List<string>();
+            foreach (QueryDataViewModel qvm in obc_qvm)
+            {
+                if (qvm.IsSelected)
+                {
+                    SampleList.Add(qvm.SampleComment);
+                }
+            }
+            bool isConfirmed = MessageBoxChoiseHelper.IsConfirmed("当前选中" + SampleList.Count.ToString() + "项，确定要删除吗？删除后将不可恢复数据！");
+            try
+            {
+                if (isConfirmed)
+                {
+                    string para = string.Join("','", SampleList);
+                    SqlHelper sqlHelper = new SqlHelper();
+                    string sql = string.Format("delete from MCA_Pool where SampleComment in ('{0}');delete from MCA_Ag where SampleComment in ('{0}');delete from MCA_W where SampleComment in ('{0}');", para);
+                    sqlHelper.getSomeDate(sql);
+                    for (int i = obc_qvm.Count - 1; i >= 0; i--)
+                    {
+                    if (obc_qvm[i].IsSelected)
+                    {
+                        obc_qvm.RemoveAt(i);
+                    }
+                    }
+                    DG1.ItemsSource = obc_qvm;
+                    MessageBox.Show("Done!", "Information");
+                }
 
-
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+}
     }
 
 

@@ -22,7 +22,8 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 5 0 0" HorizontalAlignment="Center">
                     <!--<Button Name="bt_preview" Content="Preview Selected Items" Width="auto" Margin="0 0 10 0" Click="bt_preview_Click" Visibility="Collapsed"/>-->
-                    <Button Name="bt_export" Content="Selected Items Report" Width="auto" Click="bt_export_Click" />
+                    <Button Name="bt_export" Content="Selected Items Report" Width="auto" Click="bt_export_Click" Margin="0 0 10 0"/>
+                    <Button Name="bt_delete" Content="Selected Itmes Delete" Width="auto" Click="bt_delete_Click"/>
                 </StackPanel>
             </StackPanel>
             <DataGrid Name="DG1"  AutoGenerateColumns="False" BorderThickness="1" Margin="5" CanUserAddRows="False"   DockPanel.Dock="Bottom" >
@@ -50,11 +51,11 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <mui:DataGridTextColumn Header="SampleConment" Width="auto"  Binding="{Binding Path= SampleComment}" IsReadOnly="True"/>
+                    <mui:DataGridTextColumn Header="SampleComment" Width="auto"  Binding="{Binding Path= SampleComment}" IsReadOnly="True"/>
                     <mui:DataGridCheckBoxColumn Header="AgImported" Width="auto"  Binding="{Binding Path= Ag}" IsReadOnly="True"/>
                     <mui:DataGridCheckBoxColumn Header="WImported" Width="auto"  Binding="{Binding Path= W}" IsReadOnly="True"/>
                     <mui:DataGridTextColumn Header="Date" Binding="{Binding Path=UpdateDateTime}" IsReadOnly="True"/>
-                    
+                    <mui:DataGridCheckBoxColumn Header="HideInACE" Width="auto"  Binding="{Binding Path= HideInACE}" IsReadOnly="False"/>
                 </DataGrid.Columns>
             
   

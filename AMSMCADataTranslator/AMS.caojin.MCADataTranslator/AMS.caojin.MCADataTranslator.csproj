@@ -110,6 +110,7 @@
     <Compile Include="Content\SettingsAppearanceViewModel.cs" />
     <Compile Include="Helper\CsvHelper.cs" />
     <Compile Include="Helper\ExcelHelper.cs" />
+    <Compile Include="Helper\MessageBoxChoiseHelper.cs" />
     <Compile Include="Helper\ModelConvertHelper.cs" />
     <Compile Include="Helper\SqlHelper.cs" />
     <Compile Include="MainWindow.xaml.cs">
