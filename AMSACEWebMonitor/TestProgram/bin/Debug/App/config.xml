@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<ACEWebMonitor>
+  <Timer>
+    <Interval>1</Interval>
+    <SpecTime>4.02</SpecTime>
+  </Timer>
+  <MonitorUnity>
+    <Dir>C:\Users\Default\Desktop</Dir>
+    <LastTime>20180223150929</LastTime>
+    <HasSent>True</HasSent>
+  </MonitorUnity>
+  <MonitorUnity>
+    <Dir>C:\Users\caojin\source\repos\AMSACEWebMonitor\TestProgram\bin\Debug\App</Dir>
+    <LastTime>20180919095855</LastTime>
+    <HasSent>False</HasSent>
+  </MonitorUnity>
+  <Mail>
+    <From>zhangyejun@jsamsc.com</From>
+    <To>zhangyejun@jsamsc.com</To>
+    <SMTPServer>mail.jsamsc.com</SMTPServer>
+    <Port>465</Port>
+    <Password>AMS@123456</Password>
+  </Mail>
+</ACEWebMonitor>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ACEWebMonitor>
+  
+  <Timer>
+    <!--多久执行一次检查-->
+    <Interval>1</Interval>
+    <!--时间超过多久就告警-->
+    <SpecTime>4.02</SpecTime>
+  </Timer>
+
+  <!--多个目录请在后面添加新的MonitorUnity对象-->
+  <MonitorUnity>
+    <!--需要监控的目录-->
+    <Dir></Dir>
+    <!--ACE上一次执行任务完成的时间，由程序自行修改-->
+    <LastTime></LastTime>
+    <!--是否已经发送邮件，由程序自行修改-->
+    <HasSent>False</HasSent>
+  </MonitorUnity>
+
+  <MonitorUnity>
+    <!--需要监控的目录-->
+    <Dir></Dir>
+    <!--ACE上一次执行任务完成的时间，由程序自行修改-->
+    <LastTime></LastTime>
+    <!--是否已经发送邮件，由程序自行修改-->
+    <HasSent>False</HasSent>
+  </MonitorUnity>
+  
+  <Mail>
+    <!--邮件发件人-->
+    <From></From>
+    <!--邮件收件人-->
+    <To></To>
+    <!--服务器-->
+    <SMTPServer></SMTPServer>
+    <!--服务器端口-->
+    <Port></Port>
+    <!--发件人口令-->
+    <Password></Password>
+  </Mail>
+</ACEWebMonitor>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMSACEWebMonitor", "AMSACEWebMonitor\AMSACEWebMonitor.csproj", "{914FC76F-5A2E-43D3-8488-67EA88E32338}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProgram", "TestProgram\TestProgram.csproj", "{F97E9F88-AF98-40C0-A02F-F58FC9A1D852}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{914FC76F-5A2E-43D3-8488-67EA88E32338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{914FC76F-5A2E-43D3-8488-67EA88E32338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{914FC76F-5A2E-43D3-8488-67EA88E32338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{914FC76F-5A2E-43D3-8488-67EA88E32338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F97E9F88-AF98-40C0-A02F-F58FC9A1D852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97E9F88-AF98-40C0-A02F-F58FC9A1D852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97E9F88-AF98-40C0-A02F-F58FC9A1D852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97E9F88-AF98-40C0-A02F-F58FC9A1D852}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A34FF1F-2B85-4A47-B8D2-84C3E29438F8}
+	EndGlobalSection
+EndGlobal
