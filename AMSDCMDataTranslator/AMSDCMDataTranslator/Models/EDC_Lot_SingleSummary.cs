@@ -57,7 +57,7 @@ namespace AMSDCMDataTranslator.Models
 
         public string InsertSql()
         {
-            string sql = string.Format("insert into edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values ({0},{1},{2},{3},to_date('{4}','yyyy/mm/dd HH24:mi:ss'),'{5}')", ProductID,Lot_ID,EDC_Parameter_ID,RangeIndex,MeasureDateTime,DuplicateFlage);
+            string sql = string.Format("insert into acme.edc_lot_summary (product_id,lot_id,edc_parameter_id,range_index,measure_time,duplicate_flag) values ({0},{1},{2},{3},to_date('{4}','yyyy/mm/dd HH24:mi:ss'),'{5}')", ProductID,Lot_ID,EDC_Parameter_ID,RangeIndex,MeasureDateTime,DuplicateFlage);
             return sql;
         }
 

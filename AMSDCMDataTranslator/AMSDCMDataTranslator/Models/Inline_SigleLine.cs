@@ -352,8 +352,8 @@ namespace AMSDCMDataTranslator.Models
             WaferSiteArray = dr[31].ToString();
             MeasureDataArray = dr[32].ToString();
             Target = dr[33].ToString();
-            ValidLow = dr[34].ToString();
-            ValidHigh = dr[35].ToString();
+            ValidLow = "";
+            ValidHigh = "";
             SpecLow = dr[36].ToString();
             SpecHigh = dr[37].ToString();
             CtrlLow = dr[38].ToString();

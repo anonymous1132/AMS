@@ -12,13 +12,13 @@ namespace AMSDCMDataTranslator.Models
         {
             get;
             set;
-        } = "acme";
+        } = "ace_loader";
 
         public static string Password
         {
             get;
             set;
-        } = "acme";
+        } = "KT4LOADER";
 
         /// <summary>
         /// IP或者DNS主机名

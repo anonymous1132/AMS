@@ -15,7 +15,7 @@ namespace TestConsoleProject
     {
         static void Main(string[] args)
         {
-            TestSsh.Test();
+            TestInline.Test();
             Console.ReadLine();
         }
     }

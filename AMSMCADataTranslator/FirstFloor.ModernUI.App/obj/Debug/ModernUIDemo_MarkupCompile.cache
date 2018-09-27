@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\repository\AMSMCADataTranslator\FirstFloor.ModernUI.App\obj\Debug\
+D:\ProgramData\GitHub\AMS\AMSMCADataTranslator\FirstFloor.ModernUI.App\obj\Debug\
 FirstFloor.ModernUI.App
 none
 false
 DEBUG;TRACE
-D:\repository\AMSMCADataTranslator\FirstFloor.ModernUI.App\App.xaml
+D:\ProgramData\GitHub\AMS\AMSMCADataTranslator\FirstFloor.ModernUI.App\App.xaml
 411804588286
 
-54-1063963819
-15-1668649010
+54210771206
+152052122813
 Assets\ModernUI.Snowflakes.xaml;Assets\ModernUI.Love.xaml;Assets\ModernUI.BingImage.xaml;Assets\ModernUI.HelloKitty.xaml;Content\ContentLoaderImages.xaml;Content\ContentLoaderIntro.xaml;Content\ControlsModernFrame.xaml;Content\ControlsModernMenu.xaml;Content\ControlsModernProgressRing.xaml;Content\ControlsModernWindow.xaml;Content\ControlsStylesDataGrid.xaml;Content\ControlsStylesProgressBar.xaml;Content\ControlsStylesSampleForm.xaml;Content\ControlsStylesSlider.xaml;Content\ControlsStylesDate.xaml;Content\ModernFrame\CancelNavigateSample.xaml;Content\ModernFrame\ErrorSample.xaml;Content\ModernFrame\Sample.xaml;MainWindow.xaml;Pages\ContentLoader.xaml;Pages\DpiAwareness.xaml;Pages\Navigation.xaml;Pages\ControlsModern.xaml;Content\ControlsModernBBCodeBlock.xaml;Content\ControlsModernButton.xaml;Content\ControlsModernDialog.xaml;Pages\ControlsStyles.xaml;Pages\Introduction.xaml;Content\ControlsStylesButton.xaml;Content\ControlsStylesItemsControl.xaml;Content\ControlsStylesText.xaml;Pages\LayoutBasic.xaml;Pages\LayoutList.xaml;Pages\LayoutSplit.xaml;Pages\LayoutWireframe.xaml;Pages\LayoutTab.xaml;Content\LoremIpsum.xaml;Content\LoremIpsumList.xaml;Content\LoremIpsumSplit.xaml;Content\SettingsAppearance.xaml;Pages\Settings.xaml;
 
 True

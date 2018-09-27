@@ -27,14 +27,14 @@ namespace AMSDCMDataTranslator
             {
                 LogHelper.ErrorLog("Inline", e);
             }
-            try
-            {
-                EDC_Lot_Summary summary = new EDC_Lot_Summary();
-            }
-            catch (Exception e)
-            {
-                LogHelper.ErrorLog("Inline", e);
-            }
+            //try
+            //{
+            //    EDC_Lot_Summary summary = new EDC_Lot_Summary();
+            //}
+            //catch (Exception e)
+            //{
+            //    LogHelper.ErrorLog("Inline", e);
+            //}
 
             LogHelper.InlineInfoLog("InlineDebugTranslator执行完毕");
         }

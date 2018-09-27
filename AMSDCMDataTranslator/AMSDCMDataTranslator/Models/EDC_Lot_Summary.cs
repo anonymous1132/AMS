@@ -55,11 +55,15 @@ namespace AMSDCMDataTranslator.Models
             string sql = "";
             try
             {
-                sql = string.Format("select * from ams_lotdebug_sum where measure_time >= to_date('{0}','yyyy/mm/dd HH24:mi:ss') order by measure_time", GetLastDBLine());
+                sql = string.Format("select product_id,lot_id,EDC_PARAMETER_ID,MEASURE_TIME,N from " +
+                    "(select product_id,lot_id,EDC_PARAMETER_ID,MEASURE_TIME,SUM(site_count) n FROM acme.edc_wafer_summary  GROUP BY product_id,lot_id,EDC_PARAMETER_ID,MEASURE_TIME HAVING measure_time>=to_date('{0}', 'yyyy/mm/dd HH24:mi:ss'))" +
+                    "  order by measure_time", GetLastDBLine());
             }
             catch (Exception)
             {
-                sql = "select * from ams_lotdebug_sum order by measure_time";
+                sql = string.Format("select product_id,lot_id,EDC_PARAMETER_ID,MEASURE_TIME,N from " +
+                    "(select product_id,lot_id,EDC_PARAMETER_ID,MEASURE_TIME,SUM(site_count) n FROM acme.edc_wafer_summary  GROUP BY product_id,lot_id,EDC_PARAMETER_ID,MEASURE_TIME HAVING measure_time>to_date('2018-04-17 16:02:51', 'yyyy/mm/dd HH24:mi:ss'))" +
+                    "  order by measure_time");
             }
             DataTable dt= OracleHelper.ExecuteDataTable(sql);
             foreach (DataRow dr in dt.Rows)
@@ -84,7 +88,7 @@ namespace AMSDCMDataTranslator.Models
             string msg = "";
             foreach (EDC_Lot_SingleSummary singleSummary in singleSummaries)
             {
-                sql =string.Format("select * from edc_lot_summary where product_id={0} and lot_id= {1} and edc_parameter_id={2} and measure_time=to_date('{3}','yyyy/mm/dd HH24:mi:ss')",
+                sql =string.Format("select * from acme.edc_lot_summary where product_id={0} and lot_id= {1} and edc_parameter_id={2} and measure_time=to_date('{3}','yyyy/mm/dd HH24:mi:ss')",
                 singleSummary.ProductID,singleSummary.Lot_ID,singleSummary.EDC_Parameter_ID,singleSummary.MeasureDateTime);
                 DataTable dt = OracleHelper.ExecuteDataTable(sql);
                 if (dt.DefaultView.Count == 0)
