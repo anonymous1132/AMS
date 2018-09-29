@@ -8,7 +8,7 @@ using AMSDCMDataTranslator.Helper;
 
 namespace AMSDCMDataTranslator.Models
 {
-    public class HlcmWAT:Etest
+    public class HlcmWAT : Etest
     {
         /// <summary>
         /// 获取Hlcm数据文件中的数据
@@ -18,8 +18,13 @@ namespace AMSDCMDataTranslator.Models
         public override void GetData(string filePath, string specPath)
         {
             this.filePath = filePath;
-            DataTable dt = ExcelHelper.GetContent(filePath).Tables[0];
-            if (dt.Columns.Count< 8 ||dt.Columns[0].ColumnName!= "LOT ID" ||dt.Columns[1].ColumnName!= "PRODUCT NAME"||dt.Columns[5].ColumnName!="SITE" || dt.Rows.Count<3)
+            ParameterList = new List<string>();
+            //  ExcelOper excelOper = new ExcelOper(filePath);
+            //  DataTable dt = excelOper.GetContentFromExcel();
+            NPOIExcelHelper excelHelper = new NPOIExcelHelper(filePath);
+            DataTable dt = excelHelper.ExcelToDataTable("Raw data",true);
+            int j= dt.Columns.Count;
+            if (dt.Columns.Count < 8 || dt.Columns[0].ColumnName != "LOT ID" || dt.Columns[1].ColumnName != "PRODUCT NAME" || dt.Columns[5].ColumnName != "SITE" || dt.Rows.Count < 3)
             {
                 throw new Exception(filePath + "文件格式错误");
             }
@@ -31,7 +36,7 @@ namespace AMSDCMDataTranslator.Models
             //参数列表赋值
             for (int i = 7; i < dt.Columns.Count; i++)
             {
-                if (dt.Columns[i].ColumnName.Substring(0, 1) == "F" && dt.Columns[i].ColumnName.Length<4)
+                if (dt.Columns[i].ColumnName.Substring(0, 1) == "F" && dt.Columns[i].ColumnName.Length < 4)
                 {
                     break;
                 }
@@ -41,7 +46,7 @@ namespace AMSDCMDataTranslator.Models
 
             for (int i = 0; i < 2; i++)
             {
-                lot_run.etest_limits = GetEtestLimits(dt.Rows[i],lot_run.etest_limits);
+                lot_run.etest_limits = GetEtestLimits(dt.Rows[i], lot_run.etest_limits);
             }
 
             for (int i = 2; i < dt.Rows.Count; i++)
@@ -52,12 +57,12 @@ namespace AMSDCMDataTranslator.Models
 
         public void GetData(string filePath)
         {
-            GetData(filePath,"");
+            GetData(filePath, "");
         }
         /// <summary>
         /// 参数集合
         /// </summary>
-        private List<string> ParameterList = new List<string>();
+        private List<string> ParameterList ;
         /// <summary>
         /// Lot_Run赋值
         /// </summary>
@@ -68,7 +73,8 @@ namespace AMSDCMDataTranslator.Models
             {
                 lot_run.Lot = dr[0].ToString();
                 lot_run.Product = dr[1].ToString();
-                lot_run.MeasureTime =((DateTime)dr[2]).ToString("yyyy/MM/dd")+"_"+ ((DateTime)dr[3]).ToString("hh:mm:ss");
+                //debug:需要根据日期格式来判断
+                lot_run.MeasureTime = FixHlcmDate(dr[2].ToString()) + "_" + FixTime(dr[3]);
                 lot_run.Operation = "HLCMWAT";
                 lot_run.SpecfileName = FileName;
                 lot_run.TestProgram = lot_run.Product;
@@ -78,7 +84,7 @@ namespace AMSDCMDataTranslator.Models
                 lot_run.Owner = "";
             }
             Etest_Wafer_Run wafer_Run = GetWaferRun(dr);
-            wafer_Run.sites = new List<Etest_Site>();
+            
             Etest_Site site = new Etest_Site()
             {
                 SiteID = dr[5].ToString(),
@@ -86,9 +92,9 @@ namespace AMSDCMDataTranslator.Models
                 SiteY = dr[5].ToString(),
                 etest_ts = new List<Etest_T>()
             };
-            for (int i=0;i<ParameterList.Count;i++)
+            for (int i = 0; i < ParameterList.Count; i++)
             {
-                site.etest_ts.Add(new Etest_T() { TestID=ParameterList[i],TestValue=dr[i+7].ToString()});
+                site.etest_ts.Add(new Etest_T() { TestID =GetTestIDByDescription(ParameterList[i]).ToString(), TestValue = dr[i + 7].ToString() });
             }
             wafer_Run.sites.Add(site);
         }
@@ -115,8 +121,10 @@ namespace AMSDCMDataTranslator.Models
             Etest_Wafer_Run wafer_Run = new Etest_Wafer_Run
             {
                 WaferNumber = dr[4].ToString(),
-                Comments = ""
+                Comments = "",
+                ParameterCount = ParameterList.Count.ToString()
             };
+            wafer_Run.sites = new List<Etest_Site>();
             lot_run.etest_wafers.Add(wafer_Run);
             return wafer_Run;
         }
@@ -127,11 +135,11 @@ namespace AMSDCMDataTranslator.Models
         //文件名
         private string FileName
         {
-            get { return filePath.Substring(filePath.LastIndexOf("\\")+1); }
+            get { return filePath.Substring(filePath.LastIndexOf("\\") + 1); }
         }
 
         //赋值Etest_Limits
-        private List<Etest_Limit> GetEtestLimits(DataRow dr,List<Etest_Limit>etest_Limits)
+        private List<Etest_Limit> GetEtestLimits(DataRow dr, List<Etest_Limit> etest_Limits)
         {
             if (dr[6].ToString() == "SPEC HI")
             {
@@ -139,10 +147,11 @@ namespace AMSDCMDataTranslator.Models
                 {
                     Etest_Limit limit = new Etest_Limit
                     {
-                        ID = dr.Table.Columns[i].ColumnName,
+                        ID =GetTestIDByDescription(dr.Table.Columns[i].ColumnName).ToString(),
                         Desc = dr.Table.Columns[i].ColumnName,
-                        SH= dr[i].ToString()
-                };
+                        SH = dr[i].ToString(),
+                        Key="N"
+                    };
                     etest_Limits.Add(limit);
                 }
             }
@@ -150,7 +159,7 @@ namespace AMSDCMDataTranslator.Models
             {
                 for (int i = 7; i < dr.Table.Columns.Count; i++)
                 {
-                 etest_Limits[i - 7].SL = dr[i] is null ? "0" : dr[i].ToString();
+                    etest_Limits[i - 7].SL = dr[i] is null ? "0" : dr[i].ToString();
                 }
             }
             else
@@ -160,6 +169,94 @@ namespace AMSDCMDataTranslator.Models
             return etest_Limits;
         }
 
+        private int GetTestIDByDescription(string desc)
+        {
+            if (HlcmSetting.DicTestID2Desc.ContainsKey(desc))
+            {
+                return HlcmSetting.DicTestID2Desc.FirstOrDefault(q => q.Key == desc).Value;
+            }
+            else
+            {
+                int value = HlcmSetting.DicTestID2Desc.Count+1;
+                HlcmSetting.DicTestID2Desc.Add(desc,value);
+                HlcmSetting.IsDicUpdated = true;
+                return value;
+            }
 
+        }
+
+        private string FixHlcmDate(string datestring)
+        {
+            try {
+                 DateTime dt = DateTime.ParseExact(datestring, "dd-MM-yy", System.Globalization.CultureInfo.CurrentCulture);
+                datestring = dt.ToString("yyyy/MM/dd");
+                 }
+            catch (Exception)
+            { 
+            if (datestring.Contains("-"))
+            {
+                string[] list = datestring.Split('-');
+                if (list.Length == 3)
+                {
+                    return FixYear(list[2]) + "/" + FixMoon(list[1]) + "/" + FixDay(list[0]);
+                }
+            }
+            }
+
+            return datestring;
+        }
+
+        private Dictionary<string, string> dic = new Dictionary<string, string>
+        { { "Jan", "01" },{ "Feb","02"},{ "Mar", "03" },{ "Apr","04"},{ "May","05"},{ "Jun","06"},{ "Jul","07"},{"Aug","08" },{ "Sep","09" },{ "Oct","10"},{ "Nov","11"},{ "Dec","12"} };
+
+
+        private string FixDay(string day)
+        {
+            if (day.Length > 1)
+            { return day; }
+            else
+            {
+                return "0" + day;
+            }
+        }
+
+        private string FixMoon(string moon)
+        {
+            string resault= dic.Where(p => p.Key == moon).FirstOrDefault().Value;
+            return string.IsNullOrEmpty(resault) ? moon : resault;
+        }
+        private string FixYear(string year)
+        {
+            if (year.Length == 2)
+            {
+                return "20" + year;
+            }
+            else
+            {
+                return year;
+            }
+        }
+
+        private string FixTime(object time)
+        {
+            string resault = "";
+            try
+            {
+                resault = ((DateTime)time).ToString("hh:mm:ss");
+            }
+            catch (Exception)
+            {
+                string[] arry = time.ToString().Split(':');
+                for (int i = 0; i < 3; i++)
+                {
+                    if (arry[i].Length == 1)
+                    {
+                        arry[i] += "0";
+                    }
+                }
+                resault = string.Join(":",arry);
+            }
+            return resault;
+        }
     }
 }

@@ -27,6 +27,7 @@ namespace AMSDCMDataTranslator
             get { return _filePath; }
             set
             {
+                //Console.WriteLine(File.Exists(value));
                 if (File.Exists(value))
                 {
                     _filePath = value;
@@ -48,7 +49,7 @@ namespace AMSDCMDataTranslator
             try
             {
 
-                String line = sr.ReadLine();
+                string line = sr.ReadLine();
                 //如果文件第一行不包含5个“=”，则断定为格式错误。
                 if (!line.Contains("=====")) return;
                 while (!(line = sr.ReadLine()).Contains("====="))
@@ -64,37 +65,47 @@ namespace AMSDCMDataTranslator
 
                 while ((line = sr.ReadLine()) != null)
                 {
-                    string[] array = line.Split(',');
+                if (string.IsNullOrEmpty(line)) continue;
+                string[] array = line.Split(',');
 
-                    if (array[0] == "SYS_WAFERID")
+                if (array[0] == "SYS_WAFERID")
+                {
+                    if (!string.IsNullOrEmpty(wafer.WaferID))
                     {
-                        if (!string.IsNullOrEmpty(wafer.WaferID))
-                        {
-                            Wat.wafers.Add(wafer);
-                        }
-                        wafer.WaferID = array[1];
+                        Wat.wafers.Add(wafer);
+                        wafer = new WATWafer();
                     }
-                    if (array.Length > 3)
+                    wafer.WaferID = array[1];
+                }
+                else if (string.IsNullOrEmpty(array[0]))
+                {
+                    for (int i = 1; i < array.Length; i++)
                     {
-                        WATParameter parameter = new WATParameter
-                        {
-                            ItemNo = array[0],
-                            ParameterName = array[1],
-                            unit = array[2]
-                        };
-                        for (int i = 3; i < array.Length; i++)
-                        {
-                            parameter.ValueList.Add(array[i]);
-                        }
-                        wafer.parameters.Add(parameter);
+                        wafer.parameters[wafer.parameters.Count - 1].ValueList.Add(array[i]);
                     }
+                }
+                else if (array[0].Substring(0, 2) == "R[")
+                {
+                    WATParameter parameter = new WATParameter
+                    {
+                        ItemNo = array[0],
+                        ParameterName = array[1],
+                        unit = array[2]
+                    };
+                    for (int i = 3; i < array.Length; i++)
+                    {
+                        parameter.ValueList.Add(array[i]);
+                    }
+                    wafer.parameters.Add(parameter);
+                }
+               
                 }
 
                 if (!string.IsNullOrEmpty(wafer.WaferID))
                 {
                     Wat.wafers.Add(wafer);
                 }
-            }
+        }
             catch (Exception)
             {
                 throw;
@@ -103,7 +114,7 @@ namespace AMSDCMDataTranslator
             {
                 sr.Close();
             }
-            
+
         }
 
         private Dictionary<string, string> dic = new Dictionary<string, string> { { "Recipe ID", "RecipeID" },{ "Lot ID", "LotID"},{ "Foup ID", "FoupID"},{ "Tester ID", "TesterID"},{ "ProbeCard ID", "ProbeCardID" },{ "User ID", "UserID" },{ "Testprogram", "TestProgram" },

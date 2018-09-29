@@ -34,9 +34,7 @@ namespace AMSDCMDataTranslator.Models
         {
             int posleft = parameter.ItemNo.IndexOf("[");
             int posright = parameter.ItemNo.IndexOf("]");
-
             TestID = parameter.ItemNo.Substring(posleft+1,posright-posleft-1);
-
             TestValue = parameter.ValueList[i];
         }
     }

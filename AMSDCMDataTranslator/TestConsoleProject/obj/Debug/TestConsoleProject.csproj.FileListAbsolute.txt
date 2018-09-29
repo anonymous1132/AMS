@@ -42,3 +42,9 @@ D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\Test
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.csproj.CopyComplete
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.exe
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.pdb
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.OOXML.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.OpenXml4Net.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.xml

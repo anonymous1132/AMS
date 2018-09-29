@@ -36,6 +36,7 @@ namespace AMSDCMDataTranslator.Models
         /// <param name="fileSuffix">数据文件指定后缀</param>  
         protected abstract void TranslateFile(string filePath,string fileSuffix);
 
+
         protected virtual void OperateFiles(TranslateDelegate translateDelegate,string fileSuffix)
         {
         }

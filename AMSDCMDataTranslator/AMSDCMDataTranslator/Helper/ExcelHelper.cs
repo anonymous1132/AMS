@@ -34,7 +34,27 @@ namespace AMSDCMDataTranslator.Helper
             return objDataset1;
         }
 
-      
+        //针对本项目Hlcm数据获取
+        public static DataSet GetHlcmContent(string path, string ver = "2007")
+        {
+            string sConnectionString = ver == "2003" ? "Provider=Microsoft.Jet.OLEDB.4.0;" +
+             "Data Source=" + path + ";" +
+            "Extended Properties=Excel 8.0;" : "Provider=Microsoft.ACE.OLEDB.12.0;" +
+             "Data Source=" + path + ";" +
+            "Extended Properties=Excel 12.0;";
+            OleDbConnection objConn = new OleDbConnection(sConnectionString);
+            objConn.Open();
+            OleDbCommand objCmdSelect = new OleDbCommand("SELECT * FROM [Raw data$]", objConn);
+            OleDbDataAdapter objAdapter1 = new OleDbDataAdapter();
+            objAdapter1.SelectCommand = objCmdSelect;
+            DataSet objDataset1 = new DataSet();
+            //将Excel中数据填充到数据集
+            objAdapter1.Fill(objDataset1, "XLData");
+            objConn.Close();
+            return objDataset1;
+        }
+
+
 
         public Excel.Application app()
         {

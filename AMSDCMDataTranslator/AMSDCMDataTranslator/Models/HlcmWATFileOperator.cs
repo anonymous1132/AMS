@@ -32,7 +32,7 @@ namespace AMSDCMDataTranslator.Models
             SIFF_PATH = HlcmSetting.SiffPath;
             SIFF_HISTORY_PATH = HlcmSetting.SiffHistoryPath;
             //测试临时使用
-            SOURCE_FILE_PATH = @"C:\Users\PUI\Desktop\test";
+            SOURCE_FILE_PATH = @"C:\Users\caojin\Desktop\test";
         }
     }
 }

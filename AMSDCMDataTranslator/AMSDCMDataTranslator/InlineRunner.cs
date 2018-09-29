@@ -38,5 +38,22 @@ namespace AMSDCMDataTranslator
 
             LogHelper.InlineInfoLog("InlineDebugTranslator执行完毕");
         }
+
+        public static void RunTest()
+        {
+            LogHelper.InlineInfoLog("开始执行InlineTEstTranslator");
+            MESInline inline = new MESInline();
+            InlineFileOperator fileOperator = new InlineFileOperator(inline);
+            try
+            {
+                fileOperator.OperateTestFiles();
+                SshOper ssh = new SshOper();
+                LogHelper.InlineInfoLog("Inline\t" + ssh.GetResault("sh ~/eda/inline.sh"));
+            }
+            catch (Exception e)
+            {
+                LogHelper.ErrorLog("InlineTest", e);
+            }
+        }
     }
 }

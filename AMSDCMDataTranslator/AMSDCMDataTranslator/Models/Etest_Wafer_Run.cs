@@ -21,8 +21,8 @@ namespace AMSDCMDataTranslator.Models
 
         public string SiteCount
         {
-            get;
-            set;
+            get { return sites.Count.ToString(); }
+            
         }
 
         public string ParameterCount
@@ -64,12 +64,12 @@ namespace AMSDCMDataTranslator.Models
         public void GetData(WATWafer wafer,WAT wat)
         {
             WaferNumber = wafer.WaferID;
-            SiteCount = wat.TestSite;
+           // SiteCount = wat.TestSite;
             ParameterCount = wafer.parameters.Count.ToString();
             WaferPass = "";
             Comments = "";
             sites = new List<Etest_Site>();
-            for (int i = 0; i < Convert.ToInt32(SiteCount); i++)
+            for (int i = 0; i < Convert.ToInt32(wat.TestSite); i++)
             {
                 Etest_Site site = new Etest_Site();
                 site.GetData(wat.site_coordinates[i],wafer,i);

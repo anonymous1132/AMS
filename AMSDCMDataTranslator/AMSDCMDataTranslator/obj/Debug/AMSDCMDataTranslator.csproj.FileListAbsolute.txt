@@ -34,3 +34,9 @@ D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\lo
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\log4net.xml
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.csproj.CopyComplete
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\NPOI.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\NPOI.OOXML.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\NPOI.OpenXml4Net.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\NPOI.xml

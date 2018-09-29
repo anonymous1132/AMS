@@ -49,8 +49,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestDcm.cs" />
+    <Compile Include="TestEnvInline.cs" />
     <Compile Include="TestExcelDate.cs" />
     <Compile Include="TestForeach.cs" />
+    <Compile Include="TestFtp.cs" />
     <Compile Include="TestHlcm.cs" />
     <Compile Include="TestInline.cs" />
     <Compile Include="TestLog.cs" />

@@ -26,5 +26,22 @@ namespace AMSDCMDataTranslator
             }
         }
 
+        public static void UploadEtestMultiFile(string[] filePaths)
+        {
+            FTPHelper.FtpServerIP = WATSetting.FtpServerIP;
+            FTPHelper.FtpUserID = WATSetting.FtpUserID;
+            FTPHelper.FtpPassword = WATSetting.FtpPassword;
+            FTPHelper.ftpURI = WATSetting.FtpUri;
+            try
+            {
+                FTPHelper ftp = new FTPHelper();
+                ftp.FtpUploadFileForMulti(filePaths);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }

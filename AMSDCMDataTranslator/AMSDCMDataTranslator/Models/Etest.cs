@@ -34,7 +34,7 @@ namespace AMSDCMDataTranslator.Models
         public string WriteSiff(string filePath)
         {
             CultureInfo cultureInfo = CultureInfo.CreateSpecificCulture("en-US");
-            string siff_file_name = lot_run.Lot+  DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt";
+            string siff_file_name = lot_run.Lot+  DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".txt";
             XmlDocument document = XmlHelper.CreateXmlDocument("ADB_DOCUMENT", DataSource, FormatVersion);
             XmlNode xn = document.SelectSingleNode("/ADB_DOCUMENT");
             XmlNode xn2 = document.CreateElement("ETEST_LOT_RUN");

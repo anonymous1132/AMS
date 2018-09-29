@@ -265,8 +265,8 @@ namespace AMSDCMDataTranslator.Helper
             Stream stream = null;
             FtpWebResponse response = null;
             FileStream fs = null;
-            try
-            {
+            //try
+            //{
                 FileInfo finfo = new FileInfo(localFullPathName);
                 if (FtpServerIP == null || FtpServerIP.Trim().Length == 0)
                 {
@@ -306,32 +306,92 @@ namespace AMSDCMDataTranslator.Helper
                     }
                     contentLen = fs.Read(buff, 0, buffLength);
                 }
-                stream.Close();
-                fs.Close();
-                response.Close();
-                return true;
+            stream.Close();
+            fs.Close();
+            response.Close();
+            //  return true;
 
-            }
-            catch (Exception)
+            //}
+            //catch (Exception)
+            //{
+            //    //return false;
+            //    throw;
+            //}
+            //  finally
+            //{
+            if (fs != null)
             {
-                return false;
-                throw;
+                fs.Close();
             }
-            finally
+            if (stream != null)
             {
-                if (fs != null)
+                stream.Close();
+            }
+            if (response != null)
+            {
+                response.Close();
+            }
+            //}
+            return true;
+        }
+
+        public bool FtpUploadFileForMulti(string[] localFullPathNames, Action<int, int> updateProgress = null)
+        {
+            FtpWebRequest reqFTP;
+            Stream stream = null;
+            FileStream fs = null;
+            foreach (string localFullPathName in localFullPathNames)
+            {
+                try
                 {
+                    FileInfo finfo = new FileInfo(localFullPathName);
+                    if (FtpServerIP == null || FtpServerIP.Trim().Length == 0)
+                    {
+                        throw new Exception("ftp上传目标服务器地址未设置！");
+                    }
+                    // Uri uri = new Uri("ftp://" + FtpServerIP + "/" + finfo.Name);
+                    Uri uri = new Uri(ftpURI + finfo.Name);
+                    reqFTP = (FtpWebRequest)WebRequest.Create(uri);
+                    reqFTP.KeepAlive = false;
+                    reqFTP.UseBinary = true;
+                    reqFTP.Credentials = new NetworkCredential(FtpUserID, FtpPassword);//用户，密码
+                    reqFTP.Method = WebRequestMethods.Ftp.UploadFile;//向服务器发出下载请求命令
+                    reqFTP.ContentLength = finfo.Length;//为request指定上传文件的大小
+                    reqFTP.ContentLength = finfo.Length;
+                    int buffLength = 1024;
+                    byte[] buff = new byte[buffLength];
+                    int contentLen;
+                    fs = finfo.OpenRead();
+                    stream = reqFTP.GetRequestStream();
+                    contentLen = fs.Read(buff, 0, buffLength);
+                    int allbye = (int)finfo.Length;
+                    //更新进度  
+                    if (updateProgress != null)
+                    {
+                        updateProgress((int)allbye, 0);//更新进度条   
+                    }
+                    int startbye = 0;
+                    while (contentLen != 0)
+                    {
+                        startbye = contentLen + startbye;
+                        stream.Write(buff, 0, contentLen);
+                        //更新进度  
+                        if (updateProgress != null)
+                        {
+                            updateProgress((int)allbye, (int)startbye);//更新进度条   
+                        }
+                        contentLen = fs.Read(buff, 0, buffLength);
+                    }
+                    stream.Close();
                     fs.Close();
                 }
-                if (stream != null)
+                catch (Exception)
                 {
-                    stream.Close();
-                }
-                if (response != null)
-                {
-                    response.Close();
+                    LogHelper.ErrorLog("HlcmFTP上传文件失败："+ localFullPathName);
+                    continue;
                 }
             }
+            return true;
         }
 
         /// <summary>

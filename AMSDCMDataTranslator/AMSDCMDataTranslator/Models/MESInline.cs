@@ -65,6 +65,39 @@ namespace AMSDCMDataTranslator.Models
             GetData("", "");
         }
 
+        public void GetTestData()
+        {
+            string sql = "";
+            try
+            {
+                sql = string.Format("select * from fvace_inline_data_test where claim_time >= to_date('{0}','yyyy/mm/dd HH24:mi:ss') order by claim_time", GetLastDBLine());
+            }
+            catch (Exception)
+            {
+                sql = "select * from fvace_inline_data_test order by claim_time";
+            }
+            //Test用
+            // sql = "select * from fvace_inline_data where measuredatacount =98";
+            DB2Helper dB2 = new DB2Helper();
+            dB2.GetSomeData(sql);
+            DataTable dt = dB2.dt;
+            Inline_lines = new List<Inline_SigleLine>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                try
+                {
+                    Inline_SigleLine inline_SigleLine = new Inline_SigleLine();
+                    inline_SigleLine.GetData(dr);
+                    Inline_lines.Add(inline_SigleLine);
+                }
+                catch (Exception e)
+                {
+                    LogHelper.ErrorLog("InlineTest", e);
+                }
+            }
+            LastDbLineThisQuery = dt.DefaultView[dt.Rows.Count - 1][0].ToString();
+        }
+
         public override string WriteSiff(string filePath)
         {
             string filepath = filePath + "\\Inline" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt";

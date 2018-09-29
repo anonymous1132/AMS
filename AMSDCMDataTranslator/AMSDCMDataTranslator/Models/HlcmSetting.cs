@@ -85,10 +85,30 @@ namespace AMSDCMDataTranslator.Models
             set;
         } = "16kQgN8V";
 
+
+        public static string DicConfigPath
+        {
+            get;
+            set;
+        }
+
+        public static Dictionary<string, int> DicTestID2Desc
+        {
+            get;
+            set;
+        } = new Dictionary<string, int>();
+
+        public static bool IsDicUpdated
+        {
+            get;
+            set;
+        } = false;
+
         public static void SetValue()
         {
             string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
             string configPath = exePath.Substring(0, exePath.LastIndexOf("\\") + 1) + "App\\config\\hlcmconfig.xml";
+            DicConfigPath= exePath.Substring(0, exePath.LastIndexOf("\\") + 1) + "App\\config\\hlcmdic.xml";
             if (!File.Exists(configPath))
             {
                 return;
@@ -111,7 +131,22 @@ namespace AMSDCMDataTranslator.Models
                 //SFTP表
                 SFtpServerIP = DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["IP"].ToString());
                 SFtpUserID = DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["UserID"].ToString());
-                SFtpPassword= DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["Password"].ToString());
+                SFtpPassword = DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["Password"].ToString());
+            }
+
+            if (!File.Exists(DicConfigPath))
+            {
+                return;
+            }
+            else
+            {
+                DataSet ds = XmlHelper.GetDataSet(configPath, XmlHelper.XmlType.File);
+                //TestDictionary表
+                DataTable dt = ds.Tables["TestDictionary"];
+                foreach (DataRow dr in dt.Rows)
+                {
+                    DicTestID2Desc.Add(dr["TestDescription"].ToString(), Convert.ToInt16(dr["TestID"].ToString()));
+                }
             }
         }
     }

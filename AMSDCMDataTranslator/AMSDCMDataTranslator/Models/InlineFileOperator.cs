@@ -25,7 +25,6 @@ namespace AMSDCMDataTranslator.Models
 
         protected override void TranslateFile(string filePath, string fileSuffix)
         {
-
             inline.GetData(filePath,fileSuffix);
             string siffFileName = inline.WriteSiff(SiffPath);
             InlineFtpOperator.UploadEtestFile( siffFileName);
@@ -47,6 +46,22 @@ namespace AMSDCMDataTranslator.Models
         public void OperateFiles()
         {
             OperateFiles("");
+        }
+
+        public void OperateTestFiles()
+        {
+            ((MESInline)inline).GetTestData();
+            foreach (var line in inline.Inline_lines)
+            {
+                line.Fab = "FABTEST";
+                line.Lot = "TEST_" + line.Lot;
+                line.SourceLot = "TEST_"+line.SourceLot;
+            }
+            string siffFileName = inline.WriteSiff(SiffPath);
+            InlineFtpOperator.UploadEtestFile(siffFileName);
+            LogHelper.InlineInfoLog("Test数据转换成功—SiffFile:" + siffFileName);
+            FileHelper.Move(siffFileName, SiffHistoryPath + siffFileName.Substring(siffFileName.LastIndexOf("\\")));
+            inline.WriteXmlConfig();
         }
     }
 }
