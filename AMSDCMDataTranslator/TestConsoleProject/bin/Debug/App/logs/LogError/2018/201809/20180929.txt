@@ -165,3 +165,15 @@
 【错误描述】WAT:	WAT_test_data_format1.dat	/r/n索引超出范围。必须为非负值并小于集合大小。
 参数名: index                                   
 【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-29 16:33:48,637                                   
+【线程编号】[4]                                   
+【执行时间】[167]毫秒                                   
+【出错文件】D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	WAT_test_data_format1.dat	/r/n索引超出范围。必须为非负值并小于集合大小。
+参数名: index                                   
+【错误详情】

@@ -40,3 +40,4 @@ D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\NP
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\NPOI.OpenXml4Net.dll
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\NPOI.OpenXmlFormats.dll
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\bin\Debug\NPOI.xml
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.csprojAssemblyReference.cache
