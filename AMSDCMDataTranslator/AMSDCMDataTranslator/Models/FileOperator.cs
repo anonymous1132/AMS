@@ -129,7 +129,7 @@ namespace AMSDCMDataTranslator.Models
         /// <summary>
         /// 操作文件：文件转换、上传
         /// </summary>
-        public abstract void OperateFiles(string fileSuffix);
+        public abstract void OperateFiles();
 
     }
 }

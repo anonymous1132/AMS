@@ -18,5 +18,11 @@ namespace TestConsoleProject
             Console.WriteLine("OK");
         }
 
+        public static void TestAMSInline()
+        {
+            InlineDebugSetting.SetValue();
+            InlineRunner.RunInlineTest();
+            Console.WriteLine("OK");
+        }
     }
 }

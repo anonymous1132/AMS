@@ -22,7 +22,7 @@ namespace AMSDCMDataTranslator
             try
             {
                 DCMFileOperator dCMFileOperator = new DCMFileOperator();
-                dCMFileOperator.OperateFiles("CSV");
+                dCMFileOperator.OperateFiles();
                 DataSet ds = dCMFileOperator.DCMData;
                 SqlOper sqlo = new SqlOper();
                 string info = "";

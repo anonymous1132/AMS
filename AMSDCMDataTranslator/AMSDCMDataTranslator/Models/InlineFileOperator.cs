@@ -23,9 +23,9 @@ namespace AMSDCMDataTranslator.Models
             SIFF_HISTORY_PATH = InlineDebugSetting.SiffHistoryPath;
         }
 
-        protected override void TranslateFile(string filePath, string fileSuffix)
+        protected override void TranslateFile()
         {
-            inline.GetData(filePath,fileSuffix);
+            inline.GetData();
             string siffFileName = inline.WriteSiff(SiffPath);
             InlineFtpOperator.UploadEtestFile( siffFileName);
             LogHelper.InlineInfoLog("数据转换成功—SiffFile:" + siffFileName);
@@ -33,29 +33,21 @@ namespace AMSDCMDataTranslator.Models
             inline.WriteXmlConfig();
         }
 
-        protected override void OperateFiles(TranslateDelegate translateDelegate, string fileSuffix)
+        public override void OperateFiles()
         {
-            translateDelegate("", fileSuffix);
+            TranslateFile();
         }
 
-        public override void OperateFiles(string fileSuffix)
-        {
-            OperateFiles( TranslateFile,fileSuffix);
-        }
-
-        public void OperateFiles()
-        {
-            OperateFiles("");
-        }
 
         public void OperateTestFiles()
         {
-            ((MESInline)inline).GetTestData();
+
+            inline.GetData();
             foreach (var line in inline.Inline_lines)
             {
                 line.Fab = "FABTEST";
                 line.Lot = "TEST_" + line.Lot;
-                line.SourceLot = "TEST_"+line.SourceLot;
+                line.SourceLot =line.SourceLot==""?"": "TEST_"+line.SourceLot;
             }
             string siffFileName = inline.WriteSiff(SiffPath);
             InlineFtpOperator.UploadEtestFile(siffFileName);
@@ -63,5 +55,7 @@ namespace AMSDCMDataTranslator.Models
             FileHelper.Move(siffFileName, SiffHistoryPath + siffFileName.Substring(siffFileName.LastIndexOf("\\")));
             inline.WriteXmlConfig();
         }
+
+
     }
 }

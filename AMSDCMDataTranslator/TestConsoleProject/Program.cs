@@ -15,12 +15,7 @@ namespace TestConsoleProject
     {
         static void Main(string[] args)
         {
-            //string[] path = new string[] { @"C:\Users\caojin\Desktop\test\Hlcm-WAT-format(test).xlsx", @"C:\Users\caojin\Desktop\test\Hlcm-WAT-format(test) (2).xlsx" };
-            //TestFtp.Test(path);
-            //Console.ReadKey();
-            TestWat.Test();
-            Console.WriteLine("ok");
-            Console.ReadKey();
+            TestInline.TestAMSInline();
         }
     }
 }

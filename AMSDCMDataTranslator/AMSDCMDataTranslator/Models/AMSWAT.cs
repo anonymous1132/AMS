@@ -13,15 +13,20 @@ namespace AMSDCMDataTranslator.Models
         /// 读取数据文件
         /// </summary>
         /// <param name="filePath">数据文件路径</param>
-        public override void GetData(string filePath,string specPath)
+        public override void GetData()
         {
-            WATFileUtil util = new WATFileUtil(filePath);
+            WATFileUtil util = new WATFileUtil(FilePath);
             SpecDataFileUtil specUtil = new SpecDataFileUtil(specPath + "\\" + util.Wat.LimitFile);
             lot_run = new Etest_Lot_Run();
-            lot_run.GetData(util.Wat,specUtil.datalist);
+            lot_run.GetData(util.Wat, specUtil.datalist);
         }
 
-      
+
+        public string specPath
+        {
+            get;
+            set;
+        }
 
     }
 }

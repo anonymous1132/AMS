@@ -12,12 +12,11 @@ namespace AMSDCMDataTranslator.Models
         {
             Etest = etest;
             SetConfig();
+            fileSuffix = "DAT";
+          //  ((AMSWAT)etest).filePath = filePath;
+            ((AMSWAT)etest).specPath = SpecPath;
         }
 
-        public void OperateFiles()
-        {
-            OperateFiles("DAT");
-        }
 
         private void SetConfig()
         {

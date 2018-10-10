@@ -8,21 +8,21 @@ using System.Data.OleDb;
 
 namespace AMSDCMDataTranslator.Helper
 {
-    class DB2Helper
+    public class DB2Helper
     {
         private readonly string strConn = "Provider=IBMDADB2;Data Source=AMRPTDB;UID=istrpt;PWD=istrpt;";
-        public DataTable dt;
+        public DataTable dt ;
 
         public void GetSomeData(string strSql)
         {
             using (OleDbConnection conn = new OleDbConnection(strConn))
             {
                 OleDbCommand cmd = new OleDbCommand(strSql, conn);
+                dt = new DataTable();
                 try
                 {
                     conn.Open();
                     OleDbDataAdapter adp = new OleDbDataAdapter(cmd);
-                    this.dt = new DataTable();
                     adp.Fill(dt);
                 }
                 catch (Exception ex)

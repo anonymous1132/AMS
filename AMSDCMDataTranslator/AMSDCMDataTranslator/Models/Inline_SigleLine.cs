@@ -11,6 +11,15 @@ namespace AMSDCMDataTranslator.Models
     {
         public Inline_SigleLine()
         { }
+        public DateTime ClaimTime
+        {
+            get;
+            private set;
+        }
+        public void SetClaimTime(DateTime date)
+        {
+            ClaimTime = date;
+        }
 
         public string Lot
         {
@@ -174,7 +183,7 @@ namespace AMSDCMDataTranslator.Models
             set;
         }
 
-        private string strMeasureDataCount
+        public string strMeasureDataCount
         {
             get;
             set;
@@ -372,121 +381,131 @@ namespace AMSDCMDataTranslator.Models
         }
 
         /// <summary>
-        /// 返回行结果，当MeasureDataCount>50时，以50位为一组分组。
+        /// 返回行结果，当MeasureDataCount>50时，以50位为一组分组(已经取消)。
         /// </summary>
         /// <returns></returns>
-        public List<string> GetSiffLines()
-        {
-            List<string> list = new List<string>();
-            if (MeasureDataCount > 50)
-            {
-                List<string> siteArray = WaferSiteListSplit(WaferSiteArray);
-                List<string> dataArray = ItemSplit(MeasureDataArray);
-                List<string>coorArray= ItemSplit(SiteCoordArray);
-                for (int i = 0; i < siteArray.Count; i++)
-                {
-                    string site = siteArray[i];
-                    string data = dataArray[i];
-                    string coord = SiteCoordArray == "" ? "" : coorArray[i];
-                    int count = (i == siteArray.Count - 1 )? MeasureDataCount%50:50;
-                    list.Add(GetAppendString(count,site,data,coord));
-                }
-            }
-            else
-            {
-                list.Add( GetAppendString(MeasureDataCount, WaferSiteArray, MeasureDataArray, SiteCoordArray));
-            }
-            return list;
-        }
+        //public List<string> OldGetSiffLines()
+        //{
+        //    List<string> list = new List<string>();
+        //    if (MeasureDataCount > 50)
+        //    {
+        //        List<string> siteArray = WaferSiteListSplit(WaferSiteArray);
+        //        List<string> dataArray = ItemSplit(MeasureDataArray);
+        //        List<string>coorArray= ItemSplit(SiteCoordArray);
+        //        for (int i = 0; i < siteArray.Count; i++)
+        //        {
+        //            string site = siteArray[i];
+        //            string data = dataArray[i];
+        //            string coord = SiteCoordArray == "" ? "" : coorArray[i];
+        //            int count = (i == siteArray.Count - 1 )? MeasureDataCount%50:50;
+        //            list.Add(GetAppendString(count,site,data,coord));
+        //        }
+        //    }
+        //    else
+        //    {
+        //        list.Add( GetAppendString(MeasureDataCount, WaferSiteArray, MeasureDataArray, SiteCoordArray));
+        //    }
+        //    return list;
+        //}
+
+        ////返回行结果
+        //public List<string> GetSiffLines()
+        //{
+        //    List<string> list = new List<string>();
+        //    list.Add(GetAppendString(MeasureDataCount, WaferSiteArray, MeasureDataArray, SiteCoordArray));
+        //    return list;
+        //}
 
         public string GetSingleSiffLine()
         {
             return GetAppendString(MeasureDataCount, WaferSiteArray, MeasureDataArray, SiteCoordArray);
         }
 
-        private List<string> ItemSplit(string Item)
-        {
+        //已作废
+        //private List<string> ItemSplit(string Item)
+        //{
 
-            List<string> resault_list = new List<string>();
-            string[] arrlist = Item.Split(';');
-            int L = arrlist.Length;
-            int c = 0;
-            while (L > 50)
-            {
-                List<string> templist = new List<string>();
-                for (int i = c; i < c+50; i++)
-                {
-                    templist.Add(arrlist[i]);
-                }
-                string temp = string.Join(";",templist);
-                c = c + 50;
-                L = L - 50;
-                resault_list.Add(temp);
-            }
-            List<string> templist2 = new List<string>();
-            for (int i = c; i < c+L; i++)
-            {
-                templist2.Add(arrlist[i]);
-            }
-            string temp2= string.Join(";", templist2);
-            resault_list.Add(temp2);
-            return resault_list;
-        }
+        //    List<string> resault_list = new List<string>();
+        //    string[] arrlist = Item.Split(';');
+        //    int L = arrlist.Length;
+        //    int c = 0;
+        //    while (L > 50)
+        //    {
+        //        List<string> templist = new List<string>();
+        //        for (int i = c; i < c+50; i++)
+        //        {
+        //            templist.Add(arrlist[i]);
+        //        }
+        //        string temp = string.Join(";",templist);
+        //        c = c + 50;
+        //        L = L - 50;
+        //        resault_list.Add(temp);
+        //    }
+        //    List<string> templist2 = new List<string>();
+        //    for (int i = c; i < c+L; i++)
+        //    {
+        //        templist2.Add(arrlist[i]);
+        //    }
+        //    string temp2= string.Join(";", templist2);
+        //    resault_list.Add(temp2);
+        //    return resault_list;
+        //}
 
-        private List<string> WaferSiteListSplit(string Item)
-        {
-            List<string> resault_list = new List<string>();
-            List<string> arrylist = new List<string>();
-            for (int i = 0; i < Item.Length; i++)
-            {
-                arrylist.Add(Item[i].ToString());
-            }
+        //已作废
+        //private List<string> WaferSiteListSplit(string Item)
+        //{
+        //    List<string> resault_list = new List<string>();
+        //    List<string> arrylist = new List<string>();
+        //    for (int i = 0; i < Item.Length; i++)
+        //    {
+        //        arrylist.Add(Item[i].ToString());
+        //    }
 
-            List<string> arrylist2 = new List<string>();
-            string temp="";
-            for (int i = 0; i < arrylist.Count; i++)
-            {
-                if (i % 4 == 0)
-                {
-                    temp = arrylist[i];
-                }
-                else if (i % 4 == 3)
-                {
-                    
-                    temp = temp + arrylist[i];
-                    arrylist2.Add(temp);
-                }
-                else
-                {
-                    temp = temp + arrylist[i];
-                }
+        //    List<string> arrylist2 = new List<string>();
+        //    string temp="";
+        //    for (int i = 0; i < arrylist.Count; i++)
+        //    {
+        //        if (i % 4 == 0)
+        //        {
+        //            temp = arrylist[i];
+        //        }
+        //        else if (i % 4 == 3)
+        //        {
 
-            }
-            int L = arrylist2.Count;
-            int c = 0;
-            while (L > 50)
-            {
-                List<string> templist = new List<string>();
-                for (int i = c; i < c + 50; i++)
-                {
-                    templist.Add(arrylist2[i]);
-                }
-                temp = string.Join("", templist);
-                c = c + 50;
-                L = L - 50;
-                resault_list.Add(temp);
-            }
+        //            temp = temp + arrylist[i];
+        //            arrylist2.Add(temp);
+        //        }
+        //        else
+        //        {
+        //            temp = temp + arrylist[i];
+        //        }
 
-            List<string> templist2 = new List<string>();
-            for (int i = c; i < c + L; i++)
-            {
-                templist2.Add(arrylist2[i]);
-            }
-            string temp2 = string.Join("", templist2);
-            resault_list.Add(temp2);
-            return resault_list;
+        //    }
+        //    int L = arrylist2.Count;
+        //    int c = 0;
+        //    while (L > 50)
+        //    {
+        //        List<string> templist = new List<string>();
+        //        for (int i = c; i < c + 50; i++)
+        //        {
+        //            templist.Add(arrylist2[i]);
+        //        }
+        //        temp = string.Join("", templist);
+        //        c = c + 50;
+        //        L = L - 50;
+        //        resault_list.Add(temp);
+        //    }
 
-        }
+        //    List<string> templist2 = new List<string>();
+        //    for (int i = c; i < c + L; i++)
+        //    {
+        //        templist2.Add(arrylist2[i]);
+        //    }
+        //    string temp2 = string.Join("", templist2);
+        //    resault_list.Add(temp2);
+        //    return resault_list;
+
+        //}
 
         public string GetAppendString(int count,string siteArray,string dataArray,string coorArray)
         {

@@ -10,23 +10,28 @@ namespace AMSDCMDataTranslator.Models
 {
     public class HlcmWAT : Etest
     {
+
+        public HlcmWAT()
+        {
+
+        }
+        
         /// <summary>
         /// 获取Hlcm数据文件中的数据
         /// </summary>
         /// <param name="filePath">数据文件全路径</param>
         /// <param name="specPath">SpecFile文件全路径</param>
-        public override void GetData(string filePath, string specPath)
+        public override void GetData()
         {
-            this.filePath = filePath;
             ParameterList = new List<string>();
             //  ExcelOper excelOper = new ExcelOper(filePath);
             //  DataTable dt = excelOper.GetContentFromExcel();
-            NPOIExcelHelper excelHelper = new NPOIExcelHelper(filePath);
+            NPOIExcelHelper excelHelper = new NPOIExcelHelper(FilePath);
             DataTable dt = excelHelper.ExcelToDataTable("Raw data",true);
             int j= dt.Columns.Count;
             if (dt.Columns.Count < 8 || dt.Columns[0].ColumnName != "LOT ID" || dt.Columns[1].ColumnName != "PRODUCT NAME" || dt.Columns[5].ColumnName != "SITE" || dt.Rows.Count < 3)
             {
-                throw new Exception(filePath + "文件格式错误");
+                throw new Exception(FilePath + "文件格式错误");
             }
             lot_run = new Etest_Lot_Run
             {
@@ -55,10 +60,6 @@ namespace AMSDCMDataTranslator.Models
             }
         }
 
-        public void GetData(string filePath)
-        {
-            GetData(filePath, "");
-        }
         /// <summary>
         /// 参数集合
         /// </summary>
@@ -130,12 +131,12 @@ namespace AMSDCMDataTranslator.Models
         }
 
         //文件路径
-        private string filePath;
+        //public string filePath;
 
         //文件名
         private string FileName
         {
-            get { return filePath.Substring(filePath.LastIndexOf("\\") + 1); }
+            get { return FilePath.Substring(FilePath.LastIndexOf("\\") + 1); }
         }
 
         //赋值Etest_Limits
@@ -164,7 +165,7 @@ namespace AMSDCMDataTranslator.Models
             }
             else
             {
-                throw new Exception(filePath + "文件格式错误");
+                throw new Exception(FilePath + "文件格式错误");
             }
             return etest_Limits;
         }
@@ -242,11 +243,18 @@ namespace AMSDCMDataTranslator.Models
             string resault = "";
             try
             {
-                resault = ((DateTime)time).ToString("hh:mm:ss");
+                resault = ((TimeSpan)time).ToString("HH:mm:ss");
             }
             catch (Exception)
             {
                 string[] arry = time.ToString().Split(':');
+                
+                //如果出现PM、AM则需要处理
+                if (arry[2].Contains(" "))
+                {
+                    arry[2] = arry[2].Split(' ')[0];
+                }
+
                 for (int i = 0; i < 3; i++)
                 {
                     if (arry[i].Length == 1)
@@ -256,6 +264,7 @@ namespace AMSDCMDataTranslator.Models
                 }
                 resault = string.Join(":",arry);
             }
+            
             return resault;
         }
     }

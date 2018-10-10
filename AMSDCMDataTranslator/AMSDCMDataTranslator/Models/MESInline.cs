@@ -28,7 +28,7 @@ namespace AMSDCMDataTranslator.Models
             return dt.DefaultView[0][0].ToString();
         }
         private string LastDbLineThisQuery;
-        public override void GetData(string filePath, string SpecFile)
+        public override void GetData()
         {
             string sql = "";
             try
@@ -60,10 +60,7 @@ namespace AMSDCMDataTranslator.Models
             }
             LastDbLineThisQuery = dt.DefaultView[dt.Rows.Count - 1][0].ToString();
         }
-        public void GetData()
-        {
-            GetData("", "");
-        }
+
 
         public void GetTestData()
         {

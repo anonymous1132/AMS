@@ -8,6 +8,6 @@ namespace AMSDCMDataTranslator.Models
 {
     public interface IFileOperable
     {
-        void OperateFiles(string fileSuffix);
+        void OperateFiles();
     }
 }

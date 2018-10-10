@@ -1,0 +1,115 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 15:25:35,127                                   
+【线程编号】[4]                                   
+【执行时间】[200]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】26                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT/r/n未将对象引用设置到对象的实例。/r/nAMSDCMDataTranslator/r/nVoid GetDate()/r/n   在 AMSDCMDataTranslator.Models.Etest.GetDate() 位置 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Models\Etest.cs:行号 52
+   在 AMSDCMDataTranslator.Models.Etest..ctor(WAT wAT, List`1 specDatas) 位置 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Models\Etest.cs:行号 18
+   在 AMSDCMDataTranslator.WATFileOperator.ReadFiles() 位置 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\WATFileOperator.cs:行号 146                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 15:25:35,127                                   
+【线程编号】[5]                                   
+【执行时间】[200]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】14                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	WAT_test_data_format1.dat:	无法移动该文件！                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 15:33:52,656                                   
+【线程编号】[4]                                   
+【执行时间】[146]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】14                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	WAT_test_data_format1.dat:	 WORKINGPATH目录已经存在该文件！                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 15:33:52,736                                   
+【线程编号】[6]                                   
+【执行时间】[226]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】14                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	WAT_test_data_format1.dat:	无法移动该文件！                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 15:33:52,737                                   
+【线程编号】[5]                                   
+【执行时间】[227]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】26                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT/r/n无法将类型为“System.Xml.XmlElement”的对象强制转换为类型“System.Xml.XmlDocument”。/r/nAMSDCMDataTranslator/r/nSystem.Xml.XmlNode SetLimitsNode(System.Xml.XmlNode)/r/n   在 AMSDCMDataTranslator.Models.Etest_Lot_Run.SetLimitsNode(XmlNode xn) 位置 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Models\Etest_Lot_Run.cs:行号 163
+   在 AMSDCMDataTranslator.Models.Etest_Lot_Run.SetLotRunNode(XmlNode xn) 位置 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Models\Etest_Lot_Run.cs:行号 151
+   在 AMSDCMDataTranslator.Models.Etest.WriteSiffFile(String filePath) 位置 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Models\Etest.cs:行号 73
+   在 AMSDCMDataTranslator.WATFileOperator.ReadFiles() 位置 D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\WATFileOperator.cs:行号 147                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 15:59:39,472                                   
+【线程编号】[4]                                   
+【执行时间】[113]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】14                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	WAT_test_data_format1.dat:	 WORKINGPATH目录已经存在该文件！                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 16:07:00,706                                   
+【线程编号】[4]                                   
+【执行时间】[108]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】14                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	WAT_test_data_format1.dat:	 WORKINGPATH目录已经存在该文件！                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 16:09:50,639                                   
+【线程编号】[4]                                   
+【执行时间】[185]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】14                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	WAT_test_data_format1.dat:	 WORKINGPATH目录已经存在该文件！                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 16:11:58,758                                   
+【线程编号】[4]                                   
+【执行时间】[164]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】14                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	WAT_test_data_format1.dat:	 WORKINGPATH目录已经存在该文件！                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-24 16:14:39,842                                   
+【线程编号】[4]                                   
+【执行时间】[121]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】14                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	WAT_test_data_format1.dat:	 WORKINGPATH目录已经存在该文件！                                   
+【错误详情】

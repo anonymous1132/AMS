@@ -22,9 +22,14 @@ namespace AMSDCMDataTranslator.Models
             get { return "1.1"; }
         }
 
+        public string FilePath
+        {
+            get;
+            set;
+        }
         public Etest_Lot_Run lot_run;
 
-        public abstract void GetData(string filePath,string specPath);
+        public abstract void GetData();
 
         /// <summary>
         /// 生成siff，

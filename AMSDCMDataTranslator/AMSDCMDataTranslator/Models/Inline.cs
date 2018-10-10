@@ -21,7 +21,7 @@ namespace AMSDCMDataTranslator.Models
 
         public IList<Inline_SigleLine> Inline_lines;
 
-        public abstract void GetData(string filePath,string fileSpec);
+        public abstract void GetData();
 
         public abstract string WriteSiff(string fileParth);
 

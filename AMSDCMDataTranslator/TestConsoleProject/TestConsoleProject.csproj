@@ -55,12 +55,14 @@
     <Compile Include="TestFtp.cs" />
     <Compile Include="TestHlcm.cs" />
     <Compile Include="TestInline.cs" />
+    <Compile Include="TestInlineEntityGroup.cs" />
     <Compile Include="TestLog.cs" />
     <Compile Include="TestMod.cs" />
     <Compile Include="TestParameter.cs" />
     <Compile Include="TestService.cs" />
     <Compile Include="TestSplit.cs" />
     <Compile Include="TestSsh.cs" />
+    <Compile Include="TestTimeStamp.cs" />
     <Compile Include="TestWat.cs" />
   </ItemGroup>
   <ItemGroup>

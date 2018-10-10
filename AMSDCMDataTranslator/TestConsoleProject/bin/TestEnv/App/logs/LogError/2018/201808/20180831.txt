@@ -1,0 +1,44 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-31 09:52:23,537                                   
+【线程编号】[4]                                   
+【执行时间】[9205]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】AMSWAT:	WAT_test_data_format1.dat	/r/nSpecFile文件路径为空                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-31 09:55:18,581                                   
+【线程编号】[4]                                   
+【执行时间】[194]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】AMSWAT:	WAT_test_data_format1.dat	/r/nSpecFile:	D:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\\AAAAAA.txt	文件不存在                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-31 10:37:08,325                                   
+【线程编号】[4]                                   
+【执行时间】[206]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】AMSWAT:	WAT_test_data_format1.dat	/r/nSpecFile:	D:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\\AAAAAA.txt	文件不存在                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-08-31 10:46:28,615                                   
+【线程编号】[4]                                   
+【执行时间】[200]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】AMSWAT:	WAT_test_data_format1.dat	/r/nSpecFile:	D:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\\AAAAAA.txt	文件不存在                                   
+【错误详情】

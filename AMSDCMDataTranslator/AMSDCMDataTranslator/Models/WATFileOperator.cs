@@ -13,42 +13,32 @@ namespace AMSDCMDataTranslator.Models
 
         protected Etest Etest;
 
-        protected override void TranslateFile(string filePath, string fileSuffix)
+        public string fileSuffix
+        {
+            get;
+            set;
+        }
+
+        public string filePath
+        {
+            get;
+            set;
+        }
+
+        protected override void TranslateFile()
         {
             if (string.IsNullOrEmpty(fileSuffix) || (filePath.Substring(filePath.LastIndexOf(".") + 1).ToUpper() == fileSuffix.ToUpper()))
             {
-                Etest.GetData(filePath, SpecPath);
+                Etest.FilePath = filePath;
+                Etest.GetData();
                 string siffFileName = Etest.WriteSiff(SiffPath);
-                // EtestFtpOperator.UploadEtestFile(SiffPath + "\\" + siffFileName);
                 SiffFileList.Add(SiffPath + "\\" + siffFileName);
                 LogHelper.WATInfoLog("数据转换成功——DataFile:" + filePath.Substring(filePath.LastIndexOf("\\") + 1) + "\tSiffFile:" + siffFileName);
-                // FileHelper.Move(SiffPath + "\\" + siffFileName, SiffHistoryPath + "\\" + siffFileName);
-                //System.Threading.Thread.Sleep(1000);
             }
         }
         List<string> SiffFileList = new List<string>();
 
-
-        //public override void OperateFiles(string fileSuffix)
-        //{
-        //    CopyNewFiles();
-        //    string[] srcpaths = (from n in GetNewFileNames select WorkingPath + "\\" + n).ToArray();
-        //    string[] destpaths= (from n in GetNewFileNames select HistoryPath + "\\" + n).ToArray();
-
-        //}
-        public override void OperateFiles(string fileSuffix)
-        {
-            OperateFiles(TranslateFile, fileSuffix);
-            string[] filepaths = SiffFileList.ToArray();
-            EtestFtpOperator.UploadEtestMultiFile(filepaths);
-            foreach (string path in SiffFileList)
-            {
-                FileHelper.Move(path, SiffHistoryPath + path.Substring(path.LastIndexOf("\\")));
-            }
-        }
-
-
-        protected override void OperateFiles(TranslateDelegate translateDelegate, string fileSuffix)
+        public override void OperateFiles()
         {
             CopyNewFiles();
             foreach (string fileName in GetNewFileNames)
@@ -57,7 +47,8 @@ namespace AMSDCMDataTranslator.Models
                 {
                     string srcPath = WorkingPath + "\\" + fileName;
                     string desPath = HistoryPath + "\\" + fileName;
-                    translateDelegate(srcPath, fileSuffix);
+                    filePath = srcPath;
+                    TranslateFile();
                     FileHelper.Move(srcPath, desPath);
                 }
                 catch (Exception e)
@@ -65,9 +56,13 @@ namespace AMSDCMDataTranslator.Models
                     LogHelper.ErrorLog("WAT:\t" + fileName + "\t", e);
                 }
             }
+
+            string[] filepaths = SiffFileList.ToArray();
+            EtestFtpOperator.UploadEtestMultiFile(filepaths);
+            foreach (string path in SiffFileList)
+            {
+                FileHelper.Move(path, SiffHistoryPath + path.Substring(path.LastIndexOf("\\")));
+            }
         }
-
-
-
     }
 }

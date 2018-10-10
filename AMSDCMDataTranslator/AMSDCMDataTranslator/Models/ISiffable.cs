@@ -18,7 +18,7 @@ namespace AMSDCMDataTranslator.Models
             get;
         }
 
-        void GetData(string filePath,string specPath);
+        void GetData();
 
         /// <summary>
         /// 生成Siff文件

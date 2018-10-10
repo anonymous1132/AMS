@@ -1,0 +1,18 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-08 14:11:19,074                                   
+【记录信息】开始执行InlineTEstTranslator                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-08 14:11:21,140                                   
+【记录信息】Test数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\inline_data\siff\Inline20181008141121.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-08 14:11:23,501                                   
+【记录信息】Inline	starttorun
+/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/u01/app/oracle/product/12.1.0.2/bin:/kla-tencor/adb/eda/bin
+Opening logfile: /kla-tencor/adb/data/siff/Inline/message/EDC_Oct8.log.....OK Connecting to database[UserName: ace_loader][DB Name: ADB].....OK %%%%%%%%% END OF PROCESS LOADFILE(S) [Mon Oct 8 14:11:23 2018] %%%%%%%%%%
+                                   
+【信息详情】

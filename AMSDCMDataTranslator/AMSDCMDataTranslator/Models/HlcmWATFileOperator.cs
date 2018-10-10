@@ -12,12 +12,9 @@ namespace AMSDCMDataTranslator.Models
         {
             Etest = etest;
             SetConfig();
+            fileSuffix = "xlsx";
         }
 
-        public void OperateFiles()
-        {
-            OperateFiles("xlsx");
-        }
 
         //private string SFtpServerIP;
 

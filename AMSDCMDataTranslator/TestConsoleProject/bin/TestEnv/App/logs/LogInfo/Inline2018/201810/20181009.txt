@@ -1,0 +1,80 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 15:34:41,250                                   
+【记录信息】开始RunInlineTestTranslator                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 15:34:41,331                                   
+【记录信息】InlineTestTranslator执行完毕                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 15:39:08,901                                   
+【记录信息】开始RunInlineTestTranslator                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 15:39:08,934                                   
+【记录信息】InlineTestTranslator执行完毕                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 15:41:07,401                                   
+【记录信息】开始RunInlineTestTranslator                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 15:41:46,508                                   
+【记录信息】Test数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\inline_data\siff\Inline20181009154145.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 15:41:46,510                                   
+【记录信息】InlineTestTranslator执行完毕                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 16:05:13,948                                   
+【记录信息】开始RunInlineTestTranslator                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 16:05:51,996                                   
+【记录信息】Test数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\inline_data\siff\Inline20181009160551.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 16:05:51,998                                   
+【记录信息】InlineTestTranslator执行完毕                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 16:11:45,001                                   
+【记录信息】开始RunInlineTestTranslator                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 16:12:23,771                                   
+【记录信息】Test数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\inline_data\siff\Inline20181009161223.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 16:12:23,773                                   
+【记录信息】InlineTestTranslator执行完毕                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 16:21:40,770                                   
+【记录信息】开始RunInlineTestTranslator                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 16:22:19,424                                   
+【记录信息】Test数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\inline_data\siff\Inline20181009162219.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-10-09 16:22:19,426                                   
+【记录信息】InlineTestTranslator执行完毕                                   
+【信息详情】

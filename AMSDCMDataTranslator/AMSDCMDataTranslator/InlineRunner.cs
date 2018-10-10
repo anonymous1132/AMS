@@ -41,7 +41,7 @@ namespace AMSDCMDataTranslator
 
         public static void RunTest()
         {
-            LogHelper.InlineInfoLog("开始执行InlineTEstTranslator");
+            LogHelper.InlineInfoLog("开始执行InlineTestTranslator");
             MESInline inline = new MESInline();
             InlineFileOperator fileOperator = new InlineFileOperator(inline);
             try
@@ -54,6 +54,43 @@ namespace AMSDCMDataTranslator
             {
                 LogHelper.ErrorLog("InlineTest", e);
             }
+            LogHelper.InlineInfoLog("InlineTestTranslator执行完毕");
+        }
+
+        public static void RunInlineTest()
+        {
+            LogHelper.InlineInfoLog("开始RunInlineTestTranslator");
+            AMSInline inline = new AMSInline();
+            InlineFileOperator fileOperator = new InlineFileOperator(inline);
+            try
+            {
+                fileOperator.OperateTestFiles();
+                SshOper ssh = new SshOper();
+                LogHelper.InlineInfoLog("Inline\t" + ssh.GetResault("sh ~/eda/inline.sh"));
+            }
+            catch (Exception e)
+            {
+                LogHelper.ErrorLog("InlineTest", e);
+            }
+            LogHelper.InlineInfoLog("InlineTestTranslator执行完毕");
+        }
+
+        public static void RunAMSInline()
+        {
+            LogHelper.InlineInfoLog("开始RunAMSInline");
+            AMSInline inline = new AMSInline();
+            InlineFileOperator fileOperator = new InlineFileOperator(inline);
+            try
+            {
+                fileOperator.OperateTestFiles();
+                SshOper ssh = new SshOper();
+                LogHelper.InlineInfoLog("AMSInline\t" + ssh.GetResault("sh ~/eda/inline.sh"));
+            }
+            catch (Exception e)
+            {
+                LogHelper.ErrorLog("AMSInline", e);
+            }
+            LogHelper.InlineInfoLog("RunAMSInline执行完毕");
         }
     }
 }

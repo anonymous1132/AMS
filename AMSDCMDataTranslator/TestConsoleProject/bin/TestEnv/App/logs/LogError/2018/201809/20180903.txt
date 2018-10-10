@@ -1,0 +1,113 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 10:40:07,696                                   
+【线程编号】[4]                                   
+【执行时间】[347]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Hlcm:	/r/n未能找到路径“D:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\hlcm_data\history”的一部分。                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 10:42:26,834                                   
+【线程编号】[5]                                   
+【执行时间】[762]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】AMSWAT:	hlcm2.xlsx	/r/nD:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\hlcm_data\current\hlcm2.xlsx文件格式错误                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 10:45:26,709                                   
+【线程编号】[5]                                   
+【执行时间】[577]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】AMSWAT:	hlcm2.xlsx	/r/nD:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\hlcm_data\current\hlcm2.xlsx文件格式错误                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 10:56:11,984                                   
+【线程编号】[5]                                   
+【执行时间】[80725]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	hlcm2.xlsx	/r/nD:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\hlcm_data\current\hlcm2.xlsx文件格式错误                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 11:11:48,340                                   
+【线程编号】[5]                                   
+【执行时间】[767]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	hlcm2.xlsx	/r/n索引超出范围。必须为非负值并小于集合大小。
+参数名: index                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 11:17:36,875                                   
+【线程编号】[5]                                   
+【执行时间】[456]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	hlcm2.xlsx	/r/n索引超出范围。必须为非负值并小于集合大小。
+参数名: index                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 11:17:36,887                                   
+【线程编号】[6]                                   
+【执行时间】[468]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Hlcm:	/r/n索引超出范围。必须为非负值并小于集合大小。
+参数名: index                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 11:37:17,528                                   
+【线程编号】[5]                                   
+【执行时间】[589]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】WAT:	hlcm2.xlsx	/r/n未将对象引用设置到对象的实例。                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 11:37:17,653                                   
+【线程编号】[6]                                   
+【执行时间】[714]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Hlcm:	/r/n未将对象引用设置到对象的实例。                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-03 16:44:45,807                                   
+【线程编号】[4]                                   
+【执行时间】[108]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】14                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】ErroTest                                   
+【错误详情】

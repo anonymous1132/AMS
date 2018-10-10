@@ -1,0 +1,22 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-05 17:24:13,390                                   
+【线程编号】[4]                                   
+【执行时间】[796]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline/r/n未能找到文件“D:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\config\inline.config”。                                   
+【错误详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【日志级别】ERROR                                   
+【记录时间】2018-09-05 17:27:33,658                                   
+【线程编号】[5]                                   
+【执行时间】[21768]毫秒                                   
+【出错文件】D:\repository\AMSDCMDataTranslator\AMSDCMDataTranslator\Helper\LogHelper.cs                                   
+【出错行号】36                                   
+【出错的类】logerror 属性[(null)]                                   
+【错误描述】Inline/r/n文件“D:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\App\inline_data\siff\Inline20180905172733.txt”正由另一进程使用，因此该进程无法访问此文件。                                   
+【错误详情】

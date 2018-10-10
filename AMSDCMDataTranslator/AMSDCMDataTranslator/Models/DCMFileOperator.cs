@@ -13,6 +13,7 @@ namespace AMSDCMDataTranslator.Models
         public DCMFileOperator()
         {
             SetConfig();
+            fileSuffix = "CSV";
         }
         private void SetConfig()
         {
@@ -22,7 +23,13 @@ namespace AMSDCMDataTranslator.Models
         }
 
         public DataSet DCMData;
-        public override void OperateFiles(string fileSuffix)
+
+        public string fileSuffix
+        {
+            get;
+            set;
+        }
+        public override void OperateFiles()
         {
             DCMData = new DataSet();
             CopyNewFiles();

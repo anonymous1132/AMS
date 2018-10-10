@@ -32,13 +32,7 @@ namespace AMSDCMDataTranslator.Models
         /// <summary>
         /// Translate操作
         /// </summary>
-        /// <param name="filePath">数据文件全路径</param>
-        /// <param name="fileSuffix">数据文件指定后缀</param>  
-        protected abstract void TranslateFile(string filePath,string fileSuffix);
+        protected abstract void TranslateFile();
 
-
-        protected virtual void OperateFiles(TranslateDelegate translateDelegate,string fileSuffix)
-        {
-        }
     }
 }
