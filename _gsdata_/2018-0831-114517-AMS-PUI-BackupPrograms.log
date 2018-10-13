@@ -1,9 +1,0 @@
-2018-08-31 11:45:18: -- Analysis Started by On File Change, After Delay
-2018-08-31 11:45:18: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7768
-2018-08-31 11:45:18: Left to Right: Copy File: 3 
-2018-08-31 11:45:18: == Sync Started by On File Change, After Delay
-2018-08-31 11:45:19: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (191,488)
-2018-08-31 11:45:19: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/HlcmWAT.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/HlcmWAT.cs' (638)
-2018-08-31 11:45:19: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/WATFileOperator.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/WATFileOperator.cs' (1,905)
-2018-08-31 11:45:19: == Sync Complete. Time: 00:00:01, Speed: 196 KB/s, OK: 3, Errors: 0
-2018-08-31 11:45:19: 

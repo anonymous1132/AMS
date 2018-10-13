@@ -1,8 +1,0 @@
-2018-08-31 11:50:16: -- Analysis Started by On File Change, After Delay
-2018-08-31 11:50:16: Changes: 2, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7769
-2018-08-31 11:50:16: Left to Right: Copy File: 2 
-2018-08-31 11:50:16: == Sync Started by On File Change, After Delay
-2018-08-31 11:50:17: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/.suo' (193,024)
-2018-08-31 11:50:17: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Helper/ExcelHelper.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Helper/ExcelHelper.cs' (6,480)
-2018-08-31 11:50:17: == Sync Complete. Time: 00:00:01, Speed: 194 KB/s, OK: 2, Errors: 0
-2018-08-31 11:50:17: 

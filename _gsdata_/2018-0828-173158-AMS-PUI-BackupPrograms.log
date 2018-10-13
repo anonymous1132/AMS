@@ -1,9 +1,0 @@
-2018-08-28 17:31:59: -- Analysis Started by On File Change, After Delay
-2018-08-28 17:31:59: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4693
-2018-08-28 17:31:59: Left to Right: Copy File: 3 
-2018-08-28 17:31:59: == Sync Started by On File Change, After Delay
-2018-08-28 17:31:59: Copy New 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/HlcmSpecData.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Models/HlcmSpecData.cs' (209)
-2018-08-28 17:31:59: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/AMSDCMDataTranslator.csproj.CoreCompileInputs.cache' (42)
-2018-08-28 17:31:59: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache' (7,254)
-2018-08-28 17:32:00: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 3, Errors: 0
-2018-08-28 17:32:00: 

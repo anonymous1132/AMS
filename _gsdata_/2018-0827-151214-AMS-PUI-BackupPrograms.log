@@ -1,9 +1,0 @@
-2018-08-27 15:12:15: -- Analysis Started by On File Change, After Delay
-2018-08-27 15:12:16: Changes: 4, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4689
-2018-08-27 15:12:16: Left to Right: Copy File: 1 Delete File: 1 Rename/Move File/Folder: 2 
-2018-08-27 15:12:16: == Sync Started by On File Change, After Delay
-2018-08-27 15:12:16: Delete File '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/config/watconfig(bak).xml'
-2018-08-27 15:12:16: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/config/watconfig.xml' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/config/watconfig.xml' (783)
-2018-08-27 15:12:16: Move File //10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/TestConsoleProject.exe -> //10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/WATConfigWriter.exe
-2018-08-27 15:12:16: == Sync Complete. Time: 00:00:00, Speed: 0 字节/s, OK: 4, Errors: 0
-2018-08-27 15:12:16: 
