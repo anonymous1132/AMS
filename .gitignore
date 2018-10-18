@@ -1,5 +1,6 @@
 AMSACEWebMonitor/TestProgram/bin
-AMSDCMDataTranslator/AMSDCMDataTranslator/bin
-AMSDCMDataTranslator/AMSTranslatorService/bin
-AMSDCMDataTranslator/TestConsoleProject/bin
-AMSMCADataTranslator/AMS.caojin.MCADataTranslator/bin
+AMSACEDataTranslateProject/AMSDCMDataTranslator/bin
+AMSACEDataTranslateProject/AMSTranslatorService/bin
+AMSACEDataTranslateProject/TestConsoleProject/bin
+AMSACEDataTranslateProject/AMS.caojin.MCADataTranslator/bin
+AMSACEWebMonitor/AMSACEWebMonitor/bin

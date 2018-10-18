@@ -1,7 +1,0 @@
-2018-08-31 08:41:03: -- Analysis Started by On File Change, After Delay
-2018-08-31 08:41:03: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7752
-2018-08-31 08:41:03: Left to Right: Copy File: 1 
-2018-08-31 08:41:03: == Sync Started by On File Change, After Delay
-2018-08-31 08:41:03: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/dcm_data/current/MT-TFR-01_AE00063.00_20180817101602.csv' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/bin/Debug/App/dcm_data/current/MT-TFR-01_AE00063.00_20180817101602.csv' (6,018)
-2018-08-31 08:41:04: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 1, Errors: 0
-2018-08-31 08:41:04: 

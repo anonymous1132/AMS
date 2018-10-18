@@ -1,7 +1,0 @@
-2018-08-29 13:36:27: -- Analysis Started by On File Change, After Delay
-2018-08-29 13:36:28: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7389
-2018-08-29 13:36:28: Left to Right: Copy File: 1 
-2018-08-29 13:36:28: == Sync Started by On File Change, After Delay
-2018-08-29 13:36:28: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/Helper/SFTPHelper.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/Helper/SFTPHelper.cs' (5,942)
-2018-08-29 13:36:29: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 1, Errors: 0
-2018-08-29 13:36:29: 

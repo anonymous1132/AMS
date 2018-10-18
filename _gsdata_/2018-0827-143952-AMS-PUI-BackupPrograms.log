@@ -1,9 +1,0 @@
-2018-08-27 14:39:53: -- Analysis Started by On File Change, After Delay
-2018-08-27 14:39:53: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4684
-2018-08-27 14:39:53: Left to Right: Copy File: 3 
-2018-08-27 14:39:53: == Sync Started by On File Change, After Delay
-2018-08-27 14:39:54: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/Server/sqlite3/storage.ide' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/Server/sqlite3/storage.ide' (696,320)
-2018-08-27 14:39:54: Copy Over 'D:/repository/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/Server/sqlite3/storage.ide-wal' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/.vs/AMSDCMDataTranslator/v15/Server/sqlite3/storage.ide-wal' (4,140,632)
-2018-08-27 14:39:54: Copy Over 'D:/repository/AMSDCMDataTranslator/AMSDCMDataTranslator/WATRunningConfig.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/AMSDCMDataTranslator/WATRunningConfig.cs' (3,192)
-2018-08-27 14:39:54: == Sync Complete. Time: 00:00:01, Speed: 4.61 MB/s, OK: 3, Errors: 0
-2018-08-27 14:39:54: 

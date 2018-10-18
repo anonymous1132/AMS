@@ -1,7 +1,0 @@
-2018-08-30 11:02:09: -- Analysis Started by On File Change, After Delay
-2018-08-30 11:02:09: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 7580
-2018-08-30 11:02:09: Left to Right: Copy File: 1 
-2018-08-30 11:02:09: == Sync Started by On File Change, After Delay
-2018-08-30 11:02:09: Copy Over 'D:/repository/AMSDCMDataTranslator/TestConsoleProject/Class1.cs' -> '//10.8.0.252/it信息/个人目录/曹晋/bak/AMSDCMDataTranslator/TestConsoleProject/Class1.cs' (319)
-2018-08-30 11:02:10: == Sync Complete. Time: 00:00:01, Speed: 0 字节/s, OK: 1, Errors: 0
-2018-08-30 11:02:10: 
