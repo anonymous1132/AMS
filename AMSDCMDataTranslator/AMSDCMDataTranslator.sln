@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleProject", "TestC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMSTranslatorService", "AMSTranslatorService\AMSTranslatorService.csproj", "{A5C665C7-4294-4F5C-AF52-EDB87BA1C2B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsService1", "WindowsService1\WindowsService1.csproj", "{C69E2EF9-1222-4DE4-A997-6AA72A03795D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{A5C665C7-4294-4F5C-AF52-EDB87BA1C2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5C665C7-4294-4F5C-AF52-EDB87BA1C2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5C665C7-4294-4F5C-AF52-EDB87BA1C2B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C69E2EF9-1222-4DE4-A997-6AA72A03795D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C69E2EF9-1222-4DE4-A997-6AA72A03795D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C69E2EF9-1222-4DE4-A997-6AA72A03795D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C69E2EF9-1222-4DE4-A997-6AA72A03795D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

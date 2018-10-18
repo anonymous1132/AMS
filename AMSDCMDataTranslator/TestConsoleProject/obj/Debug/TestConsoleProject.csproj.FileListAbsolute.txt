@@ -27,9 +27,6 @@ D:\repository\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProje
 D:\repository\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.exe
 D:\repository\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.pdb
 D:\repository\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\Renci.SshNet.dll
-D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\TestConsoleProject.exe.config
-D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\TestConsoleProject.exe
-D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\TestConsoleProject.pdb
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\AMSDCMDataTranslator.exe
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\log4net.dll
@@ -40,11 +37,14 @@ D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\log4
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.csprojAssemblyReference.cache
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.csproj.CoreCompileInputs.cache
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.csproj.CopyComplete
-D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.exe
-D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\TestConsoleProject.pdb
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.dll
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.OOXML.dll
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\ICSharpCode.SharpZipLib.dll
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.OpenXmlFormats.dll
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.OpenXml4Net.dll
 D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\NPOI.xml
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\AmsInline.exe.config
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\AmsInline.exe
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\bin\Debug\AmsInline.pdb
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\AmsInline.exe
+D:\ProgramData\GitHub\AMS\AMSDCMDataTranslator\TestConsoleProject\obj\Debug\AmsInline.pdb

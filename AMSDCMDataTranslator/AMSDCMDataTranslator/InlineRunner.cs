@@ -82,7 +82,7 @@ namespace AMSDCMDataTranslator
             InlineFileOperator fileOperator = new InlineFileOperator(inline);
             try
             {
-                fileOperator.OperateTestFiles();
+                fileOperator.OperateFiles();
                 SshOper ssh = new SshOper();
                 LogHelper.InlineInfoLog("AMSInline\t" + ssh.GetResault("sh ~/eda/inline.sh"));
             }
