@@ -62,17 +62,17 @@ namespace AMSDCMDataTranslator
             LogHelper.InlineInfoLog("开始RunInlineTestTranslator");
             AMSInline inline = new AMSInline();
             InlineFileOperator fileOperator = new InlineFileOperator(inline);
-            try
-            {
+            //try
+            //{
                 fileOperator.OperateTestFiles();
                 SshOper ssh = new SshOper();
                 LogHelper.InlineInfoLog("Inline\t" + ssh.GetResault("sh ~/eda/inline.sh"));
-            }
-            catch (Exception e)
-            {
-                LogHelper.ErrorLog("InlineTest", e);
-            }
-            LogHelper.InlineInfoLog("InlineTestTranslator执行完毕");
+            //}
+            //catch (Exception e)
+            //{
+            //    LogHelper.ErrorLog("InlineTest", e);
+            //}
+            //LogHelper.InlineInfoLog("InlineTestTranslator执行完毕");
         }
 
         public static void RunAMSInline()

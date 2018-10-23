@@ -1,0 +1,23 @@
+﻿<Window x:Class="ACEPurgeTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ACEPurgeTool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <RichTextBox  Name="richtext"  Width="200" Height="300" Margin="0 0 20 0"/>
+                <RichTextBox Name="richresault" Width="400" Height="300"></RichTextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="确定" Width="200" Height="50" Margin="0 10 0 0" Click="Button_Click"></Button>
+            <Button Content="测试" Width="200" Height="50" Margin="0 10 0 0" Click="Button_Click_1"></Button>
+            </StackPanel>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>

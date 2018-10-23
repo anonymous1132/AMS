@@ -42,6 +42,12 @@ namespace AMSDCMDataTranslator.Models
             set;
         } = new List<InlineDCMEntity>();
 
+        private List<PDModel> PDModels
+        {
+            get;
+            set;
+        } = new List<PDModel>();
+
         public List<InlineDBEntity> LotLevelEntities
         {
             get { return inlineDBEntities.Where(a => a.CollectedType == InlineDBEntity.CollectedTypes.L).ToList(); }
@@ -58,7 +64,7 @@ namespace AMSDCMDataTranslator.Models
 
         public List<InlineDBEntity> SiteLevelEntities
         {
-            get { return inlineDBEntities.Where(a => a.CollectedType == InlineDBEntity.CollectedTypes.S).OrderBy(p => int.Parse(p.WaferSeq)).ThenBy(p=>int.Parse(p.SitePosition)).ToList(); }
+            get { return inlineDBEntities.Where(a => a.CollectedType == InlineDBEntity.CollectedTypes.S).OrderBy(p => int.Parse(p.WaferSeq)).ThenBy(p => int.Parse(p.SitePosition)).ToList(); }
         }
 
         private string sql
@@ -77,6 +83,23 @@ namespace AMSDCMDataTranslator.Models
         public void GetData()
         {
             DB2Helper dB2 = new DB2Helper();
+            //获取PD信息，为Inline的Step赋值
+            dB2.GetSomeData("select distinct mainpd_id,pd_id,ope_no from fvace_wip_pdhis ");
+            foreach (DataRow dr in dB2.dt.Rows)
+            {
+                try
+                {
+                    PDModel model = new PDModel();
+                    model.MainPD_ID = dr["MainPD_ID"].ToString();
+                    model.PD_ID = dr["PD_ID"].ToString();
+                    model.OPE_NO = dr["OPE_NO"].ToString();
+                    PDModels.Add(model);
+                }
+                catch (Exception)
+                {
+                }
+            }
+
             dB2.GetSomeData(sql);
             double d = 0;
             //DB2中获取的DateTable转换为类
@@ -104,7 +127,6 @@ namespace AMSDCMDataTranslator.Models
                     entity.Owner = dr["Owner"].ToString();
                     entity.MeasRoute = dr["MeasRoute"].ToString();
                     entity.MeasRouteVer = dr["MeasRouteVer"].ToString();
-                    entity.MeasStep = dr["MeasStep"].ToString();
                     entity.MeasItem = dr["MeasItem"].ToString();
                     entity.MeasTime = (DateTime)dr["MeasTime"];
                     entity.MeasOperator = dr["MeasOperator"].ToString();
@@ -112,7 +134,11 @@ namespace AMSDCMDataTranslator.Models
                     entity.MeasRecipe = dr["MeasRecipe"].ToString();
                     entity.ProcRoute = dr["ProcRoute"].ToString();
                     entity.ProcRouteVer = dr["ProcRouteVer"].ToString();
-                    entity.ProcStep = dr["ProcStep"].ToString();
+                    //entity.ProcStep = dr["ProcStep"].ToString();
+                    var temp = PDModels.Where(w => w.Route == entity.MeasRoute && w.OPE_NO == dr["MeasStep"].ToString()).FirstOrDefault();
+                    entity.MeasStep = temp == null ? dr["MeasStep"].ToString() : temp.Step;
+                    temp = PDModels.Where(w => w.Route == entity.ProcRoute && w.OPE_NO == dr["ProcStep"].ToString()).FirstOrDefault();
+                    entity.ProcStep = temp == null ? dr["ProcStep"].ToString() : temp.Step;
                     if (dr["ProcTime"] == DBNull.Value)
                     {
                         entity.ProcTime = null;
@@ -135,7 +161,7 @@ namespace AMSDCMDataTranslator.Models
                     entity.SpecHigh = dr["SpecHigh"].ToString();
                     entity.CtrlLow = dr["CtrlLow"].ToString();
                     entity.CtrlHigh = dr["CtrlHigh"].ToString();
-                    entity.ProcStepDesc = dr["PROCSTEPDESC"].ToString().Replace("\n","");
+                    entity.ProcStepDesc = dr["PROCSTEPDESC"].ToString().Replace("\n", "");
                     entity.MeasDcdefID = dr["Meas_Dcdef_ID"].ToString();
                     entity.ItemType = dr["Item_Type"].ToString();
                     inlineDBEntities.Add(entity);
@@ -178,11 +204,11 @@ namespace AMSDCMDataTranslator.Models
                 }
                 catch (Exception e)
                 {
-                    LogHelper.ErrorLog(string.Format("InlineError InlineEntityGroup.GetData()从DB2中获取相似InlineEntity失败 ClaimTime:{0},LotID:{1}",entity.ClaimTime.ToString(),entity.Lot), e);
+                    LogHelper.ErrorLog(string.Format("InlineError InlineEntityGroup.GetData()从DB2中获取相似InlineEntity失败 ClaimTime:{0},LotID:{1}", entity.ClaimTime.ToString(), entity.Lot), e);
                 }
             }
             //获取DCM坐标信息
-            string dcmSql =string.Format( "select lotid,eqpid,measuredatacount,recipe,coordinate,newdate from fvace_inline_dcm where newdate between '{0}' and '{1}'", StartTime.AddMinutes(-2).ToString("yyyy-MM-dd-HH.mm.ss.ffffff"), endTimeStamp);
+            string dcmSql = string.Format("select lotid,eqpid,measuredatacount,recipe,coordinate,newdate from fvace_inline_dcm where newdate between '{0}' and '{1}'", StartTime.AddMinutes(-2).ToString("yyyy-MM-dd-HH.mm.ss.ffffff"), endTimeStamp);
             dB2.GetSomeData(dcmSql);
             foreach (DataRow dr in dB2.dt.Rows)
             {
@@ -199,11 +225,9 @@ namespace AMSDCMDataTranslator.Models
                 }
                 catch (Exception ex)
                 {
-                    LogHelper.ErrorLog(string.Format("InlineError InlineEntityGroup.GetData()从DCM中获取坐标错误 NewDate:{0},LotID:{1}", dr["NewDate"].ToString() ,dr["LotID"].ToString()),ex);
+                    LogHelper.ErrorLog(string.Format("InlineError InlineEntityGroup.GetData()从DCM中获取坐标错误 NewDate:{0},LotID:{1}", dr["NewDate"].ToString(), dr["LotID"].ToString()), ex);
                 }
             }
-
-
         }
 
         private Inline_SigleLine GetInlineSigleLineByEntityList(List<InlineDBEntity> entities)
@@ -252,7 +276,7 @@ namespace AMSDCMDataTranslator.Models
             }
             line.MeasureDataArray = string.Join(";", datalist);
             line.WaferSiteArray = waferarraysb.ToString();
-            line.SiteCoordArray = DCMEntities.Where(p => (p.NewDate - line.ClaimTime).Duration() < TimeSpan.FromMinutes(2) && p.LotID == line.Lot && p.EQPID == line.MeasEquipment&&p.MeasureDataCount==line.MeasureDataCount&&line.MeasRecipe.Contains(p.Recipe)).Select(a=>a.Coordinate).FirstOrDefault();
+            line.SiteCoordArray = DCMEntities.Where(p => (p.NewDate - line.ClaimTime).Duration() < TimeSpan.FromMinutes(2) && p.LotID == line.Lot && p.EQPID == line.MeasEquipment && p.MeasureDataCount == line.MeasureDataCount && line.MeasRecipe.Contains(p.Recipe)).Select(a => a.Coordinate).FirstOrDefault();
             return line;
         }
 
@@ -307,8 +331,8 @@ namespace AMSDCMDataTranslator.Models
             var list = inlineDBEntities.Where(a => a.Lot == entity.Lot && a.WaferPosition == entity.WaferPosition && a.WaferSeq != "" && a.WaferSeq != "*").OrderBy(p => (p.ClaimTime - entity.ClaimTime).Duration());
             InlineDBEntity likelyEntity = list.FirstOrDefault();
             //如果存在不一致的情况要记录
-            var testmax = list.Max(p=>p.WaferSeq);
-            var testmin= list.Min(p => p.WaferSeq);
+            var testmax = list.Max(p => p.WaferSeq);
+            var testmin = list.Min(p => p.WaferSeq);
             if (testmax != testmin)
             {
                 LogHelper.InlineInfoLog(string.Format("testmax:{0},testmin:{1},lot:{2},claimtime:{3}", testmax, testmin, entity.Lot, entity.ClaimTime.ToString()));

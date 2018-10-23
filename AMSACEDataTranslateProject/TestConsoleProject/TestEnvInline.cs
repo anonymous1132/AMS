@@ -14,7 +14,7 @@ namespace TestConsoleProject
         public static void Test()
         {
             InlineDebugSetting.SetValue();
-            InlineRunner.RunTest();
+            InlineRunner.RunInlineTest();
         }
     }
 }
