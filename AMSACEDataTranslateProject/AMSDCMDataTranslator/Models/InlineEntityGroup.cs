@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AMSDCMDataTranslator.Helper;
 using System.Data;
+using AMSDCMDataTranslator;
 
 namespace AMSDCMDataTranslator.Models
 {
@@ -74,7 +75,7 @@ namespace AMSDCMDataTranslator.Models
                 string sqltemp = string.Format("select distinct claim_time,lot,sourcelot,Technology,Product,lotype,owner,MEASROUTE,  MEASROUTEVER," +
                     "MEASSTEP,MEASITEM,MEASTIME,MEASOPERATOR,MEASEQUIPMENT,MEASRECIPE,PROCROUTE,PROCROUTEVER,PROCSTEP, PROCTIME," +
                     "PROCOPERATORUSER,PROCEQUIPMENT,PROCRECIPE,PROCRETICLE,MEAS_TYPE,WAFER_SEQ,WAFER_POSITION, SITE_POSITION," +
-                    "DCITEM_VALUE,TARGET, SPECLOW,SPECHIGH,CTRLLOW,CTRLHIGH,PROCSTEPDESC, MEAS_DCDEF_ID,ITEM_TYPE from FVACE_INLINE_DC where claim_time between '{0}' and '{1}' order by claim_time,lot,wafer_seq,site_position", satrtTimeStamp, endTimeStamp);
+                    "DCITEM_VALUE,TARGET, SPECLOW,SPECHIGH,CTRLLOW,CTRLHIGH,PROCSTEPDESC, MEAS_DCDEF_ID,ITEM_TYPE from FVACE_INLINE_DC where claim_time  >'{0}' and claim_time <= '{1}' order by claim_time,lot,wafer_seq,site_position", satrtTimeStamp, endTimeStamp);
 
                 return sqltemp;
             }
@@ -102,6 +103,10 @@ namespace AMSDCMDataTranslator.Models
 
             dB2.GetSomeData(sql);
             double d = 0;
+            if (dB2.dt.Rows.Count == 0)
+            {
+                throw new NoQueryDataException("没有新的Inline数据");
+            }
             //DB2中获取的DateTable转换为类
             foreach (DataRow dr in dB2.dt.Rows)
             {

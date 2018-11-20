@@ -71,7 +71,7 @@ namespace AMSDCMDataTranslator.Models
         /// <summary>
         /// 获取所有新文件名
         /// </summary>
-        protected IList<string> GetNewFileNames
+        protected virtual IList<string> GetNewFileNames
         {
             get
             {

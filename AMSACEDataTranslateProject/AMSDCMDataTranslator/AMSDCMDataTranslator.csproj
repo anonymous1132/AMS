@@ -77,6 +77,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChamberFtpOperator.cs" />
+    <Compile Include="ChamberRunner.cs" />
     <Compile Include="DCMRunner.cs" />
     <Compile Include="EtestFtpOperator.cs" />
     <Compile Include="ExcelOper.cs" />
@@ -97,9 +99,19 @@
     <Compile Include="InlineFtpOperator.cs" />
     <Compile Include="InlineRunner.cs" />
     <Compile Include="Models\ACEDBSetting.cs" />
+    <Compile Include="Models\AMSChamber.cs" />
     <Compile Include="Models\AMSInline.cs" />
     <Compile Include="Models\AMSWAT.cs" />
     <Compile Include="Models\AMSWATFileOperator.cs" />
+    <Compile Include="Models\AMSWIP.cs" />
+    <Compile Include="Models\Chamber.cs" />
+    <Compile Include="Models\ChamberDBEntity.cs" />
+    <Compile Include="Models\ChamberDBViewEntity.cs" />
+    <Compile Include="Models\ChamberEntityGroup.cs" />
+    <Compile Include="Models\ChamberFileOperator.cs" />
+    <Compile Include="Models\ChamberOphsEntity.cs" />
+    <Compile Include="Models\ChamberSetting.cs" />
+    <Compile Include="Models\Chamber_SingleLine.cs" />
     <Compile Include="Models\DCM.cs" />
     <Compile Include="Models\DCMDB2.cs" />
     <Compile Include="Models\DCMFileOperator.cs" />
@@ -141,6 +153,13 @@
     <Compile Include="Models\WATSpecData.cs" />
     <Compile Include="Models\WATWafer.cs" />
     <Compile Include="Models\WAT.cs" />
+    <Compile Include="Models\WIP.cs" />
+    <Compile Include="Models\WIPDbEntity.cs" />
+    <Compile Include="Models\WIPEntityGroup.cs" />
+    <Compile Include="Models\WIPFileOperator.cs" />
+    <Compile Include="Models\WIPSetting.cs" />
+    <Compile Include="Models\WIP_SingleLine.cs" />
+    <Compile Include="NoQueryDataException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpecDataFileUtil.cs" />
@@ -148,9 +167,13 @@
     <Compile Include="SshOper.cs" />
     <Compile Include="WATFileUtil.cs" />
     <Compile Include="WATRunner.cs" />
+    <Compile Include="WIPFtpOperator.cs" />
+    <Compile Include="WIPRunner.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="data\TRF 1000A_format.csv" />
     <None Include="packages.config" />
   </ItemGroup>

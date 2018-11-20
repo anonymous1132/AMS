@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AMSDCMDataTranslator.Helper;
+using AMSDCMDataTranslator.Models;
+using AMSDCMDataTranslator;
 
 namespace TestConsoleProject
 {
-   public class TestLog
+    public class TestWIP
     {
         public static void Test()
         {
-            LogHelper.ErrorLog("ErroTest");
-            LogHelper.InfoLog("DCMTest");
-            LogHelper.WATInfoLog("WATTest");
+            WIPSetting.SetValue();
+            WIPRunner.RunAmsWIP();
         }
     }
 }

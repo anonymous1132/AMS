@@ -72,6 +72,7 @@ namespace AMSTranslatorService
             timer.Enabled = true;
         }
 
+
         protected override void OnStop()
         {
             LogHelper.InfoLog("DCM服务被关闭");

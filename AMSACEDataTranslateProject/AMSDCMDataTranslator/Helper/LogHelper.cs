@@ -64,5 +64,17 @@ namespace AMSDCMDataTranslator.Helper
             log4net.ILog log = log4net.LogManager.GetLogger("inlineloginfo");
             log.Info(msg);
         }
+
+        public static void ChamberInfoLog(object msg)
+        {
+            log4net.ILog log = log4net.LogManager.GetLogger("chamberloginfo");
+            log.Info(msg);
+        }
+
+        public static void WIPInfoLog(object msg)
+        {
+            log4net.ILog log = log4net.LogManager.GetLogger("wiploginfo");
+            log.Info(msg);
+        }
     }
 }

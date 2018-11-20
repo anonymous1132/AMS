@@ -32,7 +32,6 @@ namespace AMSDCMDataTranslator.Models
         {
             InlineEntityGroup entityGroup = new InlineEntityGroup();
             DateTime dateTime = new DateTime();
-            string test = GetLastDBLine();
             DateTime.TryParseExact(GetLastDBLine(), "yyyy-MM-dd-HH.mm.ss.ffffff", System.Globalization.CultureInfo.InvariantCulture,System.Globalization.DateTimeStyles.None,out dateTime);
             entityGroup.StartTime = dateTime;
             entityGroup.GetData();

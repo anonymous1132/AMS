@@ -52,7 +52,7 @@ namespace AMSTranslatorService
                 System.Timers.Timer tt = (System.Timers.Timer)source;
                 //可防止重复执行程序
                 tt.Enabled = false;
-                InlineRunner.RunDebug();
+                InlineRunner.RunAMSInline();
                 tt.Enabled = true;
             }
             catch (Exception err)

@@ -31,5 +31,28 @@ namespace AMSDCMDataTranslator.Models
             //测试临时使用
             SOURCE_FILE_PATH = @"C:\Users\caojin\Desktop\test";
         }
+
+        private IList<string> _newFileNames;
+        /// <summary>
+        /// 获取所有新文件名
+        /// </summary>
+        protected override IList<string> GetNewFileNames
+        {
+            get
+            {
+                if (_newFileNames == null)
+                {
+                    _newFileNames = new List<string>();
+                    //foreach (string file in SMBAllFileNames)
+                    //{
+                    //    if (HistoryFiles == null || !HistoryFiles.Contains(file))
+                    //    {
+                    //        _newFileNames.Add(file);
+                    //    }
+                    //}
+                }
+                return _newFileNames;
+            }
+        }
     }
 }

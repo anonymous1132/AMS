@@ -330,55 +330,55 @@ namespace AMSDCMDataTranslator.Models
             set;
         }
 
-        public void GetData(DataRow dr)
-        {
-            Lot = dr[3].ToString();
-            SourceLot = dr[4].ToString();
-            Technology = dr[6].ToString();
-            Product = dr[7].ToString();
-            LotType = dr[8].ToString();
-            Owner = dr[9].ToString();
-            MeasRoute = dr[10].ToString();
-            MeasRouteVer = dr[11].ToString();
-            MeasStep = dr[12].ToString();
-            MeasStepVer = dr[13].ToString();
-            MeasItem = dr[14].ToString();
-            MeasTime = dr[15].ToString();
-            MeasOperator = dr[16].ToString();
-            MeasEquipment = dr[17].ToString();
-            MeasRecipe = dr[18].ToString();
-            ProcRoute = dr[19].ToString();
-            ProcRouteVer = dr[20].ToString();
-            ProcStep = dr[21].ToString();
-            ProcStepVer = dr[22].ToString();
-            ProcTime = dr[23].ToString();
-            ProcOperator = dr[24].ToString();
-            ProcEquipment = dr[25].ToString();
-            ProcRecipe = dr[26].ToString();
-            ProcReticle = dr[27].ToString();
-            CollectedType = dr[29].ToString();
-            strMeasureDataCount = dr[30].ToString();
-            WaferSiteArray = dr[31].ToString();
-            MeasureDataArray = dr[32].ToString();
-            Target = dr[33].ToString();
-            ValidLow = "";
-            ValidHigh = "";
-            SpecLow = dr[36].ToString();
-            SpecHigh = dr[37].ToString();
-            CtrlLow = dr[38].ToString();
-            CtrlHigh = dr[39].ToString();
-            Unit = dr[40].ToString();
-            ProcStepDesc = dr[41].ToString().Replace("\n"," ");
-            BatchID = dr[42].ToString();
-            TextVal = dr[44].ToString();
-            SiteCoordArray = dr[52]==DBNull.Value?"":dr[52].ToString();
-            WaferPos = dr[46].ToString();
-            String_Option1 = dr[47].ToString();
-            String_Option2 = dr[48].ToString();
-            String_Option3 = dr[49].ToString();
-            String_Option4 = dr[50].ToString();
-            String_Option5 = dr[51].ToString();
-        }
+        //public void GetData(DataRow dr)
+        //{
+        //    Lot = dr[3].ToString();
+        //    SourceLot = dr[4].ToString();
+        //    Technology = dr[6].ToString();
+        //    Product = dr[7].ToString();
+        //    LotType = dr[8].ToString();
+        //    Owner = dr[9].ToString();
+        //    MeasRoute = dr[10].ToString();
+        //    MeasRouteVer = dr[11].ToString();
+        //    MeasStep = dr[12].ToString();
+        //    MeasStepVer = dr[13].ToString();
+        //    MeasItem = dr[14].ToString();
+        //    MeasTime = dr[15].ToString();
+        //    MeasOperator = dr[16].ToString();
+        //    MeasEquipment = dr[17].ToString();
+        //    MeasRecipe = dr[18].ToString();
+        //    ProcRoute = dr[19].ToString();
+        //    ProcRouteVer = dr[20].ToString();
+        //    ProcStep = dr[21].ToString();
+        //    ProcStepVer = dr[22].ToString();
+        //    ProcTime = dr[23].ToString();
+        //    ProcOperator = dr[24].ToString();
+        //    ProcEquipment = dr[25].ToString();
+        //    ProcRecipe = dr[26].ToString();
+        //    ProcReticle = dr[27].ToString();
+        //    CollectedType = dr[29].ToString();
+        //    strMeasureDataCount = dr[30].ToString();
+        //    WaferSiteArray = dr[31].ToString();
+        //    MeasureDataArray = dr[32].ToString();
+        //    Target = dr[33].ToString();
+        //    ValidLow = "";
+        //    ValidHigh = "";
+        //    SpecLow = dr[36].ToString();
+        //    SpecHigh = dr[37].ToString();
+        //    CtrlLow = dr[38].ToString();
+        //    CtrlHigh = dr[39].ToString();
+        //    Unit = dr[40].ToString();
+        //    ProcStepDesc = dr[41].ToString().Replace("\n"," ");
+        //    BatchID = dr[42].ToString();
+        //    TextVal = dr[44].ToString();
+        //    SiteCoordArray = dr[52]==DBNull.Value?"":dr[52].ToString();
+        //    WaferPos = dr[46].ToString();
+        //    String_Option1 = dr[47].ToString();
+        //    String_Option2 = dr[48].ToString();
+        //    String_Option3 = dr[49].ToString();
+        //    String_Option4 = dr[50].ToString();
+        //    String_Option5 = dr[51].ToString();
+        //}
 
         /// <summary>
         /// 返回行结果，当MeasureDataCount>50时，以50位为一组分组(已经取消)。

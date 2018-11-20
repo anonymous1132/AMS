@@ -15,9 +15,12 @@ namespace TestConsoleProject
     {
         static void Main(string[] args)
         {
-            TestEnvInline.Test();
-            Console.Write("ok");
-            Console.ReadLine();
+            TestWIP.Test();
+           // WIPFtpOperator.UploadFile(@"C:\Users\caojin\Desktop\RPT需求申请单.xlsx");
+           //// WIPFtpOperator.UploadDefectFile(@"C:\Users\caojin\Desktop\RPT需求申请单.xlsx");
+           // ChamberFtpOperator.UploadFile(@"C:\Users\caojin\Desktop\RPT需求申请单.xlsx");
+
+            //WIPFtpOperator.UploadDefectFile(@"C:\Users\caojin\Desktop\test.txt");
         }
     }
 }
