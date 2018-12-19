@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="FirstFloor.ModernUI.App.Content.MailQueueImportContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DockPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" DockPanel.Dock="Top">
+                <TextBox Width="400" IsReadOnly="True" Name="tb_file" Text="{Binding TextBox_File_Text}"/>
+                <Button Content="选择文件" Name="button_selectfile" Click="button_selectfile_Click" Margin="0 0 10 0"/>
+                <Button  Content="导入数据" Name="button_import" Click="button_import_Click"  IsEnabled="{Binding ButtonImport_IsEnabled}"/>
+            </StackPanel>
+            <TextBlock Name="tb_resault" Text="{Binding TextBlock_Resault_Text}" Margin="0 0 50 0" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Bottom"/>
+
+            <DataGrid Name="DG1" ItemsSource="{Binding DG1_ItemSource}"  AutoGenerateColumns="False" BorderThickness="1" DockPanel.Dock="Top" Margin="0 5 0 20" CanUserAddRows="False"   IsReadOnly="True" HorizontalContentAlignment="Center" >
+                <DataGrid.Columns>
+                    <mui:DataGridTextColumn Header="发起时间" Binding="{Binding StartTime,StringFormat='{}{0:yyyy年MM月dd日 HH:mm:ss dddd}',ConverterCulture=zh-CN}" />
+                    <mui:DataGridTextColumn Header="结束时间"  Binding="{Binding EndTime,StringFormat='{}{0:yyyy年MM月dd日 HH:mm:ss dddd}',ConverterCulture=zh-CN}"/>
+                    <mui:DataGridTextColumn Header="标识编号" Binding="{Binding Mask}" />
+                    <mui:DataGridTextColumn Header="发件人" Binding="{Binding SendMailAddress}" MaxWidth="150"/>
+                    <mui:DataGridTextColumn Header="收件人列表" Binding="{Binding ReserverAddress}" MaxWidth="150" />
+                    <mui:DataGridTextColumn Header="发件字节" Binding="{Binding SendSize}" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </DockPanel>
+        <mui:ModernProgressRing IsActive="{Binding ProgressRing_IsActive}" Width="80" Height="80" Style="{StaticResource CircleProgressRingStyle}" Name="ProgressRing"/>
+    </Grid>
+</UserControl>

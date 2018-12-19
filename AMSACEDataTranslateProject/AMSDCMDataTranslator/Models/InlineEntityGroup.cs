@@ -75,7 +75,7 @@ namespace AMSDCMDataTranslator.Models
                 string sqltemp = string.Format("select distinct claim_time,lot,sourcelot,Technology,Product,lotype,owner,MEASROUTE,  MEASROUTEVER," +
                     "MEASSTEP,MEASITEM,MEASTIME,MEASOPERATOR,MEASEQUIPMENT,MEASRECIPE,PROCROUTE,PROCROUTEVER,PROCSTEP, PROCTIME," +
                     "PROCOPERATORUSER,PROCEQUIPMENT,PROCRECIPE,PROCRETICLE,MEAS_TYPE,WAFER_SEQ,WAFER_POSITION, SITE_POSITION," +
-                    "DCITEM_VALUE,TARGET, SPECLOW,SPECHIGH,CTRLLOW,CTRLHIGH,PROCSTEPDESC, MEAS_DCDEF_ID,ITEM_TYPE from FVACE_INLINE_DC where claim_time  >'{0}' and claim_time <= '{1}' order by claim_time,lot,wafer_seq,site_position", satrtTimeStamp, endTimeStamp);
+                    "DCITEM_VALUE,TARGET, SPECLOW,SPECHIGH,CTRLLOW,CTRLHIGH,PROCSTEPDESC, MEAS_DCDEF_ID,ITEM_TYPE from ISTRPT.FVACE_INLINE_DC where claim_time  >'{0}' and claim_time <= '{1}' order by claim_time,lot,wafer_seq,site_position", satrtTimeStamp, endTimeStamp);
 
                 return sqltemp;
             }
@@ -85,7 +85,7 @@ namespace AMSDCMDataTranslator.Models
         {
             DB2Helper dB2 = new DB2Helper();
             //获取PD信息，为Inline的Step赋值
-            dB2.GetSomeData("select distinct mainpd_id,pd_id,ope_no from fvace_wip_pdhis ");
+            dB2.GetSomeData("select distinct mainpd_id,pd_id,ope_no from istrpt.fvace_wip_pdhis ");
             foreach (DataRow dr in dB2.dt.Rows)
             {
                 try
@@ -200,6 +200,26 @@ namespace AMSDCMDataTranslator.Models
                         entity.ProcEquipment = likelyEntity.ProcEquipment;
                         entity.ProcRecipe = likelyEntity.ProcRecipe;
                     }
+                
+                    else if (string.IsNullOrEmpty(entity.Product) && entity.ItemType == "Derived")
+                    {
+                        InlineDBEntity likelyEntity = GetLikelyEntity(entity);
+                        entity.SourceLot = likelyEntity.SourceLot;
+                        entity.Technology = likelyEntity.Technology;
+                        entity.Product = likelyEntity.Product;
+                        entity.LotType = likelyEntity.LotType;
+                        entity.Owner = likelyEntity.Owner;
+                        entity.MeasOperator = likelyEntity.MeasOperator;
+                        entity.MeasRecipe = likelyEntity.MeasRecipe;
+                        entity.ProcRoute = likelyEntity.ProcRoute;
+                        entity.ProcRouteVer = likelyEntity.ProcRouteVer;
+                        entity.ProcStep = likelyEntity.ProcStep;
+                        entity.ProcTime = likelyEntity.ProcTime;
+                        entity.ProcOperatorUser = likelyEntity.ProcOperatorUser;
+                        entity.ProcEquipment = likelyEntity.ProcEquipment;
+                        entity.ProcRecipe = likelyEntity.ProcRecipe;
+                    }
+
                     else if (entity.WaferSeq == "*")
                     {
                         InlineDBEntity likelyEntity = GetLikelyEntity(entity);
@@ -213,7 +233,7 @@ namespace AMSDCMDataTranslator.Models
                 }
             }
             //获取DCM坐标信息
-            string dcmSql = string.Format("select lotid,eqpid,measuredatacount,recipe,coordinate,newdate from fvace_inline_dcm where newdate between '{0}' and '{1}'", StartTime.AddMinutes(-2).ToString("yyyy-MM-dd-HH.mm.ss.ffffff"), endTimeStamp);
+            string dcmSql = string.Format("select lotid,eqpid,measuredatacount,recipe,coordinate,newdate from istrpt.fvace_inline_dcm where newdate between '{0}' and '{1}'", StartTime.AddMinutes(-2).ToString("yyyy-MM-dd-HH.mm.ss.ffffff"), endTimeStamp);
             dB2.GetSomeData(dcmSql);
             foreach (DataRow dr in dB2.dt.Rows)
             {
@@ -333,7 +353,7 @@ namespace AMSDCMDataTranslator.Models
 
         private InlineDBEntity GetLikelyEntity(InlineDBEntity entity)
         {
-            var list = inlineDBEntities.Where(a => a.Lot == entity.Lot && a.WaferPosition == entity.WaferPosition && a.WaferSeq != "" && a.WaferSeq != "*").OrderBy(p => (p.ClaimTime - entity.ClaimTime).Duration());
+            var list = inlineDBEntities.Where(a => a.Lot == entity.Lot && a.WaferPosition == entity.WaferPosition  && a.WaferSeq != "*" &&a.ItemType!= "Derived").OrderBy(p => (p.ClaimTime - entity.ClaimTime).Duration());
             InlineDBEntity likelyEntity = list.FirstOrDefault();
             //如果存在不一致的情况要记录
             var testmax = list.Max(p => p.WaferSeq);
@@ -345,8 +365,8 @@ namespace AMSDCMDataTranslator.Models
             //如果没找到，就到数据库中去找
             if (likelyEntity is null)
             {
-                string sqlt = string.Format("(select claim_time, wafer_seq,sourcelot,techbology, product,lotype,owner,measoperator,measequipment,measrecipe,procroute,procroutever,procstep,proctime,procoperatoruser,procequipment,procrecipe from fvace_inline_dc where claim_time >= '{0}' and wafer_seq not in ('', '*') order by claim_time FETCH FIRST 1 ROWS ONLY) " +
-                    "union (select claim_time, wafer_seq,sourcelot,techbology, product,lotype,owner,measoperator,measequipment,measrecipe,procroute,procroutever,procstep,proctime,procoperatoruser,procequipment,procrecipe from fvace_inline_dc where claim_time <= '{0}' and wafer_seq not in ('', '*')  order by claim_time desc FETCH FIRST 1 ROWS ONLY)", entity.ClaimTime.ToString("yyyy-MM-dd-HH.mm.ss.ffffff"));
+                string sqlt = string.Format("(select claim_time, wafer_seq,sourcelot,techbology, product,lotype,owner,measoperator,measequipment,measrecipe,procroute,procroutever,procstep,proctime,procoperatoruser,procequipment,procrecipe from istrpt.fvace_inline_dc where claim_time >= '{0}' and wafer_seq not in ('', '*') order by claim_time FETCH FIRST 1 ROWS ONLY) " +
+                    "union (select claim_time, wafer_seq,sourcelot,techbology, product,lotype,owner,measoperator,measequipment,measrecipe,procroute,procroutever,procstep,proctime,procoperatoruser,procequipment,procrecipe from istrpt.fvace_inline_dc where claim_time <= '{0}' and wafer_seq not in ('', '*')  order by claim_time desc FETCH FIRST 1 ROWS ONLY)", entity.ClaimTime.ToString("yyyy-MM-dd-HH.mm.ss.ffffff"));
                 DB2Helper dB2Helper = new DB2Helper();
                 dB2Helper.GetSomeData(sqlt);
                 likelyEntity = new InlineDBEntity();

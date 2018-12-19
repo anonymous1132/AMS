@@ -21,7 +21,7 @@ namespace AMSDCMDataTranslator
         {
             try
             {
-                sql = string.Format("insert into EDA_INLINE_DCM values ('{0}',to_date('{1}', 'yyyy/mm/dd HH24:mi:ss'),'{2}','{3}','{4}',{5},'{6}',to_date('{7}', 'yyyy/mm/dd HH24:mi:ss'),'{8}')", db2.Guid,db2.CollectionDateTime,db2.EQP_ID,db2.LotID,db2.Recipe,db2.MeasureDataCount,db2.CoordinateArray,db2.UpdateTime,db2.FileName);
+                sql = string.Format("insert into ISTRPT.EDA_INLINE_DCM values ('{0}',to_date('{1}', 'yyyy/mm/dd HH24:mi:ss'),'{2}','{3}','{4}',{5},'{6}',to_date('{7}', 'yyyy/mm/dd HH24:mi:ss'),'{8}')", db2.Guid,db2.CollectionDateTime,db2.EQP_ID,db2.LotID,db2.Recipe,db2.MeasureDataCount,db2.CoordinateArray,db2.UpdateTime,db2.FileName);
                 SqlHelper sqlHelper = new SqlHelper();
                 sqlHelper.GetSomeDate(sql);
             }

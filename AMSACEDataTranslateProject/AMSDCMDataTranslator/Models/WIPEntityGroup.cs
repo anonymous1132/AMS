@@ -169,7 +169,7 @@ namespace AMSDCMDataTranslator.Models
                 WIP_SingleLine singleLine = new WIP_SingleLine()
                 {
                     Lot = entity.Lot_ID,
-                    Fab="Fab2",
+                    Fab="FAB2",
                     SourceLot = entity.Slot,
                     Technology=entity.Technology,
                     Product=entity.Product,

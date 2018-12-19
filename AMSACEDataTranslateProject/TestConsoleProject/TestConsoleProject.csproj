@@ -7,7 +7,7 @@
     <ProjectGuid>{2CC7A5BD-6267-4956-80C5-01C5CA696B49}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>TestConsoleProject</RootNamespace>
-    <AssemblyName>AmsWIPTest</AssemblyName>
+    <AssemblyName>AmsWIPRunner</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="AMSChamberRunner.cs" />
     <Compile Include="AmsInlineRunner.cs" />
+    <Compile Include="AMSWIPRunner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestAMSChamber.cs" />

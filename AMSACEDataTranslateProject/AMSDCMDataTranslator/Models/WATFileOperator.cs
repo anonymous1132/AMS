@@ -36,6 +36,7 @@ namespace AMSDCMDataTranslator.Models
                 LogHelper.WATInfoLog("数据转换成功——DataFile:" + filePath.Substring(filePath.LastIndexOf("\\") + 1) + "\tSiffFile:" + siffFileName);
             }
         }
+
         List<string> SiffFileList = new List<string>();
 
         public override void OperateFiles()

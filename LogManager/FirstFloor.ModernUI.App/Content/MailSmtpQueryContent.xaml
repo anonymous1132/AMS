@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="FirstFloor.ModernUI.App.Content.MailSmtpQueryContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top" Margin="0,0,0,8" Orientation="Horizontal" Height="30">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBox">
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="Padding" Value="10 0 0 0" />
+                    </Style>
+                    <Style TargetType="ComboBox">
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                    </Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock  Text="SMTP日志查询" Style="{StaticResource Heading2}" Margin="10 0 20 0" />
+                <ComboBox Name="comb_title" MinWidth="120" SelectedIndex="{Binding ComboTitle_SelectedIndex}">
+                    <ComboBoxItem Content="收件人"/>
+                    <ComboBoxItem Content="发件人"/>
+                    <ComboBoxItem Content="发起时间"/>
+                    <ComboBoxItem Content="IP"/>
+                </ComboBox>
+                <TextBox Width="200" Name="textbox_content" Text="{Binding TextBox_Content_Text}" Visibility="{Binding TextBox_Content_Visibility}">
+                    <TextBox.ToolTip>
+                        <TextBlock>模糊查询</TextBlock>
+                    </TextBox.ToolTip>
+                </TextBox>
+
+                <StackPanel Orientation="Horizontal" Visibility="{Binding StackPanel_Visibility}">
+
+                    <DatePicker Name="datepicker1" SelectedDate="{Binding DatePicker1_Value}"/>
+                    <TextBox Width="80" Text="{Binding TimePicker1_Value}"/>
+                    <TextBlock Text="-" Margin="5 0"/>
+                    <DatePicker Name="datepicker2" SelectedDate="{Binding DatePicker2_Value}"/>
+                    <TextBox Width="80" Text="{Binding TimePicker2_Value}"/>
+                </StackPanel>
+
+                <Button Content="查询" Name="button_query" Margin="10 0 0 0" Click="button_query_Click" IsDefault="True">
+                    <Button.ToolTip>
+                        <TextBlock>在当前已获取的数据中查询</TextBlock>
+                    </Button.ToolTip>
+                </Button>
+                <Button Content="查询全集" Name="button_query_all" Margin="10 0 0 0" Click="button_query_all_Click">
+                    <Button.ToolTip>
+                        <TextBlock>在当前数据库所有数据中查询</TextBlock>
+                    </Button.ToolTip>
+                </Button>
+            </StackPanel>
+            <TextBlock Name="tb_resault" Text="{Binding TextBlock_Resault_Text}" Margin="0 20 50 0" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Bottom"/>
+            <DataGrid Name="DG1" ItemsSource="{Binding DG1_ItemSource}" AutoGenerateColumns="False" IsReadOnly="True" DockPanel.Dock="Top" BorderThickness="1" PreviewMouseDown="DG1_PreviewMouseDown" >
+                <DataGrid.Resources>
+                    <Style  TargetType="{x:Type DataGridRow}">
+                        <Setter Property="IsSelected" Value="{Binding Path=IsSelected, Mode=TwoWay}"/>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <mui:DataGridTextColumn Header="发起时间" Binding="{Binding StartTime,StringFormat='{}{0:yyyy年MM月dd日 HH:mm:ss dddd}',ConverterCulture=zh-CN}" />
+                    <mui:DataGridTextColumn Header="结束时间"  Binding="{Binding EndTime,StringFormat='{}{0:yyyy年MM月dd日 HH:mm:ss dddd}',ConverterCulture=zh-CN}"/>
+                    <mui:DataGridTextColumn Header="标识编号" Binding="{Binding Mask}" />
+                    <mui:DataGridTextColumn Header="IP" Binding="{Binding IPAddress}"/>
+                    <mui:DataGridTextColumn Header="收件人" Binding="{Binding SendMailAddress}" MaxWidth="150"/>
+                    <mui:DataGridTextColumn Header="发件人" Binding="{Binding ReserveMailAddress}" MaxWidth="150"/>
+                    <mui:DataGridTextColumn Header="收件字节" Binding="{Binding ReserveSize}" />
+                    <mui:DataGridTextColumn Header="允许最大字节" Binding="{Binding MaxSize}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+        
+    </Grid>
+</UserControl>

@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="yes"?>
+<Config>
+  <AppearenceSetting>
+    <ThemeSource>/FirstFloor.ModernUI;component/Assets/ModernUI.Light.xaml</ThemeSource>
+    <FontSize>Large</FontSize>
+    <AccentColor>#FFE3C800</AccentColor>
+  </AppearenceSetting>
+</Config>

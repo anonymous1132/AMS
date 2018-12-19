@@ -67,24 +67,25 @@ namespace AMSDCMDataTranslator.Models
             set;
         } = "ftp://10.132.0.38/data/siff/Etest/import/";
 
-        public static string SFtpServerIP
-        {
-            get;
-            set;
-        } = "112.20.189.145";
+        //public static string SFtpServerIP
+        //{
+        //    get;
+        //    set;
+        //} = "112.20.189.144";
 
-        public static string SFtpUserID
-        {
-            get;
-            set;
-        } = "ams-file";
+        //public static string SFtpUserID
+        //{
+        //    get;
+        //    set;
+        //} = "ams-file";
 
-        public static string SFtpPassword
-        {
-            get;
-            set;
-        } = "16kQgN8V";
+        //public static string SFtpPassword
+        //{
+        //    get;
+        //    set;
+        //} = "16kQgN8V";
 
+        public static string SourcePath { get; set; } = @"C:\Users\caojin\Desktop\test";
 
         public static string DicConfigPath
         {
@@ -129,9 +130,9 @@ namespace AMSDCMDataTranslator.Models
                 FtpPassword = DESjiami.DecryptDES(ds.Tables["FTP"].DefaultView[0]["Password"].ToString());
                 FtpUri = DESjiami.DecryptDES(ds.Tables["FTP"].DefaultView[0]["Uri"].ToString());
                 //SFTP表
-                SFtpServerIP = DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["IP"].ToString());
-                SFtpUserID = DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["UserID"].ToString());
-                SFtpPassword = DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["Password"].ToString());
+                //SFtpServerIP = DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["IP"].ToString());
+                //SFtpUserID = DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["UserID"].ToString());
+                //SFtpPassword = DESjiami.DecryptDES(ds.Tables["SFTP"].DefaultView[0]["Password"].ToString());
             }
 
             if (!File.Exists(DicConfigPath))

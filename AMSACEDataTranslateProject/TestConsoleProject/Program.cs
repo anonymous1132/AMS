@@ -15,12 +15,7 @@ namespace TestConsoleProject
     {
         static void Main(string[] args)
         {
-            TestWIP.Test();
-           // WIPFtpOperator.UploadFile(@"C:\Users\caojin\Desktop\RPT需求申请单.xlsx");
-           //// WIPFtpOperator.UploadDefectFile(@"C:\Users\caojin\Desktop\RPT需求申请单.xlsx");
-           // ChamberFtpOperator.UploadFile(@"C:\Users\caojin\Desktop\RPT需求申请单.xlsx");
-
-            //WIPFtpOperator.UploadDefectFile(@"C:\Users\caojin\Desktop\test.txt");
+            AmsInlineRunner.Run();
         }
     }
 }

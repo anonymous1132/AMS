@@ -24,22 +24,22 @@ namespace AMSDCMDataTranslator.Models
             SIFF_HISTORY_PATH = WIPSetting.SiffHistoryPath;
         }
 
-        private string ChamberSiffPath
-        {
-            get { return ChamberSetting.SiffPath; }
-        }
+        //private string ChamberSiffPath
+        //{
+        //    get { return ChamberSetting.SiffPath; }
+        //}
 
-        private string ChamberSiffHistoryPath
-        {
-            get { return exeDirctory + ChamberSetting.SiffHistoryPath; }
-        }
+        //private string ChamberSiffHistoryPath
+        //{
+        //    get { return exeDirctory + ChamberSetting.SiffHistoryPath; }
+        //}
 
 
         protected override void TranslateFile()
         {
             wip.GetData();
             string siffFileName = wip.WriteSiff(SiffPath);
-           // WIPFtpOperator.UploadFile(siffFileName);
+            WIPFtpOperator.UploadFile(siffFileName);
             LogHelper.WIPInfoLog("数据转换成功—SiffFile:" + siffFileName);
             FileHelper.Move(siffFileName, SiffHistoryPath + siffFileName.Substring(siffFileName.LastIndexOf("\\")));
             //取消Chamber功能
@@ -101,14 +101,11 @@ namespace AMSDCMDataTranslator.Models
         {
             foreach (var line in wip.WIP_lines)
             {
-                if (! string.IsNullOrEmpty(line.QueueTime))
-                {
-                    line.MoveOutTime = line.MoveInTime;
-                }
+             line.MoveOutTime = line.MoveInTime.AddSeconds(1);
             }
 
             string siffFileName = wip.WriteSiff(SiffPath);
-           // WIPFtpOperator.UploadDefectFile(siffFileName);
+            WIPFtpOperator.UploadDefectFile(siffFileName);
 
             LogHelper.WIPInfoLog("数据转换成功—SiffFile:" + siffFileName);
             FileHelper.Move(siffFileName, SiffHistoryPath + "\\Defect" +siffFileName.Substring(siffFileName.LastIndexOf("\\")+1));

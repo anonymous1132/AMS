@@ -18,8 +18,8 @@ namespace AMSDCMDataTranslator
             try
             {
                 fileOperator.OperateFiles();
-                //SshOper ssh = new SshOper();
-                //LogHelper.WIPInfoLog("AMSWIP\t" + ssh.GetResault("sh ~/eda/wip.sh\nsh ~/eda/chamber.sh"));
+                SshOper ssh = new SshOper();
+                LogHelper.WIPInfoLog("AMSWIP\t" + ssh.GetResault("sh ~/eda/wip.sh"));
                 //单独loadDefect WIP
                 fileOperator.OperateDefectFiles();
             }
