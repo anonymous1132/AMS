@@ -45,6 +45,7 @@ namespace AMSDCMDataTranslator.Models
             get
             {
                 string[] files = GetFileName(Directory.GetFiles(SourceFilePath));
+                if (files == null) throw new Exception("SourcePath是空目录");
                 return files;
             }
         }

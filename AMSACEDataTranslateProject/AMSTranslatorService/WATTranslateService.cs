@@ -19,6 +19,7 @@ namespace AMSTranslatorService
         {
             InitializeComponent();
             WATSetting.SetValue();
+            HlcmSetting.SetValue();
         }
 
         /// <summary>  
@@ -34,6 +35,7 @@ namespace AMSTranslatorService
                 //可防止重复执行程序
                 tt.Enabled = false;
                 WATRunner.Run();
+                HlcmWATRunner.Run();
                 tt.Enabled = true;
             }
             catch (Exception err)

@@ -1,0 +1,11 @@
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\bin\Debug\SiviewLogLoader.exe.config
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\bin\Debug\SiviewLogLoader.exe
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\bin\Debug\SiviewLogLoader.pdb
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\obj\Debug\SiviewLogLoader.csproj.CoreCompileInputs.cache
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\obj\Debug\SiviewLogLoader.exe
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\obj\Debug\SiviewLogLoader.pdb
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\bin\Debug\EntityFramework.dll
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\bin\Debug\EntityFramework.xml
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProgramData\GitHub\AMS\SiviewLogLoader\SiviewLogLoader\obj\Debug\SiviewLogLoader.csproj.CopyComplete

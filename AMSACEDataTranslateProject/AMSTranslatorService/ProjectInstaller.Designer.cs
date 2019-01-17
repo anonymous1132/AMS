@@ -31,8 +31,7 @@
             this.serviceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
             this.serviceInstaller1 = new System.ServiceProcess.ServiceInstaller();
             this.serviceInstaller2 = new System.ServiceProcess.ServiceInstaller();
-            this.serviceInstaller3 = new System.ServiceProcess.ServiceInstaller();
-            this.serviceInstaller4 = new System.ServiceProcess.ServiceInstaller();
+
             // 
             // serviceProcessInstaller1
             // 
@@ -55,26 +54,25 @@
             // 
             // serviceInstaller3
             // 
-            this.serviceInstaller3.Description = "HlcmWATTranslate Service";
-            this.serviceInstaller3.DisplayName = "HlcmTranslate Service";
-            this.serviceInstaller3.ServiceName = "HlcmTranslateService";
-            this.serviceInstaller3.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            //this.serviceInstaller3.Description = "HlmcWATTranslate Service";
+            //this.serviceInstaller3.DisplayName = "HlmcTranslate Service";
+            //this.serviceInstaller3.ServiceName = "HlmcTranslateService";
+            //this.serviceInstaller3.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // serviceInstaller4
             // 
-            this.serviceInstaller4.Description = "MesInlineTranslate Service";
-            this.serviceInstaller4.DisplayName = "InlineTranslate Service";
-            this.serviceInstaller4.ServiceName = "InlineTranslateService";
-            this.serviceInstaller4.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            //this.serviceInstaller4.Description = "MesInlineTranslate Service";
+            //this.serviceInstaller4.DisplayName = "InlineTranslate Service";
+            //this.serviceInstaller4.ServiceName = "InlineTranslateService";
+            //this.serviceInstaller4.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
             this.serviceProcessInstaller1,
             this.serviceInstaller1,
-            this.serviceInstaller2,
-            this.serviceInstaller3,
-            this.serviceInstaller4});
+            this.serviceInstaller2
+            });
 
         }
 
@@ -83,7 +81,6 @@
         private System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
         private System.ServiceProcess.ServiceInstaller serviceInstaller1;
         private System.ServiceProcess.ServiceInstaller serviceInstaller2;
-        private System.ServiceProcess.ServiceInstaller serviceInstaller3;
-        private System.ServiceProcess.ServiceInstaller serviceInstaller4;
+
     }
 }

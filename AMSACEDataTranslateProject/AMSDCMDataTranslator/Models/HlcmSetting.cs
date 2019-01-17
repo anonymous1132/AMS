@@ -85,8 +85,11 @@ namespace AMSDCMDataTranslator.Models
         //    set;
         //} = "16kQgN8V";
 
-        public static string SourcePath { get; set; } = @"C:\Users\caojin\Desktop\test";
-
+        //test
+        //public static string SourcePath { get; set; } = @"App\hlcm_data\source_test";
+         public static string SourcePath { get; set; } = @"\\10.8.0.252\Data\External-File\HLMC";
+        
+            //App\\config\\hlcmdic.xml
         public static string DicConfigPath
         {
             get;

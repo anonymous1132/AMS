@@ -15,7 +15,9 @@ namespace TestConsoleProject
     {
         static void Main(string[] args)
         {
-            AmsInlineRunner.Run();
+            TestHlcm.Test();
+            Console.WriteLine("ok");
+            Console.ReadLine();
         }
     }
 }

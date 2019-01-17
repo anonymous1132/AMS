@@ -51,20 +51,11 @@
     <Compile Include="DCMTransLateService.Designer.cs">
       <DependentUpon>DCMTransLateService.cs</DependentUpon>
     </Compile>
-    <Compile Include="HlcmWATTranslateService.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="InlineTranslateService.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="InlineTranslateService.Designer.cs">
       <DependentUpon>InlineTranslateService.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModelTranslatorService.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ModelTranslatorService.Designer.cs">
-      <DependentUpon>ModelTranslatorService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjectInstaller.cs">
