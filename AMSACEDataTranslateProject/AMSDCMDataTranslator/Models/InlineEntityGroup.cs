@@ -9,6 +9,9 @@ using AMSDCMDataTranslator;
 
 namespace AMSDCMDataTranslator.Models
 {
+    /// <summary>
+    /// 使用方法：先设置StartTime，EndTime。然后调用GetData（）抓取数据库数据，最后调用GetInlineList（）获取Inline集合对象。
+    /// </summary>
     public class InlineEntityGroup
     {
         public List<InlineDBEntity> inlineDBEntities
@@ -319,14 +322,15 @@ namespace AMSDCMDataTranslator.Models
                     LogHelper.ErrorLog(string.Format("InlineError InlineEntityGroup.GetInlineList() LotLevel Claim_Time:{0},Lot:{1}。", entity.ClaimTime.ToString(), entity.Lot), e);
                 }
             }
-            var waferGroup = WaferLevelEntities.GroupBy(a => new { a.ClaimTime, a.Lot, a.MeasItem, a.ProcRoute }).Select(g => new { Body = g.Key });
-            var siteGroup = SiteLevelEntities.GroupBy(a => new { a.ClaimTime, a.Lot, a.MeasItem, a.ProcRoute }).Select(g => new { Body = g.Key });
+            //此处group可能逻辑存在问题
+            var waferGroup = WaferLevelEntities.GroupBy(a => new { a.ClaimTime, a.Lot, a.MeasItem, a.ProcRoute,a.ProcEquipment}).Select(g => new { Body = g.Key });
+            var siteGroup = SiteLevelEntities.GroupBy(a => new { a.ClaimTime, a.Lot, a.MeasItem, a.ProcRoute,a.ProcEquipment }).Select(g => new { Body = g.Key });
 
             foreach (var wafer in waferGroup)
             {
                 try
                 {
-                    var list = WaferLevelEntities.Where(p => p.ClaimTime == wafer.Body.ClaimTime && p.Lot == wafer.Body.Lot && p.MeasItem == wafer.Body.MeasItem && p.ProcRoute == wafer.Body.ProcRoute).ToList();
+                    var list = WaferLevelEntities.Where(p => p.ClaimTime == wafer.Body.ClaimTime && p.Lot == wafer.Body.Lot && p.MeasItem == wafer.Body.MeasItem && p.ProcRoute == wafer.Body.ProcRoute&&p.ProcEquipment==wafer.Body.ProcEquipment).ToList();
                     lines.Add(GetInlineSigleLineByEntityList(list));
                 }
                 catch (Exception e)
@@ -339,7 +343,7 @@ namespace AMSDCMDataTranslator.Models
             {
                 try
                 {
-                    var list = SiteLevelEntities.Where(p => p.ClaimTime == site.Body.ClaimTime && p.Lot == site.Body.Lot && p.MeasItem == site.Body.MeasItem && p.ProcRoute == site.Body.ProcRoute).ToList();
+                    var list = SiteLevelEntities.Where(p => p.ClaimTime == site.Body.ClaimTime && p.Lot == site.Body.Lot && p.MeasItem == site.Body.MeasItem && p.ProcRoute == site.Body.ProcRoute&&p.ProcEquipment==site.Body.ProcEquipment).ToList();
                     lines.Add(GetInlineSigleLineByEntityList(list));
                 }
                 catch (Exception e)
@@ -347,7 +351,7 @@ namespace AMSDCMDataTranslator.Models
                     LogHelper.ErrorLog(string.Format("InlineError InlineEntityGroup.GetInlineList() SiteLevel Claim_Time:{0},Lot:{1}。", site.Body.ClaimTime.ToString(), site.Body.Lot), e);
                 }
             }
-
+            var test = lines.Where(w => w.Lot == "AE00043.08");
             return lines;
         }
 

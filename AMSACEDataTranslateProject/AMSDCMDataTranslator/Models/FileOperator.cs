@@ -10,13 +10,10 @@ namespace AMSDCMDataTranslator.Models
 {
     public abstract class FileOperator:IFileOperable
     {
-        
         protected string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
-
         public  string SOURCE_FILE_PATH;
         public  string WORKING_PATH;
         public  string HISTORY_PATH;
-
         protected string SourceFilePath
         {
             get { return  SOURCE_FILE_PATH; }
@@ -34,7 +31,10 @@ namespace AMSDCMDataTranslator.Models
 
         protected string exeDirctory
         {
-            get { return exePath.Substring(0, exePath.LastIndexOf("\\") + 1); }
+            get {
+                //System.IO.Path.GetDirectoryName(exePath);
+                return exePath.Substring(0, exePath.LastIndexOf("\\") + 1); }
+            
         }
 
         /// <summary>

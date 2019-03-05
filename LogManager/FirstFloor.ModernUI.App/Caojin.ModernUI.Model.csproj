@@ -79,11 +79,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Interop.Microsoft.Office.Core">
-      <HintPath>..\..\..\库\officedll\Interop.Microsoft.Office.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\myapp\库\officedll\Interop.Microsoft.Office.Core.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.Microsoft.Office.Interop.Excel">
-      <HintPath>..\..\..\库\officedll\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
+      <HintPath>..\..\..\..\..\myapp\库\officedll\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />

@@ -27,7 +27,7 @@ namespace FirstFloor.ModernUI.App.Content
 
         private void button_selectfile_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.TextBox_File_Text = FileHelper.SelectSingleFile(new FileFilter { Description = "文本文件(*.txt)", Extension = "*.txt" });
+            ViewModel.TextBox_File_Text = FileHelper.SelectSingleFile(new FileFilter { Description = "所有文件(*.*)", Extension = "*.*" });
         }
 
         private void button_import_Click(object sender, RoutedEventArgs e)

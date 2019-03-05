@@ -12,9 +12,9 @@ DEBUG;TRACE
 D:\ProgramData\GitHub\AMS\LogManager\FirstFloor.ModernUI.App\App.xaml
 54-1315989822
 11641223951
-95-283644192
-1658970928
+91-1825009089
+18-1629691252
 Assets\ModernUI.Snowflakes.xaml;Assets\ModernUI.Love.xaml;Assets\ModernUI.BingImage.xaml;Assets\ModernUI.HelloKitty.xaml;CaojinMainWindow.xaml;Content\ContentLoaderImages.xaml;Content\ContentLoaderIntro.xaml;Content\ControlsModernFrame.xaml;Content\ControlsModernMenu.xaml;Content\ControlsModernProgressRing.xaml;Content\ControlsModernWindow.xaml;Content\ControlsStylesDataGrid.xaml;Content\ControlsStylesProgressBar.xaml;Content\ControlsStylesSampleForm.xaml;Content\ControlsStylesSlider.xaml;Content\ControlsStylesDate.xaml;Content\MailQueueImportContent.xaml;Content\MailQueueQueryContent.xaml;Content\MailSmtpImportContent.xaml;Content\MailSmtpLogListContent.xaml;Content\MailSmtpQueryContent.xaml;Content\ModernFrame\CancelNavigateSample.xaml;Content\ModernFrame\ErrorSample.xaml;Content\ModernFrame\Sample.xaml;Content\PrintLogImportContent.xaml;Content\PrintLogListContent.xaml;Content\PrintLogQueryContent.xaml;Content\SettingsDataBase.xaml;DetailWindow.xaml;MainWindow.xaml;Pages\ContentLoader.xaml;Pages\DpiAwareness.xaml;Pages\MailSmtpPage.xaml;Pages\Navigation.xaml;Pages\ControlsModern.xaml;Content\ControlsModernBBCodeBlock.xaml;Content\ControlsModernButton.xaml;Content\ControlsModernDialog.xaml;Pages\ControlsStyles.xaml;Pages\Introduction.xaml;Content\ControlsStylesButton.xaml;Content\ControlsStylesItemsControl.xaml;Content\ControlsStylesText.xaml;Pages\LayoutBasic.xaml;Pages\LayoutList.xaml;Pages\LayoutSplit.xaml;Pages\LayoutWireframe.xaml;Pages\LayoutTab.xaml;Content\LoremIpsum.xaml;Content\LoremIpsumList.xaml;Content\LoremIpsumSplit.xaml;Content\SettingsAppearance.xaml;Pages\PrintLogPage.xaml;Pages\Settings.xaml;
 
-True
+False
 

@@ -69,7 +69,7 @@ namespace AMSDCMDataTranslator.Models
         {
             get;
             set;
-        } = "Ams_ace";
+        } = "AcElic";
 
         public static string FtpUri
         {
