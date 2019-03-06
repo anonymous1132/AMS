@@ -253,3 +253,4 @@ D:\ProgramData\GitHub\AMS\LogManager\FirstFloor.ModernUI\obj\Debug\it\FirstFloor
 D:\ProgramData\GitHub\AMS\LogManager\FirstFloor.ModernUI\obj\Debug\pl\FirstFloor.ModernUI.resources.dll
 D:\ProgramData\GitHub\AMS\LogManager\FirstFloor.ModernUI\obj\Debug\ru\FirstFloor.ModernUI.resources.dll
 D:\ProgramData\GitHub\AMS\LogManager\FirstFloor.ModernUI\obj\Debug\FirstFloor.ModernUI.dll
+D:\ProgramData\GitHub\AMS\LogManager\FirstFloor.ModernUI\obj\Debug\FirstFloor.ModernUI.csprojAssemblyReference.cache

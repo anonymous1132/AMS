@@ -26,6 +26,13 @@ namespace MCADataTranslator.Bll
             set { _isSelected = value; OnPropertyChanged("IsSelected"); }
         }
 
+        private string _uid;
+        public string UID
+        {
+            get { return _uid; }
+            set { _uid = value;OnPropertyChanged("UID"); }
+        }
+
         private string _updateDateTime;
         public string UpdateDateTime
         {
@@ -57,7 +64,7 @@ namespace MCADataTranslator.Bll
         private void UpdateHideInACE()
         {
             SqlHelper sqlHelper = new SqlHelper();
-            string sql = string.Format("update MCA_Pool set HideInACE= {0} where SampleComment ='{1}'", _hideInACE == false ? 0 : 1,_sampleComment);
+            string sql = string.Format("update MCA_Pool set HideInACE= {0} where UID ='{1}'", _hideInACE == false ? 0 : 1,_uid);
             sqlHelper.getSomeDate(sql);
         }
     }

@@ -69,14 +69,10 @@ namespace MCADataTranslator.Content
             SaveFile(ref filepath);
             if (string.IsNullOrEmpty(filepath)) { return; }
             ExcelOper excel = new ExcelOper(filepath);
-            foreach (QueryDataViewModel qvm in obc_qvm)
+            foreach (QueryDataViewModel qvm in DG1.SelectedItems)
             {
-                if (qvm.IsSelected)
-                {
-                    this.report = new ReportModelBlock(qvm.SampleComment);
-                    excel.PrintOneReportBlcok(report);
-                }
-   
+                    report = new ReportModelBlock(qvm.UID);
+                    excel.PrintOneReportBlcok(report);   
             }
             excel.Save();
             excel.Quit();
@@ -109,30 +105,28 @@ namespace MCADataTranslator.Content
         private void bt_delete_Click(object sender, RoutedEventArgs e)
         {
             if (GetSelectItemsCount() <= 0) { return; }
-
-            List<string> SampleList = new List<string>();
-            foreach (QueryDataViewModel qvm in obc_qvm)
+            var items = DG1.SelectedItems;
+            List<string> UIDList = new List<string>();
+            foreach (QueryDataViewModel item in items)
             {
-                if (qvm.IsSelected)
-                {
-                    SampleList.Add(qvm.SampleComment);
-                }
+               item.IsSelected = true;
+               UIDList.Add(item.UID);
             }
-            bool isConfirmed = MessageBoxChoiseHelper.IsConfirmed("当前选中" + SampleList.Count.ToString() + "项，确定要删除吗？删除后将不可恢复数据！");
+            bool isConfirmed = MessageBoxChoiseHelper.IsConfirmed("当前选中" + UIDList.Count.ToString() + "项，确定要删除吗？删除后将不可恢复数据！");
             try
             {
                 if (isConfirmed)
                 {
-                    string para = string.Join("','", SampleList);
+                    string para = string.Join("','", UIDList);
                     SqlHelper sqlHelper = new SqlHelper();
-                    string sql = string.Format("delete from MCA_Pool where SampleComment in ('{0}');delete from MCA_Ag where SampleComment in ('{0}');delete from MCA_W where SampleComment in ('{0}');", para);
+                    string sql = string.Format("delete from MCA_Pool where UID in ('{0}');delete from MCA_Ag where Pool_UID in ('{0}');delete from MCA_W where Pool_UID in ('{0}');", para);
                     sqlHelper.getSomeDate(sql);
                     for (int i = obc_qvm.Count - 1; i >= 0; i--)
                     {
-                    if (obc_qvm[i].IsSelected)
-                    {
-                        obc_qvm.RemoveAt(i);
-                    }
+                        if (obc_qvm[i].IsSelected)
+                        {
+                            obc_qvm.RemoveAt(i);
+                        }
                     }
                     DG1.ItemsSource = obc_qvm;
                     MessageBox.Show("Done!", "Information");

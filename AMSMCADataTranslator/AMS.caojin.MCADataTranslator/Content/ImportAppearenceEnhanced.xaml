@@ -15,17 +15,18 @@
                 <Button  Content="ImportDB" Name="button_import" Click="button_import_Click" IsEnabled="False"/>
             </StackPanel>
 
-            <ScrollViewer DockPanel.Dock="Bottom" Margin="0 0 0 20">
+
                 <DataGrid Name="DG1"  AutoGenerateColumns="False" BorderThickness="1" Margin="5" CanUserAddRows="False"   IsReadOnly="True" HorizontalContentAlignment="Center" >
                     <DataGrid.Columns>
                         <mui:DataGridTextColumn  Header="FileName" Width="auto" Binding="{Binding Path=FileName}" />
                         <mui:DataGridTextColumn Header="CSVType" Width="auto" Binding="{Binding Path=CsvType}" />
                         <mui:DataGridTextColumn Header="SampleComment" Width="auto" Binding="{Binding Path=SampleComment}" />
+                        <mui:DataGridTextColumn Header="FileDirectory" Width="auto" Binding="{Binding Path=FileDir}" />
                         <mui:DataGridTextColumn Header="OperationResult" Width="auto" Binding="{Binding Path=OperationResult}" />
                         <mui:DataGridTextColumn Header="Comment" Width="auto" Binding="{Binding Path=Comment}"/>
                     </DataGrid.Columns>
                 </DataGrid>
-            </ScrollViewer>
+
         </DockPanel>
         <mui:ModernProgressRing IsActive="False" Width="80" Height="80" Style="{StaticResource CircleProgressRingStyle}" Name="ProgressRing"/>
     </Grid>
