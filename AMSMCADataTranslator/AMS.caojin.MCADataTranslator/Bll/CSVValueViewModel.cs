@@ -104,8 +104,25 @@ namespace MCADataTranslator.Bll
             set { _version = value;OnPropertyChanged("Version"); }
         }
 
+        private string _fileDir;
+        public string FileDir
+        {
+            get { return _fileDir; }
+            set { _fileDir = value;OnPropertyChanged("FileDir"); }
+        }
 
-       public ObservableCollection<AgSeriesViewModel> agvm_list=new ObservableCollection<AgSeriesViewModel>();
+        private string _fileName;
+        public string FileName
+        {
+            get { return _fileName; }
+            set { _fileName = value; OnPropertyChanged("FileName"); }
+        }
+
+        public bool Ag { get; set; } = false;
+
+        public bool W { get; set; } = false;
+
+        public ObservableCollection<AgSeriesViewModel> agvm_list=new ObservableCollection<AgSeriesViewModel>();
        public ObservableCollection<WSeriesViewModel> wvm_list=new ObservableCollection<WSeriesViewModel>();
     }
 }

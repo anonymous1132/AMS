@@ -51,11 +51,11 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <mui:DataGridTextColumn Header="SampleComment" Width="auto"  Binding="{Binding Path= SampleComment}" IsReadOnly="True"/>
-                    <mui:DataGridCheckBoxColumn Header="AgImported" Width="auto"  Binding="{Binding Path= Ag}" IsReadOnly="True"/>
-                    <mui:DataGridCheckBoxColumn Header="WImported" Width="auto"  Binding="{Binding Path= W}" IsReadOnly="True"/>
-                    <mui:DataGridTextColumn Header="Date" Binding="{Binding Path=UpdateDateTime}" IsReadOnly="True"/>
-                    <mui:DataGridCheckBoxColumn Header="HideInACE" Width="auto"  Binding="{Binding Path= HideInACE}" IsReadOnly="False"/>
+                    <DataGridTextColumn Header="SampleComment" Width="auto"  Binding="{Binding Path= SampleComment}" IsReadOnly="True"/>
+                    <DataGridCheckBoxColumn Header="AgImported" Width="auto"  Binding="{Binding Path= Ag}" IsReadOnly="True"/>
+                    <DataGridCheckBoxColumn Header="WImported" Width="auto"  Binding="{Binding Path= W}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Path=UpdateDateTime}" IsReadOnly="True"/>
+                    <DataGridCheckBoxColumn Header="HideInACE" Width="auto"  Binding="{Binding Path= HideInACE}" IsReadOnly="False"/>
                 </DataGrid.Columns>
             
   

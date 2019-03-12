@@ -9,12 +9,13 @@ namespace MCADataTranslator.Bll
 {
     public class ReportModelBlock
     {
-        public ReportModelBlock(string sampleComment)
+        public ReportModelBlock(string UID)
         {
-            this.SampleComment = sampleComment;
+            this.UID = UID;
             GetUnitLists();
             GetSpecUnit();
         }
+        public string UID;
 
         public string SampleComment;
 
@@ -33,15 +34,16 @@ namespace MCADataTranslator.Bll
 
         public void GetUnitLists()
         {
-            if (string.IsNullOrEmpty(SampleComment.Trim())) { return; }
+            if (string.IsNullOrEmpty(UID.Trim(' '))) { return; }
 
             SqlHelper sqlHelper = new SqlHelper();
-            string sql = "select * from AMS_MCA_RPT_DATA where SampleComment = '" + SampleComment + "' order by IndexNo";
+            string sql = "select * from AMS_MCA_RPT_DATA where UID = '" + UID + "' order by IndexNo";
             sqlHelper.getSomeDate(sql);
             if (sqlHelper.dt.DefaultView.Count <= 0) return;
+            SampleComment = sqlHelper.dt.DefaultView[0]["SampleComment"].ToString();
             IList<ReportModelUnit> ilist = ModelConvertHelper<ReportModelUnit>.ConvertToModel(sqlHelper.dt);
             List<ReportModelUnit> list = ModelConvertHelper<ReportModelUnit>.ConvertIListToList<ReportModelUnit>(ilist);
-            this.repotunits = list;
+            repotunits = list;
         }
 
         public void GetSpecUnit()

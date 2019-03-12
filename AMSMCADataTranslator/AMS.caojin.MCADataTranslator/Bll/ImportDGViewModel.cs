@@ -47,6 +47,14 @@ namespace MCADataTranslator.Bll
             set { _sampleComment = value; OnPropertyChanged("SampleComment"); }
         }
 
+
+        private string _fileDir;
+        public string FileDir
+        {
+            get { return _fileDir; }
+            set { _fileDir = value;OnPropertyChanged("FileDir"); }
+        }
+
         private string _operationResult;
         public string OperationResult
         {

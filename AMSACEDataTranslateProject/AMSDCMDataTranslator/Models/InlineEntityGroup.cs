@@ -351,7 +351,6 @@ namespace AMSDCMDataTranslator.Models
                     LogHelper.ErrorLog(string.Format("InlineError InlineEntityGroup.GetInlineList() SiteLevel Claim_Time:{0},Lot:{1}。", site.Body.ClaimTime.ToString(), site.Body.Lot), e);
                 }
             }
-            var test = lines.Where(w => w.Lot == "AE00043.08");
             return lines;
         }
 

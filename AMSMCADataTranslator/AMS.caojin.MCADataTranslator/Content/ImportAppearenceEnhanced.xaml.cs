@@ -59,7 +59,7 @@ namespace MCADataTranslator.Content
                 ImportDGViewModel dg_c = dg;
                 if (!string.IsNullOrEmpty(dg_c.CsvType))
                 {
-                    ImportData(ref dg_c);
+                    ImportData(dg_c);
                     dg.Comment = dg_c.Comment;
                     dg.Csv_VM = dg_c.Csv_VM;
                     dg.OperationResult = dg_c.OperationResult;
@@ -89,14 +89,14 @@ namespace MCADataTranslator.Content
             foreach (string fp in filepath)
             {
                 ImportDGViewModel idgvm = new ImportDGViewModel(fp);
-                CheckFileInOBC(ref idgvm);
+                CheckFileInOBC(idgvm);
                 obc.Add(idgvm);
             }
             return obc;
         }
 
         //检查文件内容
-        private void CheckFileInOBC(ref ImportDGViewModel dGViewModel)
+        private void CheckFileInOBC( ImportDGViewModel dGViewModel)
         {
             if (!File.Exists(dGViewModel.FilePath))
             {
@@ -127,6 +127,7 @@ namespace MCADataTranslator.Content
                 dGViewModel.SampleComment = dt.DefaultView[3][1].ToString();
                 dGViewModel.Csv_VM = new CSVValueViewModel();
                 dGViewModel.Csv_VM = CSVVM(dGViewModel.CsvType, dt);
+                dGViewModel.FileDir = dGViewModel.Csv_VM.FileDir;
             }
             catch (Exception)
             {
@@ -138,14 +139,15 @@ namespace MCADataTranslator.Content
         }
 
         //数据库操作
-        private void ImportData(ref ImportDGViewModel dGViewModel)
+        private void ImportData(ImportDGViewModel dGViewModel)
         {
-            if (CheckIsSampleCommentExist(dGViewModel.SampleComment))
+            if (CheckIsSampleCommentExist(dGViewModel))
             {
-                string sql = "select "+ dGViewModel.CsvType+" from MCA_Pool where SampleComment='"+dGViewModel.SampleComment+"'";
-                SqlHelper sqlHelper = new SqlHelper();
-                sqlHelper.getSomeDate(sql);
-                bool isExist = (bool)(sqlHelper.dt.DefaultView[0][0]);
+                // string sql = "select "+ dGViewModel.CsvType+" from MCA_Pool where SampleComment='"+dGViewModel.SampleComment+"'";   
+                //SqlHelper sqlHelper = new SqlHelper();
+                // sqlHelper.getSomeDate(sql);
+                // bool isExist = (bool)(sqlHelper.dt.DefaultView[0][0]);
+                bool isExist = dGViewModel.CsvType == "Ag" ? dGViewModel.Csv_VM.Ag : dGViewModel.Csv_VM.W;
                 if (isExist)
                 {
                     dGViewModel.Comment = "该数据已经存在";
@@ -153,23 +155,19 @@ namespace MCADataTranslator.Content
                 }
                 else
                 {
-                    ImportPicker(ref dGViewModel);
+                    ImportPicker( dGViewModel);
                 }
             }
             else
             {
-               // try
-               // {
-                    ImportMCAPoolDBTable(dGViewModel.Csv_VM);
-                //}
-              //  catch (Exception e) { dGViewModel.Comment = e.Message; dGViewModel.OperationResult = "导入失败"; return; }
-                ImportPicker(ref dGViewModel);
+                ImportMCAPoolDBTable(dGViewModel.Csv_VM);
+                ImportPicker(dGViewModel);
             }
                 
         }
 
         //根据type导入Ag或W表
-        private void ImportPicker(ref ImportDGViewModel dGViewModel)
+        private void ImportPicker( ImportDGViewModel dGViewModel)
         {
             if (dGViewModel.CsvType == "Ag")
             {
@@ -227,7 +225,9 @@ namespace MCADataTranslator.Content
             csvvm.Recipe = dt.DefaultView[11][1].ToString();
             csvvm.RecipeComment = dt.DefaultView[12][1].ToString();
             csvvm.Version = dt.DefaultView[14][1].ToString();
-          
+            string filepath = dt.DefaultView[15][1].ToString();
+            csvvm.FileDir = Path.GetDirectoryName(filepath);
+            csvvm.FileName = Path.GetFileName(filepath);
             return csvvm;
         }
 
@@ -359,29 +359,26 @@ namespace MCADataTranslator.Content
             return wvm;
         }
 
-        private bool CheckIsSampleCommentExist(string sampleComment)
+        private bool CheckIsSampleCommentExist(ImportDGViewModel dGViewModel)
         {
             bool isexist = false;
             SqlHelper sqlhelper = new SqlHelper();
-            string sql = "select SampleComment from MCA_Pool where SampleComment='" + sampleComment + "'";
+            string sql = "select UID,Ag,W from MCA_Pool where SampleComment='" + dGViewModel.SampleComment + "' and FileDir='"+dGViewModel.Csv_VM.FileDir+"'";
             sqlhelper.getSomeDate(sql);
             if (sqlhelper.dt.DefaultView.Count > 0)
             {
                 isexist = true;
+                dGViewModel.Csv_VM.GUID = sqlhelper.dt.DefaultView[0][0].ToString();
+                dGViewModel.Csv_VM.Ag = (bool)sqlhelper.dt.DefaultView[0][1];
+                dGViewModel.Csv_VM.W = (bool)sqlhelper.dt.DefaultView[0][2];
             }
-
             return isexist;
-
         }
         //数据库Insert操作
         private void ImportMCAPoolDBTable(CSVValueViewModel csv)
         {
             SqlHelper sqlhelper = new SqlHelper();
-            string sql = "insert into MCA_Pool (SampleComment,Sample,UpdateDateTime,UserName,Recipe,Version,EQP) values ('" + csv.SampleComment + "','"
-                + csv.Sample + "','" + csv.DataTime + "','" + csv.User + "','" + csv.Recipe + "','" + csv.Version + "','" + csv.SampleComment.Split(' ')[0] + "')";
-            sqlhelper.getSomeDate(sql);
-
-
+            string sql = "insert into MCA_Pool (UID,SampleComment,Sample,UpdateDateTime,UserName,Recipe,Version,EQP,FileDir,FileName) values ('"+csv.GUID+"','" + csv.SampleComment + "','" + csv.Sample + "','" + csv.DataTime + "','" + csv.User + "','" + csv.Recipe + "','" + csv.Version + "','" + csv.SampleComment.Split(' ')[0] +"','"+csv.FileDir+"','"+csv.FileName +"')"; sqlhelper.getSomeDate(sql);
         }
 
         private void ImportMACAgDBTable(CSVValueViewModel csv)
@@ -391,11 +388,7 @@ namespace MCADataTranslator.Content
 
             foreach (AgSeriesViewModel agvm in ag_list)
             {
-                string sql = "insert into MCA_Ag (SampleComment,IndexNo,X,Y,R,T,IncidentAngle,Z,Phi,Si_E10,Si_IntenC,Si_IntenR,Si_LLD," +
-         "Ge_E10,Ge_IntenC,Ge_IntenR,Ge_LLD,As_E10,As_IntenC,As_IntenR,As_LLD,Na_E10,Na_IntenC,Na_IntenR,Na_LLD,Mg_E10,Mg_IntenC,Mg_IntenR,Mg_LLD," +
-         "Al_E10,Al_IntenC,Al_IntenR,Al_LLD) values(@sampleComment,@indexNo,@x,@y,@r,@t,@incidentAngle,@z,@phi,@si_E10,@si_IntenC,@si_IntenR,@si_LLD," +
-         "@ge_E10,@ge_IntenC,@ge_IntenR,@ge_LLD,@as_E10,@as_IntenC,@as_IntenR,@as_LLD,@na_E10,@na_IntenC,@na_IntenR,@na_LLD,@mg_E10,@mg_IntenC,@mg_IntenR,@mg_LLD," +
-         "@al_E10,@al_IntenC,@al_IntenR,@al_LLD)";
+                string sql = "insert into MCA_Ag (SampleComment,IndexNo,X,Y,R,T,IncidentAngle,Z,Phi,Si_E10,Si_IntenC,Si_IntenR,Si_LLD,Ge_E10,Ge_IntenC,Ge_IntenR,Ge_LLD,As_E10,As_IntenC,As_IntenR,As_LLD,Na_E10,Na_IntenC,Na_IntenR,Na_LLD,Mg_E10,Mg_IntenC,Mg_IntenR,Mg_LLD,Al_E10,Al_IntenC,Al_IntenR,Al_LLD,POOL_UID) values(@sampleComment,@indexNo,@x,@y,@r,@t,@incidentAngle,@z,@phi,@si_E10,@si_IntenC,@si_IntenR,@si_LLD,@ge_E10,@ge_IntenC,@ge_IntenR,@ge_LLD,@as_E10,@as_IntenC,@as_IntenR,@as_LLD,@na_E10,@na_IntenC,@na_IntenR,@na_LLD,@mg_E10,@mg_IntenC,@mg_IntenR,@mg_LLD,@al_E10,@al_IntenC,@al_IntenR,@al_LLD,@pool_uid)";
                 SqlParameter[] para = new SqlParameter[]
                 {
                     new SqlParameter("@sampleComment",csv.SampleComment),
@@ -430,7 +423,8 @@ namespace MCADataTranslator.Content
                     new SqlParameter("@al_E10",ConvertString2Float(agvm.Ag_Al_E10)),
                     new SqlParameter("@al_IntenC",ConvertString2Float(agvm.Ag_Al_C)),
                     new SqlParameter("@al_IntenR",ConvertString2Float(agvm.Ag_Al_R)),
-                    new SqlParameter("@al_LLD",ConvertString2Float(agvm.Ag_Al_LLD))
+                    new SqlParameter("@al_LLD",ConvertString2Float(agvm.Ag_Al_LLD)),
+                     new SqlParameter("@pool_uid",csv.GUID)
                 };
                 sqlhelper.getSomeData2(sql, para);
 
@@ -444,17 +438,7 @@ namespace MCADataTranslator.Content
             ObservableCollection<WSeriesViewModel> w_list = csv.wvm_list;
             foreach (WSeriesViewModel wvm in w_list)
             {
-                string sql = "insert into MCA_W (SampleComment,IndexNo,X,Y,R,T,IncidentAngle,Z,Phi,Si_E10,Si_IntenC,Si_IntenR,Si_LLD," +
-                    "S_E10,S_IntenC,S_IntenR,S_LLD,Cl_E10,Cl_IntenC,Cl_IntenR,Cl_LLD,K_E10,K_IntenC,K_IntenR,K_LLD,Ca_E10,Ca_IntenC,Ca_IntenR,Ca_LLD," +
-                    "Ti_E10,Ti_IntenC,Ti_IntenR,Ti_LLD,V_E10,V_IntenC,V_IntenR,V_LLD,Cr_E10,Cr_IntenC,Cr_IntenR,Cr_LLD,Mn_E10,Mn_IntenC,Mn_IntenR,Mn_LLD," +
-                    "Fe_E10,Fe_IntenC,Fe_IntenR,Fe_LLD,Co_E10,Co_IntenC,Co_IntenR,Co_LLD,Ni_E10,Ni_IntenC,Ni_IntenR,Ni_LLD,Cu_E10,Cu_IntenC,Cu_IntenR,Cu_LLD," +
-                    "Zn_E10,Zn_IntenC,Zn_IntenR,Zn_LLD,Sb_E10,Sb_IntenC,Sb_IntenR,Sb_LLD,Te_E10,Te_IntenC,Te_IntenR,Te_LLD,Na_E10,Na_IntenC,Na_IntenR,Na_LLD," +
-                    "Mg_E10,Mg_IntenC,Mg_IntenR,Mg_LLD,Al_E10,Al_IntenC,Al_IntenR,Al_LLD) values (@sampleComment,@indexNo,@x,@y,@r,@t,@incidentAngle,@z,@phi,@si_E10,@si_IntenC,@si_IntenR,@si_LLD," +
-                    "@s_E10,@s_IntenC,@s_IntenR,@s_LLD,@cl_E10,@cl_IntenC,@cl_IntenR,@cl_LLD,@k_E10,@k_IntenC,@k_IntenR,@k_LLD,@ca_E10,@ca_IntenC,@ca_IntenR,@ca_LLD," +
-                    "@ti_E10,@ti_IntenC,@ti_IntenR,@ti_LLD,@v_E10,@v_IntenC,@v_IntenR,@v_LLD,@cr_E10,@cr_IntenC,@cr_IntenR,@cr_LLD,@mn_E10,@mn_IntenC,@mn_IntenR,@mn_LLD," +
-                    "@fe_E10,@fe_IntenC,@fe_IntenR,@fe_LLD,@co_E10,@co_IntenC,@co_IntenR,@co_LLD,@ni_E10,@ni_IntenC,@ni_IntenR,@ni_LLD,@cu_E10,@cu_IntenC,@cu_IntenR,@cu_LLD," +
-                    "@zn_E10,@zn_IntenC,@zn_IntenR,@zn_LLD,@sb_E10,@sb_IntenC,@sb_IntenR,@sb_LLD,@te_E10,@te_IntenC,@te_IntenR,@te_LLD,@na_E10,@na_IntenC,@na_IntenR,@na_LLD," +
-                    "@mg_E10,@mg_IntenC,@mg_IntenR,@mg_LLD,@al_E10,@al_IntenC,@al_IntenR,@al_LLD)";
+                string sql = "insert into MCA_W (SampleComment,IndexNo,X,Y,R,T,IncidentAngle,Z,Phi,Si_E10,Si_IntenC,Si_IntenR,Si_LLD,S_E10,S_IntenC,S_IntenR,S_LLD,Cl_E10,Cl_IntenC,Cl_IntenR,Cl_LLD,K_E10,K_IntenC,K_IntenR,K_LLD,Ca_E10,Ca_IntenC,Ca_IntenR,Ca_LLD,Ti_E10,Ti_IntenC,Ti_IntenR,Ti_LLD,V_E10,V_IntenC,V_IntenR,V_LLD,Cr_E10,Cr_IntenC,Cr_IntenR,Cr_LLD,Mn_E10,Mn_IntenC,Mn_IntenR,Mn_LLD,Fe_E10,Fe_IntenC,Fe_IntenR,Fe_LLD,Co_E10,Co_IntenC,Co_IntenR,Co_LLD,Ni_E10,Ni_IntenC,Ni_IntenR,Ni_LLD,Cu_E10,Cu_IntenC,Cu_IntenR,Cu_LLD,Zn_E10,Zn_IntenC,Zn_IntenR,Zn_LLD,Sb_E10,Sb_IntenC,Sb_IntenR,Sb_LLD,Te_E10,Te_IntenC,Te_IntenR,Te_LLD,Na_E10,Na_IntenC,Na_IntenR,Na_LLD,Mg_E10,Mg_IntenC,Mg_IntenR,Mg_LLD,Al_E10,Al_IntenC,Al_IntenR,Al_LLD,POOL_UID) values (@sampleComment,@indexNo,@x,@y,@r,@t,@incidentAngle,@z,@phi,@si_E10,@si_IntenC,@si_IntenR,@si_LLD,@s_E10,@s_IntenC,@s_IntenR,@s_LLD,@cl_E10,@cl_IntenC,@cl_IntenR,@cl_LLD,@k_E10,@k_IntenC,@k_IntenR,@k_LLD,@ca_E10,@ca_IntenC,@ca_IntenR,@ca_LLD,@ti_E10,@ti_IntenC,@ti_IntenR,@ti_LLD,@v_E10,@v_IntenC,@v_IntenR,@v_LLD,@cr_E10,@cr_IntenC,@cr_IntenR,@cr_LLD,@mn_E10,@mn_IntenC,@mn_IntenR,@mn_LLD,@fe_E10,@fe_IntenC,@fe_IntenR,@fe_LLD,@co_E10,@co_IntenC,@co_IntenR,@co_LLD,@ni_E10,@ni_IntenC,@ni_IntenR,@ni_LLD,@cu_E10,@cu_IntenC,@cu_IntenR,@cu_LLD,@zn_E10,@zn_IntenC,@zn_IntenR,@zn_LLD,@sb_E10,@sb_IntenC,@sb_IntenR,@sb_LLD,@te_E10,@te_IntenC,@te_IntenR,@te_LLD,@na_E10,@na_IntenC,@na_IntenR,@na_LLD,@mg_E10,@mg_IntenC,@mg_IntenR,@mg_LLD,@al_E10,@al_IntenC,@al_IntenR,@al_LLD,@pool_uid)";
                 SqlParameter[] para = new SqlParameter[]
                  {
                     new SqlParameter("@sampleComment",csv.SampleComment),
@@ -542,17 +526,19 @@ namespace MCADataTranslator.Content
                     new SqlParameter("@al_IntenC",ConvertString2Float(wvm.W_Al_C)),
                     new SqlParameter("@al_IntenR",ConvertString2Float(wvm.W_Al_R)),
                     new SqlParameter("@al_LLD",ConvertString2Float(wvm.W_Al_LLD)),
+                    new SqlParameter("@pool_uid",csv.GUID),
                  };
+
                 sqlhelper.getSomeData2(sql, para);
             }
         }
 
         private void UpdateMCAPoolDBTable(ImportDGViewModel dGViewModel)
         {
-            string sql = "update MCA_Pool set "+dGViewModel.CsvType+"=1 where SampleComment ='"+dGViewModel.SampleComment+"'";
+          //  string sql = "update MCA_Pool set "+dGViewModel.CsvType+"=1 where SampleComment ='"+dGViewModel.SampleComment+"'";
+            string sql = string.Format("update MCA_POOL set {0}=1 where UID='{1}'",dGViewModel.CsvType,dGViewModel.Csv_VM.GUID);  //2019-3-5修改
             SqlHelper sqlHelper = new SqlHelper();
             sqlHelper.getSomeDate(sql);
-
         }
 
         private float ConvertString2Float(string str)

@@ -16,7 +16,7 @@
             </mui:ModernTab.Links>
         </mui:ModernTab>
         <!--<content:ImportAppearenceEnhanced   />-->
-            <mui:BBCodeBlock   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 50 0"  >Current Version:1.3.0.0   UpdateDate:2018/09/12
+            <mui:BBCodeBlock   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 50 0"  >Current Version:1.4.0.0   UpdateDate:2019/03/06
             </mui:BBCodeBlock>
  
     </Grid>
