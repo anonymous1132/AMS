@@ -236,7 +236,9 @@ namespace AMSDCMDataTranslator.Models
                 }
             }
             //获取DCM坐标信息
-            string dcmSql = string.Format("select lotid,eqpid,measuredatacount,recipe,coordinate,newdate from istrpt.fvace_inline_dcm where newdate between '{0}' and '{1}'", StartTime.AddMinutes(-2).ToString("yyyy-MM-dd-HH.mm.ss.ffffff"), endTimeStamp);
+            var lotList = inlineDBEntities.Select(s => s.Lot).Distinct();
+            string conditon =lotList.Count()<15? string.Format("where lotid in ('{0}')",string.Join("','",lotList)):"";
+            string dcmSql = string.Format("select lotid,eqpid,measuredatacount,recipe,coordinate,newdate from istrpt.fvace_inline_dcm_last {0}", conditon);
             dB2.GetSomeData(dcmSql);
             foreach (DataRow dr in dB2.dt.Rows)
             {
@@ -304,7 +306,7 @@ namespace AMSDCMDataTranslator.Models
             }
             line.MeasureDataArray = string.Join(";", datalist);
             line.WaferSiteArray = waferarraysb.ToString();
-            line.SiteCoordArray = DCMEntities.Where(p => (p.NewDate - line.ClaimTime).Duration() < TimeSpan.FromMinutes(2) && p.LotID == line.Lot && p.EQPID == line.MeasEquipment && p.MeasureDataCount == line.MeasureDataCount && line.MeasRecipe.Contains(p.Recipe)).Select(a => a.Coordinate).FirstOrDefault();
+            line.SiteCoordArray = DCMEntities.Where(p =>  p.LotID == line.Lot && p.EQPID == line.MeasEquipment && p.MeasureDataCount == line.MeasureDataCount && line.MeasRecipe.Contains(p.Recipe)).Select(a => a.Coordinate).FirstOrDefault();
             return line;
         }
 

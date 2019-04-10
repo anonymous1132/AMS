@@ -1,0 +1,28 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-26 10:23:49,573                                   
+【记录信息】开始RunAMSWIP                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-26 10:23:53,466                                   
+【记录信息】数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\App\wip_data\siff\WIP20181126102353.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-26 10:24:18,049                                   
+【记录信息】AMSWIP	starttorun
+/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/u01/app/oracle/product/12.1.0.2/bin:/kla-tencor/adb/eda/bin
+Opening logfile: /kla-tencor/adb/data/siff/WIP/message/WIP_Nov26.log.....OK Connecting to database[UserName: ace_loader][DB Name: ADB].....OK %%%%%%%%% END OF PROCESS LOADFILE(S) [Mon Nov 26 10:24:05 2018] %%%%%%%%%% Opening logfile: /kla-tencor/adb/data/siff/WIP/message/WIP_Nov26.log.....OK Connecting to database[UserName: ace_loader][DB Name: ADB].....OK %%%%%%%%% END OF PROCESS LOADFILE(S) [Mon Nov 26 10:24:17 2018] %%%%%%%%%%
+                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-26 10:24:18,144                                   
+【记录信息】数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\App\wip_data\siff\WIP20181126102418.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-26 10:24:18,145                                   
+【记录信息】RunAMSWIP执行完毕                                   
+【信息详情】

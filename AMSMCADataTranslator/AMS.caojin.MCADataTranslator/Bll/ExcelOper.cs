@@ -176,7 +176,7 @@ namespace MCADataTranslator.Bll
                 DataRow dr = dt.NewRow();
                 for (int iCol = 1; iCol <= iColCount; iCol++)
                 {
-                  Range  range = worksheet.Cells[iRow, iCol];
+                  Range  range = (Range)worksheet.Cells[iRow, iCol];
                     dr[iCol - 1] = (range.Value2 == null) ? "" : range.Text.ToString();
                 }
                 dt.Rows.Add(dr);

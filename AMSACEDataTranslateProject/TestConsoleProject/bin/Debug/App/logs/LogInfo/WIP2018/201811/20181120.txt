@@ -1,0 +1,55 @@
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:40:25,721                                   
+【记录信息】开始RunAMSWIP                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:40:30,439                                   
+【记录信息】数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\App\wip_data\siff\WIP20181120154030.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:40:30,477                                   
+【记录信息】数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\App\wip_data\siff\WIP20181120154030.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:40:30,584                                   
+【记录信息】RunAMSWIP执行完毕                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:46:30,715                                   
+【记录信息】开始RunAMSWIP                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:46:34,009                                   
+【记录信息】数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\App\wip_data\siff\WIP20181120154633.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:46:34,046                                   
+【记录信息】数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\App\wip_data\siff\WIP20181120154634.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:48:40,871                                   
+【记录信息】开始RunAMSWIP                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:48:44,404                                   
+【记录信息】数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\App\wip_data\siff\WIP20181120154844.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:48:44,441                                   
+【记录信息】数据转换成功—SiffFile:D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\App\wip_data\siff\WIP20181120154844.txt                                   
+【信息详情】
+
+＝＝＝＝＝＝＝＝＝＝                                   
+【记录时间】2018-11-20 15:48:44,442                                   
+【记录信息】RunAMSWIP执行完毕                                   
+【信息详情】

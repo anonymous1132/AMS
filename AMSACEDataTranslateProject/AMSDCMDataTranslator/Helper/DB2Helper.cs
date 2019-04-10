@@ -10,7 +10,7 @@ namespace AMSDCMDataTranslator.Helper
 {
     public class DB2Helper
     {
-        private readonly string strConn = "Provider=IBMDADB2;Data Source=AMRPTDB;UID=rptprod;PWD=rptprod;";
+        private readonly string strConn = "Provider=IBMDADB2;Data Source=AMRPTDB;UID=rptprod;PWD=Rpd#2019;";
         public DataTable dt ;
 
         public void GetSomeData(string strSql)

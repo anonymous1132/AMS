@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\ProgramData\SVN\AMS\AMSMCADataTranslator\AMS.caojin.MCADataTranslator\obj\Debug\
+D:\ProgramData\GitHub\AMS\AMSMCADataTranslator\AMS.caojin.MCADataTranslator\obj\Debug\
 MCADataTranslator
 none
 false
 DEBUG;TRACE
-D:\ProgramData\SVN\AMS\AMSMCADataTranslator\AMS.caojin.MCADataTranslator\App.xaml
+D:\ProgramData\GitHub\AMS\AMSMCADataTranslator\AMS.caojin.MCADataTranslator\App.xaml
 111808480862
 
 352127131062
-20-168894840
+202105455993
 Content\ImportAppearance.xaml;Content\ImportAppearanceType2.xaml;Content\ImportAppearenceEnhanced.xaml;Content\OutputAppearance.xaml;Content\OutputAppearenceType2.xaml;Content\PreviewDrid.xaml;Content\SettingsAppearance.xaml;MainWindow.xaml;Pages\Import.xaml;Pages\Output.xaml;Pages\Settings.xaml;
 
 False
