@@ -1,6 +1,5 @@
-*/bin/
-*/debug/
-*/obj/
-.vs
+*/.vs/
+*/*/bin/
+*/*/obj/
+*/*/
 */packages/
-*.txt
