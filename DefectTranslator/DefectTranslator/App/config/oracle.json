@@ -1,0 +1,7 @@
+{
+  "UserID": "acme",
+  "Password": "acme",
+  "HostName": "10.132.0.35",
+  "Port": 1525,
+  "ServiceName": "udbprod.world"
+}

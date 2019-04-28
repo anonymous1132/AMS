@@ -61,4 +61,3 @@ D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\AMSDCMDataTranslator\bin\De
 D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\AMSDCMDataTranslator\bin\Debug\log4net.xml
 D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\AMSDCMDataTranslator\bin\Debug\NPOI.xml
 D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.csproj.CopyComplete
-D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\AMSDCMDataTranslator\obj\Debug\AMSDCMDataTranslator.csprojAssemblyReference.cache

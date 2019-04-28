@@ -15,9 +15,27 @@ namespace TestConsoleProject
     {
         static void Main(string[] args)
         {
-             AmsInlineRunner.Run();
-            //TestAMSInline.Run();
-            Console.WriteLine("ok");
+            try
+            {
+                //if (args.Length == 1)
+                //{
+                //    DefectTouch.Run("*" + args[0] + "*");
+                //}
+                //else
+                //{
+                //    Console.WriteLine("请输入要更新的文件对应的LotID：");
+                //    string lot = Console.ReadLine();
+                //    DefectTouch.Run("*" + lot + "*");
+                //}
+                //Console.WriteLine("ok");
+
+                  DefectUploadFile.UploadFile();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error\n"+ex.Message);
+            }
+        
             Console.ReadLine();
         }
     }
