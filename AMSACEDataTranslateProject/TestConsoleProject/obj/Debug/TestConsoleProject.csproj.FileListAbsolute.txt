@@ -64,8 +64,8 @@ D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debu
 D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\log4net.xml
 D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\NPOI.xml
 D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\obj\Debug\TestConsoleProject.csproj.CopyComplete
-D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\AmsWIPRunner.exe.config
-D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\AmsWIPRunner.exe
-D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\AmsWIPRunner.pdb
-D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\obj\Debug\AmsWIPRunner.exe
-D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\obj\Debug\AmsWIPRunner.pdb
+D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\AmsInlineRunner.exe.config
+D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\AmsInlineRunner.exe
+D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\bin\Debug\AmsInlineRunner.pdb
+D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\obj\Debug\AmsInlineRunner.exe
+D:\ProgramData\GitHub\AMS\AMSACEDataTranslateProject\TestConsoleProject\obj\Debug\AmsInlineRunner.pdb

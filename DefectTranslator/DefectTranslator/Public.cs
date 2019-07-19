@@ -39,7 +39,8 @@ namespace DefectTranslator
 
         public static FtpConPara FtpConPara { get; set; }= JsonConvert.DeserializeObject<FtpConPara>(File.ReadAllText(Path.Combine(ExeDir, "App\\config\\ftp.json")));
 
-        public static OracleDataCatcher<EDAORM> EdaCatcher { get; set; } = new OracleDataCatcher<EDAORM>("",OracleConPara,string.Format(@"select s.inspect_equip_id EqpID,s.lot_id LotID,r.recipe_id RecipeID,s.adder_defects ADC,s.defective_die DDC,s.repeaters RDC,s.inspection_time InspectionTime,s.slot_id SlotID,s.wafer_id WaferID
-from UDB.INSP_WAFER_SUMMARY s left join udb.insp_recipe r on s.recipe_key = r.recipe_key where s.inspection_time >to_date('{0}','yyyy-mm-dd hh24:mi:ss')",LastInspectionTime.ToString("yyyy-MM-dd HH:mm:ss")));
+        //2019-7-5 s.inspection_time InspectionTime=>s.last_update InspectionTime
+        public static OracleDataCatcher<EDAORM> EdaCatcher { get; set; } = new OracleDataCatcher<EDAORM>("",OracleConPara,string.Format(@"select s.inspect_equip_id EqpID,s.lot_id LotID,r.recipe_id RecipeID,s.adder_defects ADC,s.defective_die DDC,s.repeaters RDC,s.last_update InspectionTime,s.slot_id SlotID,s.wafer_id WaferID
+from UDB.INSP_WAFER_SUMMARY s left join udb.insp_recipe r on s.recipe_key = r.recipe_key where s.last_update >to_date('{0}','yyyy-mm-dd hh24:mi:ss')",LastInspectionTime.ToString("yyyy-MM-dd HH:mm:ss")));
     }
 }

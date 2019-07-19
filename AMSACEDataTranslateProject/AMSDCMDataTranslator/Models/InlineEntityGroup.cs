@@ -61,14 +61,18 @@ namespace AMSDCMDataTranslator.Models
         {
             get
             {
-                var list = inlineDBEntities.Where(a => a.CollectedType == InlineDBEntity.CollectedTypes.W).OrderBy(p => int.Parse(p.WaferSeq)).ToList();
+                 var list = inlineDBEntities.Where(a => a.CollectedType == InlineDBEntity.CollectedTypes.W).OrderBy(p => { int.TryParse(p.WaferSeq,out int result);return result; }).ToList();
+               // var list = inlineDBEntities.Where(a => a.CollectedType == InlineDBEntity.CollectedTypes.W).OrderBy(p => int.Parse(p.WaferSeq)).ToList();
                 return list;
             }
         }
 
         public List<InlineDBEntity> SiteLevelEntities
         {
-            get { return inlineDBEntities.Where(a => a.CollectedType == InlineDBEntity.CollectedTypes.S).OrderBy(p => int.Parse(p.WaferSeq)).ThenBy(p => int.Parse(p.SitePosition)).ToList(); }
+            get {
+                return inlineDBEntities.Where(a => a.CollectedType == InlineDBEntity.CollectedTypes.S).OrderBy(p => { int.TryParse(p.WaferSeq, out int result); return result; }).ThenBy(p => { int.TryParse(p.SitePosition, out int result); return result; }).ToList();
+                //return inlineDBEntities.Where(a => a.CollectedType == InlineDBEntity.CollectedTypes.S).OrderBy(p => int.Parse(p.WaferSeq)).ThenBy(p => int.Parse(p.SitePosition)).ToList();
+            }
         }
 
         private string sql
@@ -332,7 +336,7 @@ namespace AMSDCMDataTranslator.Models
             {
                 try
                 {
-                    var list = WaferLevelEntities.Where(p => p.ClaimTime == wafer.Body.ClaimTime && p.Lot == wafer.Body.Lot && p.MeasItem == wafer.Body.MeasItem && p.ProcRoute == wafer.Body.ProcRoute&&p.ProcEquipment==wafer.Body.ProcEquipment).ToList();
+                    var list = WaferLevelEntities.Where(p => p.ClaimTime == wafer.Body.ClaimTime && p.Lot == wafer.Body.Lot && p.MeasItem == wafer.Body.MeasItem && p.ProcRoute == wafer.Body.ProcRoute && p.ProcEquipment == wafer.Body.ProcEquipment).ToList();
                     lines.Add(GetInlineSigleLineByEntityList(list));
                 }
                 catch (Exception e)
@@ -345,7 +349,7 @@ namespace AMSDCMDataTranslator.Models
             {
                 try
                 {
-                    var list = SiteLevelEntities.Where(p => p.ClaimTime == site.Body.ClaimTime && p.Lot == site.Body.Lot && p.MeasItem == site.Body.MeasItem && p.ProcRoute == site.Body.ProcRoute&&p.ProcEquipment==site.Body.ProcEquipment).ToList();
+                    var list = SiteLevelEntities.Where(p => p.ClaimTime == site.Body.ClaimTime && p.Lot == site.Body.Lot && p.MeasItem == site.Body.MeasItem && p.ProcRoute == site.Body.ProcRoute && p.ProcEquipment == site.Body.ProcEquipment).ToList();
                     lines.Add(GetInlineSigleLineByEntityList(list));
                 }
                 catch (Exception e)

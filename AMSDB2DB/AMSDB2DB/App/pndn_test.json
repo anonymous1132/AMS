@@ -1,0 +1,21 @@
+{
+  "From": {
+    "DBType": "Oracle",
+    "HostName": "10.8.0.69",
+    "Port": 1521,
+    "UserID": "zhangyejun",
+    "Password": "zhangyejun",
+    "ServiceName": "ORCL",
+    "Table": "AMSC.FORMTABLE_MAIN_132",
+    "Columns": [ "*" ],
+    "Sequence": "ID"
+  },
+  "To": {
+    "DBType": "DB2",
+    "UserID": "sitst1",
+    "Password": "sitstcim1",
+    "ServiceName": "ATRPT1",
+    "Table": "ISTRPT.OA_PNDN_SUMMARY"
+  },
+  "Interval": 120
+}

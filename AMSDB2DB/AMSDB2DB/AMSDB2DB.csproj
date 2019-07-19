@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2CC7A5BD-6267-4956-80C5-01C5CA696B49}</ProjectGuid>
+    <ProjectGuid>{0AB618A7-38B1-4C7D-8B00-45C692FAEC0F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestConsoleProject</RootNamespace>
-    <AssemblyName>AmsInlineRunner</AssemblyName>
+    <RootNamespace>AMSDB2DB</RootNamespace>
+    <AssemblyName>AMSDB2DB</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,29 +49,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AMSChamberRunner.cs" />
-    <Compile Include="AmsInlineRunner.cs" />
-    <Compile Include="AMSWIPRunner.cs" />
-    <Compile Include="DefectTouch.cs" />
-    <Compile Include="DefectUploadFile.cs" />
+    <Compile Include="Cmd\Clear.cs" />
+    <Compile Include="Cmd\Exit.cs" />
+    <Compile Include="Cmd\Help.cs" />
+    <Compile Include="Cmd\Task.cs" />
+    <Compile Include="ConsoleCmds.cs" />
+    <Compile Include="ConsoleHelper.cs" />
+    <Compile Include="FromEntity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestAMSChamber.cs" />
-    <Compile Include="TestAMSInline.cs" />
-    <Compile Include="TestDcm.cs" />
-    <Compile Include="TestHlcm.cs" />
-    <Compile Include="TestWat.cs" />
-    <Compile Include="TestWIP.cs" />
+    <Compile Include="PublicValues.cs" />
+    <Compile Include="TaskEntity.cs" />
+    <Compile Include="TaskHandler.cs" />
+    <Compile Include="TaskList.cs" />
+    <Compile Include="ToEntity.cs" />
+    <Compile Include="TypeChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="App\service.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App\pndn_test.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App\task1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App\pndn_test.seq.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App\task1.seq.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
+    <None Include="readme.md" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\AMSDCMDataTranslator\AMSDCMDataTranslator.csproj">
-      <Project>{fcff45d2-880b-441b-8827-f082473816f0}</Project>
-      <Name>AMSDCMDataTranslator</Name>
+    <ProjectReference Include="..\..\..\AMSDotNetWebAPI\CommonUtilsLibrary\CommonUtilsLibrary.csproj">
+      <Project>{c28d1898-85e1-4fe4-95d7-8d459200be2d}</Project>
+      <Name>CommonUtilsLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties App_4pndn_3test_1json__JSONSchema="." />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

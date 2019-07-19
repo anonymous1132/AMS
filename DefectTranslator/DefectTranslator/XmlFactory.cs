@@ -41,18 +41,19 @@ namespace DefectTranslator
             List<string> wafers = new List<string>();
             string head = "<?xml version=\"1.0\"?>";
             head += "\n<EDA>\n";
+            head += "<DataItems>\n";
             foreach (var wafer in Eda.WaferEntities)
             {
                 if (wafers.IndexOf(wafer.WaferID) >=0) continue;
-                head += "<DataItems>\n";
+ 
                 head += string.Format("<DataItem WaferID=\"{0}\" SlotNo=\"{1}\">\n",wafer.WaferID,wafer.SlotID);
                 head += string.Format("<Item ItemName=\"ADC\">{0}</Item>\n",wafer.ADC);
                 head += string.Format("<Item ItemName=\"DDC\">{0}</Item>\n", wafer.DDC);
                 head += string.Format("<Item ItemName=\"RDC\">{0}</Item>\n", wafer.RDC);
-                head += "</DataItem>\n</DataItems>\n";
+                head += "</DataItem>\n";
                 wafers.Add(wafer.WaferID);
             }
-            head += "</EDA>";
+            head += "</DataItems>\n</EDA>";
             File.WriteAllText(FilePath,head);
         }
 
@@ -61,27 +62,25 @@ namespace DefectTranslator
             List<string> list = File.ReadAllLines(FilePath).ToList();
             foreach (var wafer in Eda.WaferEntities)
             {
-                int pos = list.FindIndex(f=>f.Contains(string.Format("<DataItem waferID=\"{0}\"", wafer.WaferID)));
+                int pos = list.FindIndex(f=>f.Contains(string.Format("<DataItem WaferID=\"{0}\"", wafer.WaferID)));
 
                 //如果没有该wafer
                 if (pos==-1)
                 {
-                    list.Insert(2,"</DataItems>");//插入新的Node
-                    list.Insert(2, "</DataItem>");
-                    list.Insert(2, string.Format("<Item Itemname=\"RDC\">{0}</Item>", wafer.RDC));
-                    list.Insert(2, string.Format("<Item Itemname=\"DDC\">{0}</Item>", wafer.DDC));
-                    list.Insert(2, string.Format("<Item Itemname=\"ADC\">{0}</Item>", wafer.ADC));
-                    list.Insert(2, string.Format("<DataItem waferID=\"{0}\" waferSlotNo=\"{1}\">", wafer.WaferID, wafer.SlotID));
-                    list.Insert(2, "<DataItems>");
+                    list.Insert(3, "</DataItem>");
+                    list.Insert(3, string.Format("<Item ItemName=\"RDC\">{0}</Item>", wafer.RDC));
+                    list.Insert(3, string.Format("<Item ItemName=\"DDC\">{0}</Item>", wafer.DDC));
+                    list.Insert(3, string.Format("<Item ItemName=\"ADC\">{0}</Item>", wafer.ADC));
+                    list.Insert(3, string.Format("<DataItem WaferID=\"{0}\" SlotNo=\"{1}\">", wafer.WaferID, wafer.SlotID));
                 }
                 else
                 {
                     try
                     {
-                        list[pos] = string.Format("<DataItem waferID=\"{0}\" waferSlotNo=\"{1}\">", wafer.WaferID, wafer.SlotID);
-                        list[pos + 1] = string.Format("<Item Itemname=\"ADC\">{0}</Item>", wafer.ADC);
-                        list[pos + 2] = string.Format("<Item Itemname=\"DDC\">{0}</Item>", wafer.DDC);
-                        list[pos + 3] = string.Format("<Item Itemname=\"RDC\">{0}</Item>", wafer.RDC);
+                        list[pos] = string.Format("<DataItem WaferID=\"{0}\" SlotNo=\"{1}\">", wafer.WaferID, wafer.SlotID);
+                        list[pos + 1] = string.Format("<Item ItemName=\"ADC\">{0}</Item>", wafer.ADC);
+                        list[pos + 2] = string.Format("<Item ItemName=\"DDC\">{0}</Item>", wafer.DDC);
+                        list[pos + 3] = string.Format("<Item ItemName=\"RDC\">{0}</Item>", wafer.RDC);
                     }
                     catch (Exception ex)
                     {

@@ -1,0 +1,21 @@
+{
+  "From": {
+    "DBType": "Oracle",
+    "HostName": "10.132.0.38",
+    "Port": 1521,
+    "UserID": "ace_loader",
+    "Password": "KT4LOADER",
+    "ServiceName": "acexp",
+    "Table": "ACME.ACEUSAGE",
+    "Columns": [ "*" ],
+    "Sequence": "Time"
+  },
+  "To": {
+    "DBType": "DB2",
+    "UserID": "sitst1",
+    "Password": "sitstcim1",
+    "ServiceName": "ATRPT1",
+    "Table": "ISTRPT.ACEUSAGE"
+  },
+  "Interval": 300
+}
