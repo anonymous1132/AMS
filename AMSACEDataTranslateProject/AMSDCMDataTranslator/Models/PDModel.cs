@@ -30,12 +30,14 @@ namespace AMSDCMDataTranslator.Models
 
         public string Route
         {
-            get { return MainPD_ID.TrimEnd(new char[] { '.','0'}); }
+            //get { return MainPD_ID.TrimEnd(new char[] { '.','0'}); }
+            get { return MainPD_ID.Split('.')[0]; }
         }
 
         public string Step
         {
-            get { return PD_ID.TrimEnd(new char[] { '.', '0' }); }
+            // get { return PD_ID.TrimEnd(new char[] { '.', '0' }); }
+            get { return PD_ID.Split('.')[0]; }
         }
     }
 }

@@ -44,7 +44,7 @@ namespace ACEPurgeTool
         {
             get;
             set;
-        } = "Ams_ace";
+        } = "AcElic";
 
         private SshClient client ;
 

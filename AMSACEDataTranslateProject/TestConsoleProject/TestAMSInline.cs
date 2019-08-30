@@ -10,10 +10,43 @@ namespace TestConsoleProject
 {
     public  class TestAMSInline
     {
-        public static void Run()
+        public static void Run(string[] args)
         {
-            InlineDebugSetting.SetValue();
-            InlineRunner.RunInlineTest();
+            if (args.Length > 0)
+            {
+                DateTime from = new DateTime();
+                DateTime to = new DateTime();
+                bool isYes = DateTime.TryParseExact(args[0], "yyyy-MM-dd-HH.mm.ss", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out from);
+
+                if (args.Length == 1)
+                {
+                    to = DateTime.Now;
+                }
+                else if (args.Length == 2)
+                {
+                    isYes &= DateTime.TryParseExact(args[1], "yyyy-MM-dd-HH.mm.ss", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out to);
+                }
+                else
+                {
+                    Console.WriteLine("Usage:AMSInlineRunner from to[default now]");
+                    return;
+                }
+
+                if (!isYes)
+                {
+                    Console.WriteLine("正确的时间格式：yyyy-MM-dd-HH.mm.ss");
+                    return;
+                }
+                InlineDebugSetting.SetValue();
+                InlineRunner.RunInlineTest(from,to);
+            }
+            else
+            {
+                InlineDebugSetting.SetValue();
+                InlineRunner.RunInlineTest();
+            }
+
+
         }
     }
 }

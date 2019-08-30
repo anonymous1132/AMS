@@ -25,6 +25,7 @@ namespace AMSDCMDataTranslator.Models
             get;
             set;
         } = DateTime.Now.AddHours(-1);
+
         private string satrtTimeStamp
         {
             get { return StartTime.ToString("yyyy-MM-dd-HH.mm.ss.ffffff"); }
@@ -82,7 +83,7 @@ namespace AMSDCMDataTranslator.Models
                 string sqltemp = string.Format("select distinct claim_time,lot,sourcelot,Technology,Product,lotype,owner,MEASROUTE,  MEASROUTEVER," +
                     "MEASSTEP,MEASITEM,MEASTIME,MEASOPERATOR,MEASEQUIPMENT,MEASRECIPE,PROCROUTE,PROCROUTEVER,PROCSTEP, PROCTIME," +
                     "PROCOPERATORUSER,PROCEQUIPMENT,PROCRECIPE,PROCRETICLE,MEAS_TYPE,WAFER_SEQ,WAFER_POSITION, SITE_POSITION," +
-                    "DCITEM_VALUE,TARGET, SPECLOW,SPECHIGH,CTRLLOW,CTRLHIGH,PROCSTEPDESC, MEAS_DCDEF_ID,ITEM_TYPE from ISTRPT.FVACE_INLINE_DC where claim_time  >'{0}' and claim_time <= '{1}' order by claim_time,lot,wafer_seq,site_position", satrtTimeStamp, endTimeStamp);
+                    "DCITEM_VALUE,TARGET, SPECLOW,SPECHIGH,CTRLLOW,CTRLHIGH,PROCSTEPDESC, MEAS_DCDEF_ID,ITEM_TYPE from ISTRPT.FVACE_INLINE_DC where claim_time  >'{0}' and claim_time <= '{1}' and wafer_id !='*' order by claim_time,lot,wafer_seq,site_position", satrtTimeStamp, endTimeStamp);
 
                 return sqltemp;
             }
@@ -92,7 +93,7 @@ namespace AMSDCMDataTranslator.Models
         {
             DB2Helper dB2 = new DB2Helper();
             //获取PD信息，为Inline的Step赋值
-            dB2.GetSomeData("select distinct mainpd_id,pd_id,ope_no from istrpt.fvace_wip_pdhis ");
+            dB2.GetSomeData("select distinct mainpd_id,pd_id,ope_no from istrpt.fvace_wip_pdhis_v2 ");
             foreach (DataRow dr in dB2.dt.Rows)
             {
                 try
@@ -166,7 +167,7 @@ namespace AMSDCMDataTranslator.Models
                     entity.ProcReticle = dr["ProcReticle"].ToString();
                     entity.MeasType = dr["Meas_Type"].ToString();
                     entity.WaferSeq = dr["Wafer_Seq"].ToString().Trim();
-                    entity.WaferPosition = dr["WAFER_POSITION"].ToString();
+                    entity.WaferPosition = dr["WAFER_POSITION"].ToString().Trim();
                     entity.SitePosition = dr["Site_Position"].ToString();
                     entity.Target = dr["Target"].ToString();
                     entity.SpecLow = dr["SpecLow"].ToString();
@@ -183,14 +184,23 @@ namespace AMSDCMDataTranslator.Models
                     LogHelper.ErrorLog(string.Format("InlineError InlineEntityGroup.GetData() ClaimTime:{0},Lot:{1}。", dr["Claim_Time"].ToString(), dr["Lot"].ToString()), e);
                 }
             }
+
             //对wafer_seq为空或者为*号的数据去取相似案例的数据
             foreach (InlineDBEntity entity in inlineDBEntities)
             {
+                if (entity.CollectedType == InlineDBEntity.CollectedTypes.L) continue;
                 try
                 {
-                    if (string.IsNullOrEmpty(entity.WaferSeq))
+                    //Raw情况,暂未考虑WaferSeq为空的情况.
+                    if (entity.ItemType == "Raw" && entity.WaferSeq == "*")
                     {
-                        InlineDBEntity likelyEntity = GetLikelyEntity(entity);
+                        var likelyEntity = GetLikelyEntity(entity);
+                        entity.WaferSeq = likelyEntity.WaferSeq;
+                    }
+                        //Derived情况
+                    if (entity.ItemType == "Derived")
+                    {
+                       var likelyEntity= GetRawEntityOfDerived(entity);
                         entity.WaferSeq = likelyEntity.WaferSeq;
                         entity.SourceLot = likelyEntity.SourceLot;
                         entity.Technology = likelyEntity.Technology;
@@ -207,10 +217,11 @@ namespace AMSDCMDataTranslator.Models
                         entity.ProcEquipment = likelyEntity.ProcEquipment;
                         entity.ProcRecipe = likelyEntity.ProcRecipe;
                     }
-                
+                    /*
                     else if (string.IsNullOrEmpty(entity.Product) && entity.ItemType == "Derived")
                     {
                         InlineDBEntity likelyEntity = GetLikelyEntity(entity);
+                        entity.WaferSeq = likelyEntity.WaferSeq;
                         entity.SourceLot = likelyEntity.SourceLot;
                         entity.Technology = likelyEntity.Technology;
                         entity.Product = likelyEntity.Product;
@@ -232,11 +243,12 @@ namespace AMSDCMDataTranslator.Models
                         InlineDBEntity likelyEntity = GetLikelyEntity(entity);
                         entity.WaferSeq = likelyEntity.WaferSeq;
                     }
+                    */
 
                 }
                 catch (Exception e)
                 {
-                    LogHelper.ErrorLog(string.Format("InlineError InlineEntityGroup.GetData()从DB2中获取相似InlineEntity失败 ClaimTime:{0},LotID:{1}", entity.ClaimTime.ToString(), entity.Lot), e);
+                    LogHelper.ErrorLog("InlineEntityGroup.cs Error! ", e);
                 }
             }
             //获取DCM坐标信息
@@ -362,57 +374,52 @@ namespace AMSDCMDataTranslator.Models
 
         private InlineDBEntity GetLikelyEntity(InlineDBEntity entity)
         {
-            var list = inlineDBEntities.Where(a => a.Lot == entity.Lot && a.WaferPosition == entity.WaferPosition  && a.WaferSeq != "*" &&a.ItemType!= "Derived").OrderBy(p => (p.ClaimTime - entity.ClaimTime).Duration());
-            InlineDBEntity likelyEntity = list.FirstOrDefault();
-            //如果存在不一致的情况要记录
-            var testmax = list.Max(p => p.WaferSeq);
-            var testmin = list.Min(p => p.WaferSeq);
-            if (testmax != testmin)
+            string sqlt = string.Format("(select claim_time, wafer_seq,sourcelot,technology, product,lotype,owner,measoperator,measequipment,measrecipe,procroute,procroutever,procstep,proctime,procoperatoruser,procequipment,procrecipe from istrpt.fvace_inline_dc where lot='{1}' and wafer_position='{2}' and claim_time >= '{0}' and wafer_seq not in ('', '*') order by claim_time FETCH FIRST 1 ROWS ONLY) " +
+                   "union (select claim_time, wafer_seq,sourcelot,technology, product,lotype,owner,measoperator,measequipment,measrecipe,procroute,procroutever,procstep,proctime,procoperatoruser,procequipment,procrecipe from istrpt.fvace_inline_dc where lot='{1}' and wafer_position='{2}' and claim_time <= '{0}' and wafer_seq not in ('', '*')  order by claim_time desc FETCH FIRST 1 ROWS ONLY)", entity.ClaimTime.ToString("yyyy-MM-dd-HH.mm.ss.ffffff"),entity.Lot,entity.WaferPosition);
+            DB2Helper dB2Helper = new DB2Helper();
+            dB2Helper.GetSomeData(sqlt);
+           var likelyEntity = new InlineDBEntity();
+            DataRow dr = dB2Helper.dt.NewRow();
+            if (dB2Helper.dt.Rows.Count == 2 && dB2Helper.dt.Rows[0][1].ToString() != dB2Helper.dt.Rows[1][1].ToString())
             {
-                LogHelper.InlineInfoLog(string.Format("testmax:{0},testmin:{1},lot:{2},claimtime:{3}", testmax, testmin, entity.Lot, entity.ClaimTime.ToString()));
+                dr = (DateTime)dB2Helper.dt.Rows[0][0] - entity.ClaimTime < entity.ClaimTime - (DateTime)dB2Helper.dt.Rows[1][0] ? dB2Helper.dt.Rows[0] : dB2Helper.dt.Rows[1];
             }
-            //如果没找到，就到数据库中去找
-            if (likelyEntity is null)
+            else if (dB2Helper.dt.Rows.Count > 0)
             {
-                string sqlt = string.Format("(select claim_time, wafer_seq,sourcelot,techbology, product,lotype,owner,measoperator,measequipment,measrecipe,procroute,procroutever,procstep,proctime,procoperatoruser,procequipment,procrecipe from istrpt.fvace_inline_dc where claim_time >= '{0}' and wafer_seq not in ('', '*') order by claim_time FETCH FIRST 1 ROWS ONLY) " +
-                    "union (select claim_time, wafer_seq,sourcelot,techbology, product,lotype,owner,measoperator,measequipment,measrecipe,procroute,procroutever,procstep,proctime,procoperatoruser,procequipment,procrecipe from istrpt.fvace_inline_dc where claim_time <= '{0}' and wafer_seq not in ('', '*')  order by claim_time desc FETCH FIRST 1 ROWS ONLY)", entity.ClaimTime.ToString("yyyy-MM-dd-HH.mm.ss.ffffff"));
-                DB2Helper dB2Helper = new DB2Helper();
-                dB2Helper.GetSomeData(sqlt);
-                likelyEntity = new InlineDBEntity();
-                DataRow dr = dB2Helper.dt.NewRow();
-                if (dB2Helper.dt.Rows.Count == 2 && dB2Helper.dt.Rows[0][1].ToString() != dB2Helper.dt.Rows[1][1].ToString())
-                {
-                    dr = (DateTime)dB2Helper.dt.Rows[0][0] - entity.ClaimTime < entity.ClaimTime - (DateTime)dB2Helper.dt.Rows[1][0] ? dB2Helper.dt.Rows[0] : dB2Helper.dt.Rows[1];
-                }
-                else if (dB2Helper.dt.Rows.Count > 0)
-                {
-                    dr = dB2Helper.dt.Rows[0];
-                }
-                likelyEntity.ClaimTime = (DateTime)dr[0];
-                likelyEntity.WaferSeq = dr[1].ToString();
-                likelyEntity.SourceLot = dr[2].ToString();
-                likelyEntity.Technology = dr[3].ToString();
-                likelyEntity.Product = dr[4].ToString();
-                likelyEntity.LotType = dr[5].ToString();
-                likelyEntity.Owner = dr[6].ToString();
-                likelyEntity.MeasOperator = dr[7].ToString();
-                likelyEntity.MeasEquipment = dr[8].ToString();
-                likelyEntity.MeasRecipe = dr[9].ToString();
-                likelyEntity.ProcRoute = dr[10].ToString();
-                likelyEntity.ProcRouteVer = dr[11].ToString();
-                likelyEntity.ProcStep = dr[12].ToString();
-                if (dr[13] is null)
-                {
-                    likelyEntity.ProcTime = null;
-                }
-                else
-                { likelyEntity.ProcTime = (DateTime)dr[13]; }
-                likelyEntity.ProcOperatorUser = dr[14].ToString();
-                likelyEntity.ProcRecipe = dr[15].ToString();
+                dr = dB2Helper.dt.Rows[0];
             }
-
+            likelyEntity.ClaimTime = (DateTime)dr[0];
+            likelyEntity.WaferSeq = dr[1].ToString();
+            likelyEntity.SourceLot = dr[2].ToString();
+            likelyEntity.Technology = dr[3].ToString();
+            likelyEntity.Product = dr[4].ToString();
+            likelyEntity.LotType = dr[5].ToString();
+            likelyEntity.Owner = dr[6].ToString();
+            likelyEntity.MeasOperator = dr[7].ToString();
+            likelyEntity.MeasEquipment = dr[8].ToString();
+            likelyEntity.MeasRecipe = dr[9].ToString();
+            likelyEntity.ProcRoute = dr[10].ToString();
+            likelyEntity.ProcRouteVer = dr[11].ToString();
+            //likelyEntity.ProcStep = dr[12].ToString();
+            var temp = PDModels.Where(w => w.Route == entity.ProcRoute && w.OPE_NO == dr["ProcStep"].ToString()).FirstOrDefault();
+            likelyEntity.ProcStep = temp == null ? dr["ProcStep"].ToString() : temp.Step;
+            if (dr[13] is null)
+            {
+                likelyEntity.ProcTime = null;
+            }
+            else
+            { likelyEntity.ProcTime = (DateTime)dr[13]; }
+            likelyEntity.ProcOperatorUser = dr[14].ToString();
+            likelyEntity.ProcRecipe = dr[15].ToString();
             return likelyEntity;
         }
 
+        private InlineDBEntity GetRawEntityOfDerived(InlineDBEntity entity)
+        {
+            var list = inlineDBEntities.Where(w => w.Lot == entity.Lot && w.ClaimTime == entity.ClaimTime && w.WaferPosition == entity.WaferPosition && w.ItemType != "Derived");
+            if (!list.Any()) throw new Exception(string.Format("没有获取Raw Data——Lot ID:{0},Claim Time:{1},Meas Item:{2}", entity.Lot, entity.ClaimTime.ToString("yyyy-MM-dd HH:mm:ss"), entity.MeasItem));
+            var likelyEntity = list.First();
+            return likelyEntity;
+        }
     }
 }

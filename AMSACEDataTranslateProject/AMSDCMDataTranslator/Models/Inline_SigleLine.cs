@@ -85,7 +85,7 @@ namespace AMSDCMDataTranslator.Models
         {
             get;
             set;
-        }
+        } = ".00";
 
         public string MeasItem
         {
@@ -139,7 +139,7 @@ namespace AMSDCMDataTranslator.Models
         {
             get;
             set;
-        }
+        } = ".00";
 
         public string ProcTime
         {

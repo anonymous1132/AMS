@@ -11,29 +11,20 @@ namespace AMSDCMDataTranslator.Models
 {
     public class AMSInline:Inline
     {
-        private string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
-        private string ExeDirctory
-        {
-            get { return exePath.Substring(0, exePath.LastIndexOf("\\") + 1); }
-        }
-        private readonly string Config = @"App\config\inlinetime.config";
-        private string ConfigPath
-        {
-            get { return ExeDirctory + Config; }
-        }
-        private string GetLastDBLine()
-        {
-            DataTable dt = XmlHelper.GetTable(ConfigPath, XmlHelper.XmlType.File, "Inline");
-            return dt.DefaultView[0][0].ToString();
-        }
+
+
         private string LastDbLineThisQuery;
+
+        public DateTime StartTime { get; set; }
+
+        public DateTime EndTime { get; set; }
 
         public override void GetData()
         {
             InlineEntityGroup entityGroup = new InlineEntityGroup();
-            DateTime dateTime = new DateTime();
-            DateTime.TryParseExact(GetLastDBLine(), "yyyy-MM-dd-HH.mm.ss.ffffff", System.Globalization.CultureInfo.InvariantCulture,System.Globalization.DateTimeStyles.None,out dateTime);
-            entityGroup.StartTime = dateTime;
+
+            entityGroup.StartTime = StartTime;
+            entityGroup.EndTime =EndTime;
             entityGroup.GetData();
             Inline_lines = entityGroup.GetInlineList();
             LastDbLineThisQuery = entityGroup.inlineDBEntities.Max(p=>p.ClaimTime).ToString("yyyy-MM-dd-HH.mm.ss.ffffff");
@@ -79,7 +70,7 @@ namespace AMSDCMDataTranslator.Models
             dr[0] = LastDbLineThisQuery;
             dt.Rows.Add(dr);
             ds.Tables.Add(dt);
-            ds.WriteXml(ConfigPath);
+            ds.WriteXml(InlineRunner.ConfigPath);
         }
 
 

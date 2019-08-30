@@ -40,7 +40,7 @@ namespace AMSDCMDataTranslator.Models
             get
             {
                 string sqltemp = string.Format("select Lot_ID,Fab,Slot,Technology,Product,Lot_Type,RouteVersion,Stage_ID,Route,Step,Sequence,Version_ID,Description,EQP_ID,EquipmentGroup,MoveInTime,MoveOutTime,MoveInWaferCount,MoveOutWaferCount,MoveInOperator,MoveOutOperator," +
-                    "Reticle,Recipe,BatchID,QueueTime,Owner,CustomerCode,LotStatus,CarrierID,WafeList from ISTRPT.FVACE_WIP_DATA where MoveOutTime > '{0}' and MoveOutTime <= '{1}'", startTimeStamp, endTimeStamp);
+                    "Reticle,Recipe,BatchID,QueueTime,Owner,CustomerCode,LotStatus,CarrierID,WafeList from ISTRPT.FVACE_WIP_DATA_V2 where MoveOutTime > '{0}' and MoveOutTime <= '{1}'", startTimeStamp, endTimeStamp);
                 return sqltemp;
             }
         }
@@ -65,40 +65,48 @@ namespace AMSDCMDataTranslator.Models
             }
             foreach (DataRow dr in dB2.dt.Rows)
             {
-                WIPDbEntity wipDbEntity = new WIPDbEntity
+
+                try
                 {
-                    Lot_ID = dr["Lot_ID"].ToString(),
-                    // Fab = dr["Fab"].ToString(),
-                    Slot = dr["Slot"].ToString(),
-                    Technology = dr["Technology"].ToString(),
-                    Product = dr["Product"].ToString(),
-                    Lot_Type = dr["Lot_Type"].ToString(),
-                    RouteVersion = dr["RouteVersion"].ToString(),
-                    Stage_ID = dr["Stage_ID"].ToString(),
-                    Route = dr["Route"].ToString(),
-                    Step = dr["Step"].ToString(),
-                    Sequence = dr["Sequence"].ToString(),
-                    Version_ID = dr["Version_ID"].ToString(),
-                    Description = dr["Description"].ToString(),
-                    EQP_ID = dr["Eqp_ID"].ToString(),
-                    EquipmentGroup = dr["EquipmentGroup"].ToString(),
-                    MoveInTime = (DateTime)dr["MoveInTime"],
-                    MoveInWaferCount = ((int?)dr["MoveInWaferCount"]).HasValue ? ((int?)dr["MoveInWaferCount"]).Value : 0,
-                    MoveInOperator = dr["MoveInOperator"].ToString(),
-                    MoveOutTime = (DateTime)dr["MoveOutTime"],
-                    MoveOutWaferCount = dr["MoveOutWaferCount"] == DBNull.Value ? 0 : (int)dr["MoveOutWaferCount"],
-                    MoveOutOperator = dr["MoveOutOperator"].ToString(),
-                    Reticle = dr["Reticle"] == DBNull.Value ? "" : dr["Reticle"].ToString(),
-                    Recipe = dr["Recipe"].ToString(),
-                    BatchID = ((int?)dr["BatchID"]) ?? 0,
-                    QueueTime = dr["QueueTime"] == DBNull.Value ? 0 : (int)dr["QueueTime"],
-                    Owner = dr["Owner"].ToString(),
-                    CustomerCode = dr["CustomerCode"].ToString(),
-                    LotStatus = dr["LotStatus"].ToString(),
-                    CarrierID = dr["CarrierID"].ToString(),
-                    WafeList = dr["WafeList"].ToString()
-                };
-                WIPDbEntities.Add(wipDbEntity);
+                    WIPDbEntity wipDbEntity = new WIPDbEntity
+                    {
+                        Lot_ID = dr["Lot_ID"].ToString(),
+                        // Fab = dr["Fab"].ToString(),
+                        Slot = dr["Slot"].ToString(),
+                        Technology = dr["Technology"].ToString(),
+                        Product = dr["Product"].ToString(),
+                        Lot_Type = dr["Lot_Type"].ToString(),
+                        RouteVersion = dr["RouteVersion"].ToString(),
+                        Stage_ID = dr["Stage_ID"].ToString(),
+                        Route = dr["Route"].ToString(),
+                        Step = dr["Step"].ToString(),
+                        Sequence = dr["Sequence"].ToString(),
+                        Version_ID = dr["Version_ID"].ToString(),
+                        Description = dr["Description"].ToString(),
+                        EQP_ID = dr["Eqp_ID"].ToString(),
+                        EquipmentGroup = dr["EquipmentGroup"].ToString(),
+                        MoveInTime = (DateTime)dr["MoveInTime"],
+                        MoveInWaferCount = ((int?)dr["MoveInWaferCount"]).HasValue ? ((int?)dr["MoveInWaferCount"]).Value : 0,
+                        MoveInOperator = dr["MoveInOperator"].ToString(),
+                        MoveOutTime = (DateTime)dr["MoveOutTime"],
+                        MoveOutWaferCount = dr["MoveOutWaferCount"] == DBNull.Value ? 0 : (int)dr["MoveOutWaferCount"],
+                        MoveOutOperator = dr["MoveOutOperator"].ToString(),
+                        Reticle = dr["Reticle"] == DBNull.Value ? "" : dr["Reticle"].ToString(),
+                        Recipe = dr["Recipe"].ToString(),
+                        BatchID = ((int?)dr["BatchID"]) ?? 0,
+                        QueueTime = dr["QueueTime"] == DBNull.Value ? 0 : (int)dr["QueueTime"],
+                        Owner = dr["Owner"].ToString(),
+                        CustomerCode = dr["CustomerCode"].ToString(),
+                        LotStatus = dr["LotStatus"].ToString(),
+                        CarrierID = dr["CarrierID"].ToString(),
+                        WafeList = dr["WafeList"].ToString()
+                    };
+                    WIPDbEntities.Add(wipDbEntity);
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.ErrorLog(string.Format("WIP WIPEntityGroup.cs GetData() Lot:{0},MoveInTime:{1}", dr["Lot_ID"]??"Null", dr["MoveInTime"])??"Null", ex);
+                }
             }
             //取消Chamber的方案
             //dB2.GetSomeData(Sql_Chamber);

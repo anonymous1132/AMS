@@ -40,23 +40,22 @@ namespace AMSDCMDataTranslator
             LogHelper.WIPInfoLog("开始RunAMSWIPTest");
             AMSWIP wip = new AMSWIP();
             WIPFileOperator fileOperator = new WIPFileOperator(wip);
-            try
-            {
+            //try
+            //{
                 fileOperator.OperateFiles();
                 //SshOper ssh = new SshOper();
                 //LogHelper.WIPInfoLog("AMSWIPTest\t" + ssh.GetResault("sh ~/eda/wip.sh\nsh ~/eda/chamber.sh"));
-                fileOperator.OperateDefectFiles();
-            }
-            catch (NoQueryDataException ne)
-            {
-                LogHelper.WIPInfoLog(ne.Message);
-            }
-            catch (Exception e)
-            {
-                LogHelper.ErrorLog("AMSWIPTest", e);
-            }
-            LogHelper.WIPInfoLog("RunAMSWIPTest执行完毕");
-
+                //fileOperator.OperateDefectFiles();
+            //}
+            //catch (NoQueryDataException ne)
+            //{
+            //    LogHelper.WIPInfoLog(ne.Message);
+            //}
+            //catch (Exception e)
+            //{
+            //    LogHelper.ErrorLog("AMSWIPTest", e);
+            //}
+            //LogHelper.WIPInfoLog("RunAMSWIPTest执行完毕");
         }
     }
 }

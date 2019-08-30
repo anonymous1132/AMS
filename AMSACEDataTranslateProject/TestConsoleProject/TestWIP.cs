@@ -13,7 +13,7 @@ namespace TestConsoleProject
         public static void Test()
         {
             WIPSetting.SetValue();
-            WIPRunner.RunAmsWIP();
+            WIPRunner.RunAmsWIPTest();
         }
     }
 }

@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2CC7A5BD-6267-4956-80C5-01C5CA696B49}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestConsoleProject</RootNamespace>
+    <RootNamespace>AMSConsoleProgram</RootNamespace>
     <AssemblyName>AmsInlineRunner</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
