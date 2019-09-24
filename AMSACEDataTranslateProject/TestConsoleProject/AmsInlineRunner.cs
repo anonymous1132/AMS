@@ -38,13 +38,15 @@ namespace TestConsoleProject
                     return;
                 }
                 InlineDebugSetting.SetValue();
-                InlineRunner.RunAMSInline(from, to);
+                InlineRunner.RunAMSInline(from, to,false);
             }
             else
             {
                 InlineDebugSetting.SetValue();
                 InlineRunner.RunAMSInline();
             }
+            //休息500ms用于确保log记录
+            System.Threading.Thread.Sleep(500);
         }
     }
 }

@@ -45,13 +45,14 @@ namespace AMSDCMDataTranslator
 
         }
 
-        public static void RunAMSInline(DateTime from,DateTime to)
+        public static void RunAMSInline(DateTime from,DateTime to,bool isRun2Now=true)
         {
-            LogHelper.InlineInfoLog(string.Format( "开始RunAMSInlinem,From:{0},To:{1}",from.ToString("yyyy-MM-dd HH:mm:ss.ffffff"),to.ToString("yyyy-MM-dd HH:mm:ss.ffffff")));
+            LogHelper.InlineInfoLog(string.Format( "开始RunAMSInline,From:{0},To:{1}",from.ToString("yyyy-MM-dd HH:mm:ss.ffffff"),to.ToString("yyyy-MM-dd HH:mm:ss.ffffff")));
             AMSInline inline = new AMSInline
             {
                 StartTime = from,
-                EndTime = to
+                EndTime = to,
+                IsRun2Now=isRun2Now
             };
             InlineFileOperator fileOperator = new InlineFileOperator(inline);
             try
@@ -71,14 +72,15 @@ namespace AMSDCMDataTranslator
             LogHelper.InlineInfoLog("RunAMSInline执行完毕");
         }
 
-        public static void RunInlineTest(DateTime from, DateTime to)
+        public static void RunInlineTest(DateTime from, DateTime to,bool isRun2Now=true)
         {
 
-            LogHelper.InlineInfoLog(string.Format("开始RunInlineTestTranslator,From:{0},To:{1}", from.ToString("yyyy-MM-dd HH:mm:ss.ffffff"), to.ToString("yyyy-MM-dd HH:mm:ss.ffffff")));
+            LogHelper.InlineInfoLog(string.Format("开始RunInlineTest,From:{0},To:{1}", from.ToString("yyyy-MM-dd HH:mm:ss.ffffff"), to.ToString("yyyy-MM-dd HH:mm:ss.ffffff")));
             AMSInline inline = new AMSInline
             {
                 StartTime = from,
-                EndTime = to
+                EndTime = to,
+                IsRun2Now=isRun2Now
             };
             InlineFileOperator fileOperator = new InlineFileOperator(inline);
 

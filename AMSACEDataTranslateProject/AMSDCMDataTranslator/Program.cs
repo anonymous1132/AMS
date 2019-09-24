@@ -15,7 +15,7 @@ namespace AMSDCMDataTranslator
 
         public static void Main(string[] args)
         {
-
+            Console.WriteLine("Not used for run directly");
 
         }
 

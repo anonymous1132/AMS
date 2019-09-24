@@ -15,9 +15,10 @@ namespace TestConsoleProject
     {
         static void Main(string[] args)
         {
-            TestAMSInline.Run(args);
-            //AmsInlineRunner.Run(args);
-            Console.WriteLine("OK");
+             //TestAMSInline.Run(args);
+            AmsInlineRunner.Run(args);
+            //TestWIP.Test(args);
+           // AMSWIPRunner.Run(args);
         }
     }
 }

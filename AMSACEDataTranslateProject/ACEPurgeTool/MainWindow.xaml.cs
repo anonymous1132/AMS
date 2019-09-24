@@ -43,7 +43,7 @@ namespace ACEPurgeTool
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             ssh.Commands = new List<string>();
-            ssh.Commands.Add("source /etc/profile&&echo $PATH");
+            ssh.Commands.Add("source /etc/profile&&" + exePath + exeProgram+" -h");
             richresault.AppendText(ssh.GetResault());
         }
     }

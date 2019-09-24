@@ -19,6 +19,8 @@ namespace AMSDCMDataTranslator.Models
 
         public DateTime EndTime { get; set; }
 
+        public bool IsRun2Now { get; set; } = true;
+
         public override void GetData()
         {
             InlineEntityGroup entityGroup = new InlineEntityGroup();
@@ -63,6 +65,7 @@ namespace AMSDCMDataTranslator.Models
 
         public override void WriteXmlConfig()
         {
+            if (!IsRun2Now) return;
             DataSet ds = new DataSet("ACE");
             DataTable dt = new DataTable("Inline");
             dt.Columns.Add("Sequence");
@@ -72,8 +75,6 @@ namespace AMSDCMDataTranslator.Models
             ds.Tables.Add(dt);
             ds.WriteXml(InlineRunner.ConfigPath);
         }
-
-
 
     }
 }

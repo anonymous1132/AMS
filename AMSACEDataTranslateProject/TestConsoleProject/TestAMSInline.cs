@@ -38,15 +38,15 @@ namespace TestConsoleProject
                     return;
                 }
                 InlineDebugSetting.SetValue();
-                InlineRunner.RunInlineTest(from,to);
+                InlineRunner.RunInlineTest(from,to,false);
             }
             else
             {
                 InlineDebugSetting.SetValue();
                 InlineRunner.RunInlineTest();
             }
-
-
+            System.Threading.Thread.Sleep(500);
+            Console.WriteLine("ok");
         }
     }
 }

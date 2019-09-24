@@ -11,23 +11,11 @@ namespace AMSDCMDataTranslator.Models
 {
     public class AMSWIP:WIP
     {
-        private string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
-        private string ExeDirctory
-        {
-            get { return exePath.Substring(0, exePath.LastIndexOf("\\") + 1); }
-        }
+        public DateTime StartTime { get; set; }
 
-        private readonly string Config = @"App\config\wiptime.config";
-        private string ConfigPath
-        {
-            get { return ExeDirctory + Config; }
-        }
+        public DateTime EndTime { get; set; }
 
-        private string GetLastDBLine()
-        {
-            DataTable dt = XmlHelper.GetTable(ConfigPath, XmlHelper.XmlType.File, "WIP");
-            return dt.DefaultView[0][0].ToString();
-        }
+        public bool IsRun2Now { get; set; } = true;
 
         private string LastDbLineThisQuery;
 
@@ -37,9 +25,8 @@ namespace AMSDCMDataTranslator.Models
         public override void GetData()
         {
             WIPEntityGroup entityGroup = new WIPEntityGroup();
-            DateTime dateTime = new DateTime();
-            DateTime.TryParseExact(GetLastDBLine(), "yyyy-MM-dd-HH.mm.ss.ffffff", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime);
-            entityGroup.StartTime = dateTime;
+            entityGroup.StartTime = StartTime;
+            entityGroup.EndTime = EndTime;
             entityGroup.GetData();
             WIP_lines = entityGroup.GetWIPLists();
             //取消Chamber方案
@@ -114,6 +101,7 @@ namespace AMSDCMDataTranslator.Models
 
         public override void WriteXmlConfig()
         {
+            if (!IsRun2Now) return;
             DataSet ds = new DataSet("ACE");
             DataTable dt = new DataTable("WIP");
             dt.Columns.Add("Sequence");
@@ -121,7 +109,7 @@ namespace AMSDCMDataTranslator.Models
             dr[0] = LastDbLineThisQuery;
             dt.Rows.Add(dr);
             ds.Tables.Add(dt);
-            ds.WriteXml(ConfigPath);
+            ds.WriteXml(WIPRunner.ConfigPath);
         }
     }
 }

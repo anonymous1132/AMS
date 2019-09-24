@@ -1,8 +1,0 @@
-<?xml version="1.0" standalone="yes"?>
-<Config>
-  <AppearenceSetting>
-    <ThemeSource>/FirstFloor.ModernUI;component/Assets/ModernUI.Light.xaml</ThemeSource>
-    <FontSize>Small</FontSize>
-    <AccentColor>#FF339933</AccentColor>
-  </AppearenceSetting>
-</Config>

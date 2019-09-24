@@ -1,6 +1,0 @@
-D:\ProgramData\GitHub\AMS\LogManager\FileImporter\bin\Debug\FileImporter.exe.config
-D:\ProgramData\GitHub\AMS\LogManager\FileImporter\bin\Debug\FileImporter.exe
-D:\ProgramData\GitHub\AMS\LogManager\FileImporter\bin\Debug\FileImporter.pdb
-D:\ProgramData\GitHub\AMS\LogManager\FileImporter\obj\Debug\FileImporter.csproj.CoreCompileInputs.cache
-D:\ProgramData\GitHub\AMS\LogManager\FileImporter\obj\Debug\FileImporter.exe
-D:\ProgramData\GitHub\AMS\LogManager\FileImporter\obj\Debug\FileImporter.pdb

@@ -1,0 +1,10 @@
+{
+  "CPAUPath": "\\\\10.8.0.252\\共享文件\\MES培训资料\\EDA\\CPAU\\CPAU.exe",
+  "UserName": "administrator",
+  "Password": "password",
+  "DecPath": "DecFiles",
+  "BatPath": "BatScripts",
+  "IsDomainUser": true,
+  "DestFiles": [ "\\\\10.8.0.252\\共享文件\\MES培训资料\\EDA\\softwares\\ACE\\Client 64-bit\\ACEPlatinumSetup64.exe" ],
+  "KeyDirectory": "\\\\10.8.0.252\\共享文件\\MES培训资料\\EDA\\CPAU"
+}
