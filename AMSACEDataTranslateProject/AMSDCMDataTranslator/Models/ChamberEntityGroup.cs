@@ -126,7 +126,8 @@ namespace AMSDCMDataTranslator.Models
                 singleLine.RouteVersion = dBEntity.MainPD_ID.Split('.').Length==2? dBEntity.MainPD_ID.Split('.')[1]:"";
                 singleLine.DateTimeList = dBEntity.strProcTime;
                 singleLine.ChamberList = dBEntity.Procrsc_ID;
-                var item = ChamberOphsEntities.Where(w => w.Eqp_ID == dBEntity.Eqp_ID && w.MainPD_ID == dBEntity.MainPD_ID && w.Ope_No == dBEntity.Ope_No && w.Ope_Pass_Count == w.Ope_Pass_Count).OrderBy(o => o.Claim_Time).First();
+                var item = ChamberOphsEntities.Where(w => w.Eqp_ID == dBEntity.Eqp_ID && w.MainPD_ID == dBEntity.MainPD_ID && w.Ope_No == dBEntity.Ope_No && w.Ope_Pass_Count == dBEntity.Ope_Pass_Count).OrderBy(o => o.Claim_Time).FirstOrDefault();
+                if (item is null) continue;
                 singleLine.Step = item.PD_ID.Split('.')[0];
                 singleLine.StepVersion = item.PD_ID.Split('.').Length==2?dBEntity.MainPD_ID.Split('.')[1]:"";
                 singleLine.RecipeList = item.Recipe_ID;
