@@ -116,10 +116,16 @@ namespace AMSDB2DB
             {
                 DB2DynamicDataCatcher db2 = new DB2DynamicDataCatcher(Task.From.Table, para, sql);
                 entities = db2.GetEntities();
-            } else if (DbType == "oracle")
+            }
+            else if (DbType == "oracle")
             {
                 OracleDynamicDataCatcher oracle = new OracleDynamicDataCatcher(Task.From.Table, para, sql);
                 entities = oracle.GetEntities();
+            }
+            else if (DbType == "sqlserver")
+            {
+                MsDynamicDataCatcher ms = new MsDynamicDataCatcher(Task.From.Table, para, sql);
+                entities = ms.GetEntities();
             }
         }
 
@@ -168,6 +174,11 @@ namespace AMSDB2DB
             {
                 OracleUtil oracle = new OracleUtil(para);
                 oracle.UpdateBatchCommand(sqls);
+            }
+            else if (Task.To.DBType.ToLower() == "sqlserver")
+            {
+                MsUtil ms = new MsUtil(para);
+                ms.UpdateBatchCommand(sqls);
             }
             WriteSeqValue();
         }

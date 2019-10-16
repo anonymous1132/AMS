@@ -1,0 +1,21 @@
+{
+  "From": {
+    "DBType": "Oracle",
+    "HostName": "10.8.0.6",
+    "Port": 1521,
+    "UserID": "zhangyejun",
+    "Password": "zhangyejun",
+    "ServiceName": "ORCL",
+    "Table": "AMSC.LLDH_RELATION_LOT_VIEW",
+    "Columns": [ "ID","WLBM1","PMGG","PH","LLDH" ],
+    "Sequence": "ID"
+  },
+  "To": {
+    "DBType": "DB2",
+    "UserID": "rptprod",
+    "Password": "Rpd#2019",
+    "ServiceName": "AMRPTDB",
+    "Table": "ISTRPT.OA_RequisitionNo_VendorId_Mapping"
+  },
+  "Interval": 120
+}
